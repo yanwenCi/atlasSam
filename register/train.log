@@ -1,0 +1,638 @@
+nohup: ignoring input
+/home/wen/.conda/envs/env-sam/lib/python3.9/site-packages/monai/networks/blocks/warp.py:72: UserWarning: monai.networks.blocks.Warp: Using PyTorch native grid_sample.
+  warnings.warn("monai.networks.blocks.Warp: Using PyTorch native grid_sample.")
+2025-05-16 23:03:56,120 - __main__ - INFO - Epoch 0, Batch 100, Loss: -0.2505
+2025-05-16 23:06:22,401 - __main__ - INFO - Epoch 0, Batch 200, Loss: -0.2989
+2025-05-16 23:08:48,550 - __main__ - INFO - Epoch 0, Batch 300, Loss: 1.2753
+2025-05-16 23:11:14,418 - __main__ - INFO - Epoch 0, Batch 400, Loss: -0.4945
+2025-05-16 23:13:40,056 - __main__ - INFO - Epoch 0, Batch 500, Loss: -0.0947
+2025-05-16 23:16:05,562 - __main__ - INFO - Epoch 0, Batch 600, Loss: -0.0185
+2025-05-16 23:18:31,185 - __main__ - INFO - Epoch 0, Batch 700, Loss: -0.5812
+2025-05-16 23:20:56,976 - __main__ - INFO - Epoch 0, Batch 800, Loss: -0.5841
+2025-05-16 23:23:21,961 - __main__ - INFO - Epoch 0, Batch 900, Loss: -0.5275
+2025-05-16 23:25:46,366 - __main__ - INFO - Epoch 0, Batch 1000, Loss: -0.5903
+2025-05-16 23:28:10,676 - __main__ - INFO - Epoch 0, Batch 1100, Loss: -0.6222
+2025-05-16 23:30:34,945 - __main__ - INFO - Epoch 0, Batch 1200, Loss: -0.6342
+2025-05-16 23:32:59,005 - __main__ - INFO - Epoch 0, Batch 1300, Loss: -0.5642
+2025-05-16 23:33:45,154 - __main__ - INFO - Epoch 0, Average Loss: -0.2596
+2025-05-16 23:33:46,531 - __main__ - INFO - Epoch 1, Batch 0, Loss: -0.4283
+2025-05-16 23:36:04,190 - __main__ - INFO - Epoch 1, Batch 100, Loss: -0.1884
+2025-05-16 23:38:21,986 - __main__ - INFO - Epoch 1, Batch 200, Loss: -0.6552
+2025-05-16 23:40:39,840 - __main__ - INFO - Epoch 1, Batch 300, Loss: -0.0535
+2025-05-16 23:42:57,580 - __main__ - INFO - Epoch 1, Batch 400, Loss: -0.6326
+2025-05-16 23:45:15,344 - __main__ - INFO - Epoch 1, Batch 500, Loss: -0.5830
+2025-05-16 23:47:32,950 - __main__ - INFO - Epoch 1, Batch 600, Loss: -0.5695
+2025-05-16 23:49:50,607 - __main__ - INFO - Epoch 1, Batch 700, Loss: -0.1391
+2025-05-16 23:52:08,305 - __main__ - INFO - Epoch 1, Batch 800, Loss: -0.5068
+2025-05-16 23:54:25,953 - __main__ - INFO - Epoch 1, Batch 900, Loss: -0.3612
+2025-05-16 23:56:43,672 - __main__ - INFO - Epoch 1, Batch 1000, Loss: -0.5243
+2025-05-16 23:59:01,124 - __main__ - INFO - Epoch 1, Batch 1100, Loss: -0.4104
+2025-05-17 00:01:18,741 - __main__ - INFO - Epoch 1, Batch 1200, Loss: 2.6214
+2025-05-17 00:03:39,055 - __main__ - INFO - Epoch 1, Batch 1300, Loss: -0.3094
+2025-05-17 00:04:25,967 - __main__ - INFO - Epoch 1, Average Loss: -0.2145
+2025-05-17 00:04:27,340 - __main__ - INFO - Epoch 2, Batch 0, Loss: -0.0387
+2025-05-17 00:06:45,098 - __main__ - INFO - Epoch 2, Batch 100, Loss: -0.3464
+2025-05-17 00:09:03,259 - __main__ - INFO - Epoch 2, Batch 200, Loss: -0.0389
+2025-05-17 00:11:20,973 - __main__ - INFO - Epoch 2, Batch 300, Loss: -0.2660
+2025-05-17 00:13:38,721 - __main__ - INFO - Epoch 2, Batch 400, Loss: -0.3504
+2025-05-17 00:15:56,113 - __main__ - INFO - Epoch 2, Batch 500, Loss: -0.4864
+2025-05-17 00:18:13,691 - __main__ - INFO - Epoch 2, Batch 600, Loss: -0.2911
+2025-05-17 00:20:31,211 - __main__ - INFO - Epoch 2, Batch 700, Loss: -0.0069
+2025-05-17 00:22:48,714 - __main__ - INFO - Epoch 2, Batch 800, Loss: -0.2277
+2025-05-17 00:25:06,328 - __main__ - INFO - Epoch 2, Batch 900, Loss: -0.4471
+2025-05-17 00:27:23,833 - __main__ - INFO - Epoch 2, Batch 1000, Loss: 2.1143
+2025-05-17 00:29:41,243 - __main__ - INFO - Epoch 2, Batch 1100, Loss: 3.6482
+2025-05-17 00:31:58,575 - __main__ - INFO - Epoch 2, Batch 1200, Loss: 1.5479
+2025-05-17 00:34:16,997 - __main__ - INFO - Epoch 2, Batch 1300, Loss: 1.2219
+2025-05-17 00:35:03,535 - __main__ - INFO - Epoch 2, Average Loss: 0.7958
+2025-05-17 00:35:04,902 - __main__ - INFO - Epoch 3, Batch 0, Loss: 1.1827
+2025-05-17 00:37:22,435 - __main__ - INFO - Epoch 3, Batch 100, Loss: -0.0451
+2025-05-17 00:39:40,203 - __main__ - INFO - Epoch 3, Batch 200, Loss: -0.1808
+2025-05-17 00:41:57,774 - __main__ - INFO - Epoch 3, Batch 300, Loss: -0.2867
+2025-05-17 00:44:15,394 - __main__ - INFO - Epoch 3, Batch 400, Loss: 0.2779
+2025-05-17 00:46:32,870 - __main__ - INFO - Epoch 3, Batch 500, Loss: 35.0105
+2025-05-17 00:48:50,331 - __main__ - INFO - Epoch 3, Batch 600, Loss: -0.1925
+2025-05-17 00:51:07,774 - __main__ - INFO - Epoch 3, Batch 700, Loss: 1.6743
+2025-05-17 00:53:25,361 - __main__ - INFO - Epoch 3, Batch 800, Loss: -0.5263
+2025-05-17 00:55:43,108 - __main__ - INFO - Epoch 3, Batch 900, Loss: 2.3716
+2025-05-17 00:58:00,736 - __main__ - INFO - Epoch 3, Batch 1000, Loss: 1.4570
+2025-05-17 01:00:18,420 - __main__ - INFO - Epoch 3, Batch 1100, Loss: -0.3093
+2025-05-17 01:02:36,426 - __main__ - INFO - Epoch 3, Batch 1200, Loss: -0.5242
+2025-05-17 01:04:54,822 - __main__ - INFO - Epoch 3, Batch 1300, Loss: -0.5420
+2025-05-17 01:05:40,972 - __main__ - INFO - Epoch 3, Average Loss: 1.2198
+2025-05-17 01:05:42,342 - __main__ - INFO - Epoch 4, Batch 0, Loss: -0.4028
+2025-05-17 01:08:00,100 - __main__ - INFO - Epoch 4, Batch 100, Loss: -0.4485
+2025-05-17 01:10:18,223 - __main__ - INFO - Epoch 4, Batch 200, Loss: -0.4163
+2025-05-17 01:12:36,437 - __main__ - INFO - Epoch 4, Batch 300, Loss: -0.3342
+2025-05-17 01:14:54,527 - __main__ - INFO - Epoch 4, Batch 400, Loss: 1.2354
+2025-05-17 01:17:12,493 - __main__ - INFO - Epoch 4, Batch 500, Loss: -0.4418
+2025-05-17 01:19:30,232 - __main__ - INFO - Epoch 4, Batch 600, Loss: -0.4004
+2025-05-17 01:21:48,154 - __main__ - INFO - Epoch 4, Batch 700, Loss: -0.4365
+2025-05-17 01:24:06,042 - __main__ - INFO - Epoch 4, Batch 800, Loss: -0.5420
+2025-05-17 01:26:23,843 - __main__ - INFO - Epoch 4, Batch 900, Loss: -0.5027
+2025-05-17 01:28:41,713 - __main__ - INFO - Epoch 4, Batch 1000, Loss: 1.2488
+2025-05-17 01:30:59,635 - __main__ - INFO - Epoch 4, Batch 1100, Loss: -0.1602
+2025-05-17 01:33:17,834 - __main__ - INFO - Epoch 4, Batch 1200, Loss: -0.3206
+2025-05-17 01:35:36,326 - __main__ - INFO - Epoch 4, Batch 1300, Loss: -0.6645
+2025-05-17 01:36:22,456 - __main__ - INFO - Epoch 4, Average Loss: 0.1120
+2025-05-17 01:38:43,065 - __main__ - INFO - Best model saved at epoch 4
+2025-05-17 01:38:43,066 - __main__ - INFO - Dice Score: -0.2859126329421997, Std: [0.19203864]
+2025-05-17 01:38:44,446 - __main__ - INFO - Epoch 5, Batch 0, Loss: -0.5977
+2025-05-17 01:41:01,198 - __main__ - INFO - Epoch 5, Batch 100, Loss: -0.4469
+2025-05-17 01:43:18,796 - __main__ - INFO - Epoch 5, Batch 200, Loss: -0.4728
+2025-05-17 01:45:36,120 - __main__ - INFO - Epoch 5, Batch 300, Loss: 0.0203
+2025-05-17 01:47:53,602 - __main__ - INFO - Epoch 5, Batch 400, Loss: -0.4579
+2025-05-17 01:50:10,672 - __main__ - INFO - Epoch 5, Batch 500, Loss: -0.4109
+2025-05-17 01:52:28,064 - __main__ - INFO - Epoch 5, Batch 600, Loss: -0.3952
+2025-05-17 01:54:45,454 - __main__ - INFO - Epoch 5, Batch 700, Loss: -0.2915
+2025-05-17 01:57:02,817 - __main__ - INFO - Epoch 5, Batch 800, Loss: -0.3997
+2025-05-17 01:59:20,084 - __main__ - INFO - Epoch 5, Batch 900, Loss: -0.2565
+2025-05-17 02:01:37,402 - __main__ - INFO - Epoch 5, Batch 1000, Loss: -0.2354
+2025-05-17 02:03:54,620 - __main__ - INFO - Epoch 5, Batch 1100, Loss: -0.4504
+2025-05-17 02:06:12,157 - __main__ - INFO - Epoch 5, Batch 1200, Loss: -0.6019
+2025-05-17 02:08:30,725 - __main__ - INFO - Epoch 5, Batch 1300, Loss: -0.4067
+2025-05-17 02:09:16,576 - __main__ - INFO - Epoch 5, Average Loss: -0.3345
+2025-05-17 02:09:17,958 - __main__ - INFO - Epoch 6, Batch 0, Loss: -0.3994
+2025-05-17 02:11:35,464 - __main__ - INFO - Epoch 6, Batch 100, Loss: -0.5804
+2025-05-17 02:13:52,929 - __main__ - INFO - Epoch 6, Batch 200, Loss: 0.1067
+2025-05-17 02:16:10,405 - __main__ - INFO - Epoch 6, Batch 300, Loss: -0.3468
+2025-05-17 02:18:27,850 - __main__ - INFO - Epoch 6, Batch 400, Loss: -0.3624
+2025-05-17 02:20:45,351 - __main__ - INFO - Epoch 6, Batch 500, Loss: -0.4949
+2025-05-17 02:23:03,050 - __main__ - INFO - Epoch 6, Batch 600, Loss: -0.6367
+2025-05-17 02:25:20,559 - __main__ - INFO - Epoch 6, Batch 700, Loss: -0.4515
+2025-05-17 02:27:38,007 - __main__ - INFO - Epoch 6, Batch 800, Loss: -0.4697
+2025-05-17 02:29:55,338 - __main__ - INFO - Epoch 6, Batch 900, Loss: 0.3059
+2025-05-17 02:32:12,733 - __main__ - INFO - Epoch 6, Batch 1000, Loss: 0.2264
+2025-05-17 02:34:30,048 - __main__ - INFO - Epoch 6, Batch 1100, Loss: -0.5344
+2025-05-17 02:36:47,610 - __main__ - INFO - Epoch 6, Batch 1200, Loss: -0.5198
+2025-05-17 02:39:05,659 - __main__ - INFO - Epoch 6, Batch 1300, Loss: -0.6324
+2025-05-17 02:39:51,298 - __main__ - INFO - Epoch 6, Average Loss: -0.3190
+2025-05-17 02:39:52,686 - __main__ - INFO - Epoch 7, Batch 0, Loss: -0.6509
+2025-05-17 02:42:10,104 - __main__ - INFO - Epoch 7, Batch 100, Loss: -0.3357
+2025-05-17 02:44:27,509 - __main__ - INFO - Epoch 7, Batch 200, Loss: -0.3684
+2025-05-17 02:46:45,285 - __main__ - INFO - Epoch 7, Batch 300, Loss: -0.6564
+2025-05-17 02:49:02,706 - __main__ - INFO - Epoch 7, Batch 400, Loss: -0.4588
+2025-05-17 02:51:20,033 - __main__ - INFO - Epoch 7, Batch 500, Loss: -0.3880
+2025-05-17 02:53:37,416 - __main__ - INFO - Epoch 7, Batch 600, Loss: -0.3018
+2025-05-17 02:55:54,588 - __main__ - INFO - Epoch 7, Batch 700, Loss: 1.2272
+2025-05-17 02:58:11,891 - __main__ - INFO - Epoch 7, Batch 800, Loss: 1.9234
+2025-05-17 03:00:29,070 - __main__ - INFO - Epoch 7, Batch 900, Loss: -0.4056
+2025-05-17 03:02:46,309 - __main__ - INFO - Epoch 7, Batch 1000, Loss: -0.4606
+2025-05-17 03:05:03,483 - __main__ - INFO - Epoch 7, Batch 1100, Loss: -0.4790
+2025-05-17 03:07:21,087 - __main__ - INFO - Epoch 7, Batch 1200, Loss: 3.1534
+2025-05-17 03:09:39,544 - __main__ - INFO - Epoch 7, Batch 1300, Loss: 0.1675
+2025-05-17 03:10:25,049 - __main__ - INFO - Epoch 7, Average Loss: 0.5341
+2025-05-17 03:10:26,433 - __main__ - INFO - Epoch 8, Batch 0, Loss: -0.4166
+2025-05-17 03:12:44,230 - __main__ - INFO - Epoch 8, Batch 100, Loss: 1.7082
+2025-05-17 03:15:01,955 - __main__ - INFO - Epoch 8, Batch 200, Loss: 2.3343
+2025-05-17 03:17:19,700 - __main__ - INFO - Epoch 8, Batch 300, Loss: 1.0841
+2025-05-17 03:19:37,477 - __main__ - INFO - Epoch 8, Batch 400, Loss: 0.0818
+2025-05-17 03:21:55,290 - __main__ - INFO - Epoch 8, Batch 500, Loss: -0.4583
+2025-05-17 03:24:13,147 - __main__ - INFO - Epoch 8, Batch 600, Loss: -0.4159
+2025-05-17 03:26:30,780 - __main__ - INFO - Epoch 8, Batch 700, Loss: 1.6698
+2025-05-17 03:28:48,426 - __main__ - INFO - Epoch 8, Batch 800, Loss: 1.9208
+2025-05-17 03:31:06,215 - __main__ - INFO - Epoch 8, Batch 900, Loss: 0.3418
+2025-05-17 03:33:23,786 - __main__ - INFO - Epoch 8, Batch 1000, Loss: -0.2677
+2025-05-17 03:35:41,610 - __main__ - INFO - Epoch 8, Batch 1100, Loss: -0.3126
+2025-05-17 03:37:59,501 - __main__ - INFO - Epoch 8, Batch 1200, Loss: 21.5045
+2025-05-17 03:40:17,617 - __main__ - INFO - Epoch 8, Batch 1300, Loss: 1.6011
+2025-05-17 03:41:03,560 - __main__ - INFO - Epoch 8, Average Loss: 2.6290
+2025-05-17 03:41:04,939 - __main__ - INFO - Epoch 9, Batch 0, Loss: 0.8974
+2025-05-17 03:43:22,984 - __main__ - INFO - Epoch 9, Batch 100, Loss: 0.2632
+2025-05-17 03:45:41,046 - __main__ - INFO - Epoch 9, Batch 200, Loss: 0.6809
+2025-05-17 03:47:58,759 - __main__ - INFO - Epoch 9, Batch 300, Loss: 0.6635
+2025-05-17 03:50:16,710 - __main__ - INFO - Epoch 9, Batch 400, Loss: -0.2862
+2025-05-17 03:52:34,664 - __main__ - INFO - Epoch 9, Batch 500, Loss: -0.2073
+2025-05-17 03:54:52,484 - __main__ - INFO - Epoch 9, Batch 600, Loss: 5.0019
+2025-05-17 03:57:10,396 - __main__ - INFO - Epoch 9, Batch 700, Loss: 1.8631
+2025-05-17 03:59:28,103 - __main__ - INFO - Epoch 9, Batch 800, Loss: 1.4606
+2025-05-17 04:01:45,844 - __main__ - INFO - Epoch 9, Batch 900, Loss: 0.2867
+2025-05-17 04:04:03,711 - __main__ - INFO - Epoch 9, Batch 1000, Loss: -0.4432
+2025-05-17 04:06:21,464 - __main__ - INFO - Epoch 9, Batch 1100, Loss: -0.4142
+2025-05-17 04:08:39,322 - __main__ - INFO - Epoch 9, Batch 1200, Loss: -0.3752
+2025-05-17 04:10:57,681 - __main__ - INFO - Epoch 9, Batch 1300, Loss: -0.2395
+2025-05-17 04:11:43,102 - __main__ - INFO - Epoch 9, Average Loss: 1.2574
+2025-05-17 04:19:19,899 - __main__ - INFO - Best model saved at epoch 9
+2025-05-17 04:19:19,899 - __main__ - INFO - Dice Score: -0.11137279123067856, Std: [0.25171968]
+2025-05-17 04:19:21,276 - __main__ - INFO - Epoch 10, Batch 0, Loss: -0.5570
+2025-05-17 04:21:38,710 - __main__ - INFO - Epoch 10, Batch 100, Loss: -0.5967
+2025-05-17 04:23:57,019 - __main__ - INFO - Epoch 10, Batch 200, Loss: -0.1076
+2025-05-17 04:26:15,187 - __main__ - INFO - Epoch 10, Batch 300, Loss: -0.1430
+2025-05-17 04:28:33,380 - __main__ - INFO - Epoch 10, Batch 400, Loss: -0.1657
+2025-05-17 04:30:51,503 - __main__ - INFO - Epoch 10, Batch 500, Loss: -0.1662
+2025-05-17 04:33:09,613 - __main__ - INFO - Epoch 10, Batch 600, Loss: -0.2452
+2025-05-17 04:35:27,553 - __main__ - INFO - Epoch 10, Batch 700, Loss: 0.0027
+2025-05-17 04:37:45,427 - __main__ - INFO - Epoch 10, Batch 800, Loss: -0.6375
+2025-05-17 04:40:03,518 - __main__ - INFO - Epoch 10, Batch 900, Loss: -0.4275
+2025-05-17 04:42:21,459 - __main__ - INFO - Epoch 10, Batch 1000, Loss: -0.4346
+2025-05-17 04:44:39,360 - __main__ - INFO - Epoch 10, Batch 1100, Loss: -0.5222
+2025-05-17 04:46:57,326 - __main__ - INFO - Epoch 10, Batch 1200, Loss: -0.1254
+2025-05-17 04:49:14,672 - __main__ - INFO - Epoch 10, Batch 1300, Loss: nan
+/home/wen/.conda/envs/env-sam/lib/python3.9/site-packages/torch/utils/tensorboard/summary.py:576: RuntimeWarning: invalid value encountered in cast
+  tensor = (tensor * scale_factor).clip(0, 255).astype(np.uint8)
+2025-05-17 04:50:00,067 - __main__ - INFO - Epoch 10, Average Loss: nan
+2025-05-17 04:50:01,425 - __main__ - INFO - Epoch 11, Batch 0, Loss: nan
+2025-05-17 04:52:18,905 - __main__ - INFO - Epoch 11, Batch 100, Loss: nan
+2025-05-17 04:54:35,475 - __main__ - INFO - Epoch 11, Batch 200, Loss: nan
+2025-05-17 04:56:52,145 - __main__ - INFO - Epoch 11, Batch 300, Loss: nan
+2025-05-17 04:59:08,830 - __main__ - INFO - Epoch 11, Batch 400, Loss: nan
+2025-05-17 05:01:25,351 - __main__ - INFO - Epoch 11, Batch 500, Loss: nan
+2025-05-17 05:03:41,908 - __main__ - INFO - Epoch 11, Batch 600, Loss: nan
+2025-05-17 05:05:58,457 - __main__ - INFO - Epoch 11, Batch 700, Loss: nan
+2025-05-17 05:08:15,140 - __main__ - INFO - Epoch 11, Batch 800, Loss: nan
+2025-05-17 05:10:31,795 - __main__ - INFO - Epoch 11, Batch 900, Loss: nan
+2025-05-17 05:12:48,242 - __main__ - INFO - Epoch 11, Batch 1000, Loss: nan
+2025-05-17 05:15:04,704 - __main__ - INFO - Epoch 11, Batch 1100, Loss: nan
+2025-05-17 05:17:20,678 - __main__ - INFO - Epoch 11, Batch 1200, Loss: nan
+2025-05-17 05:19:36,869 - __main__ - INFO - Epoch 11, Batch 1300, Loss: nan
+2025-05-17 05:20:21,912 - __main__ - INFO - Epoch 11, Average Loss: nan
+2025-05-17 05:20:23,268 - __main__ - INFO - Epoch 12, Batch 0, Loss: nan
+2025-05-17 05:22:39,376 - __main__ - INFO - Epoch 12, Batch 100, Loss: nan
+2025-05-17 05:24:55,555 - __main__ - INFO - Epoch 12, Batch 200, Loss: nan
+2025-05-17 05:27:11,738 - __main__ - INFO - Epoch 12, Batch 300, Loss: nan
+2025-05-17 05:29:27,889 - __main__ - INFO - Epoch 12, Batch 400, Loss: nan
+2025-05-17 05:31:44,024 - __main__ - INFO - Epoch 12, Batch 500, Loss: nan
+2025-05-17 05:34:00,298 - __main__ - INFO - Epoch 12, Batch 600, Loss: nan
+2025-05-17 05:36:16,664 - __main__ - INFO - Epoch 12, Batch 700, Loss: nan
+2025-05-17 05:38:32,870 - __main__ - INFO - Epoch 12, Batch 800, Loss: nan
+2025-05-17 05:40:49,092 - __main__ - INFO - Epoch 12, Batch 900, Loss: nan
+2025-05-17 05:43:05,220 - __main__ - INFO - Epoch 12, Batch 1000, Loss: nan
+2025-05-17 05:45:21,364 - __main__ - INFO - Epoch 12, Batch 1100, Loss: nan
+2025-05-17 05:47:37,329 - __main__ - INFO - Epoch 12, Batch 1200, Loss: nan
+2025-05-17 05:49:53,345 - __main__ - INFO - Epoch 12, Batch 1300, Loss: nan
+2025-05-17 05:50:37,811 - __main__ - INFO - Epoch 12, Average Loss: nan
+2025-05-17 05:50:39,173 - __main__ - INFO - Epoch 13, Batch 0, Loss: nan
+2025-05-17 05:52:55,369 - __main__ - INFO - Epoch 13, Batch 100, Loss: nan
+2025-05-17 05:55:11,879 - __main__ - INFO - Epoch 13, Batch 200, Loss: nan
+2025-05-17 05:57:28,220 - __main__ - INFO - Epoch 13, Batch 300, Loss: nan
+2025-05-17 05:59:44,658 - __main__ - INFO - Epoch 13, Batch 400, Loss: nan
+2025-05-17 06:02:00,917 - __main__ - INFO - Epoch 13, Batch 500, Loss: nan
+2025-05-17 06:04:17,135 - __main__ - INFO - Epoch 13, Batch 600, Loss: nan
+2025-05-17 06:06:33,252 - __main__ - INFO - Epoch 13, Batch 700, Loss: nan
+2025-05-17 06:08:49,416 - __main__ - INFO - Epoch 13, Batch 800, Loss: nan
+2025-05-17 06:11:05,603 - __main__ - INFO - Epoch 13, Batch 900, Loss: nan
+2025-05-17 06:13:21,672 - __main__ - INFO - Epoch 13, Batch 1000, Loss: nan
+2025-05-17 06:15:37,722 - __main__ - INFO - Epoch 13, Batch 1100, Loss: nan
+2025-05-17 06:17:53,772 - __main__ - INFO - Epoch 13, Batch 1200, Loss: nan
+2025-05-17 06:20:10,025 - __main__ - INFO - Epoch 13, Batch 1300, Loss: nan
+2025-05-17 06:20:55,074 - __main__ - INFO - Epoch 13, Average Loss: nan
+2025-05-17 06:20:56,434 - __main__ - INFO - Epoch 14, Batch 0, Loss: nan
+2025-05-17 06:23:12,571 - __main__ - INFO - Epoch 14, Batch 100, Loss: nan
+2025-05-17 06:25:28,779 - __main__ - INFO - Epoch 14, Batch 200, Loss: nan
+2025-05-17 06:27:44,807 - __main__ - INFO - Epoch 14, Batch 300, Loss: nan
+2025-05-17 06:30:00,904 - __main__ - INFO - Epoch 14, Batch 400, Loss: nan
+2025-05-17 06:32:16,926 - __main__ - INFO - Epoch 14, Batch 500, Loss: nan
+2025-05-17 06:34:33,085 - __main__ - INFO - Epoch 14, Batch 600, Loss: nan
+2025-05-17 06:36:49,162 - __main__ - INFO - Epoch 14, Batch 700, Loss: nan
+2025-05-17 06:39:05,168 - __main__ - INFO - Epoch 14, Batch 800, Loss: nan
+2025-05-17 06:41:21,202 - __main__ - INFO - Epoch 14, Batch 900, Loss: nan
+2025-05-17 06:43:37,165 - __main__ - INFO - Epoch 14, Batch 1000, Loss: nan
+2025-05-17 06:45:53,108 - __main__ - INFO - Epoch 14, Batch 1100, Loss: nan
+2025-05-17 06:48:08,984 - __main__ - INFO - Epoch 14, Batch 1200, Loss: nan
+2025-05-17 06:50:25,029 - __main__ - INFO - Epoch 14, Batch 1300, Loss: nan
+2025-05-17 06:51:09,950 - __main__ - INFO - Epoch 14, Average Loss: nan
+2025-05-17 06:53:23,034 - __main__ - INFO - Best model saved at epoch 14
+2025-05-17 06:53:23,035 - __main__ - INFO - Dice Score: 0.999994158744812, Std: [5.9604645e-08]
+2025-05-17 06:53:24,398 - __main__ - INFO - Epoch 15, Batch 0, Loss: nan
+2025-05-17 06:55:40,649 - __main__ - INFO - Epoch 15, Batch 100, Loss: nan
+2025-05-17 06:57:56,794 - __main__ - INFO - Epoch 15, Batch 200, Loss: nan
+2025-05-17 07:00:12,965 - __main__ - INFO - Epoch 15, Batch 300, Loss: nan
+2025-05-17 07:02:29,219 - __main__ - INFO - Epoch 15, Batch 400, Loss: nan
+2025-05-17 07:04:45,411 - __main__ - INFO - Epoch 15, Batch 500, Loss: nan
+2025-05-17 07:07:01,756 - __main__ - INFO - Epoch 15, Batch 600, Loss: nan
+2025-05-17 07:09:18,057 - __main__ - INFO - Epoch 15, Batch 700, Loss: nan
+2025-05-17 07:11:34,355 - __main__ - INFO - Epoch 15, Batch 800, Loss: nan
+2025-05-17 07:13:50,678 - __main__ - INFO - Epoch 15, Batch 900, Loss: nan
+2025-05-17 07:16:06,891 - __main__ - INFO - Epoch 15, Batch 1000, Loss: nan
+2025-05-17 07:18:23,189 - __main__ - INFO - Epoch 15, Batch 1100, Loss: nan
+2025-05-17 07:20:39,303 - __main__ - INFO - Epoch 15, Batch 1200, Loss: nan
+2025-05-17 07:22:55,713 - __main__ - INFO - Epoch 15, Batch 1300, Loss: nan
+2025-05-17 07:23:40,215 - __main__ - INFO - Epoch 15, Average Loss: nan
+2025-05-17 07:23:41,589 - __main__ - INFO - Epoch 16, Batch 0, Loss: nan
+2025-05-17 07:25:57,960 - __main__ - INFO - Epoch 16, Batch 100, Loss: nan
+2025-05-17 07:28:14,382 - __main__ - INFO - Epoch 16, Batch 200, Loss: nan
+2025-05-17 07:30:30,722 - __main__ - INFO - Epoch 16, Batch 300, Loss: nan
+2025-05-17 07:32:47,165 - __main__ - INFO - Epoch 16, Batch 400, Loss: nan
+2025-05-17 07:35:03,500 - __main__ - INFO - Epoch 16, Batch 500, Loss: nan
+2025-05-17 07:37:19,746 - __main__ - INFO - Epoch 16, Batch 600, Loss: nan
+2025-05-17 07:39:36,147 - __main__ - INFO - Epoch 16, Batch 700, Loss: nan
+2025-05-17 07:41:52,480 - __main__ - INFO - Epoch 16, Batch 800, Loss: nan
+2025-05-17 07:44:08,560 - __main__ - INFO - Epoch 16, Batch 900, Loss: nan
+2025-05-17 07:46:24,586 - __main__ - INFO - Epoch 16, Batch 1000, Loss: nan
+2025-05-17 07:48:40,563 - __main__ - INFO - Epoch 16, Batch 1100, Loss: nan
+2025-05-17 07:50:56,611 - __main__ - INFO - Epoch 16, Batch 1200, Loss: nan
+2025-05-17 07:53:12,977 - __main__ - INFO - Epoch 16, Batch 1300, Loss: nan
+2025-05-17 07:53:57,508 - __main__ - INFO - Epoch 16, Average Loss: nan
+2025-05-17 07:53:58,871 - __main__ - INFO - Epoch 17, Batch 0, Loss: nan
+2025-05-17 07:56:14,934 - __main__ - INFO - Epoch 17, Batch 100, Loss: nan
+2025-05-17 07:58:31,176 - __main__ - INFO - Epoch 17, Batch 200, Loss: nan
+2025-05-17 08:00:47,417 - __main__ - INFO - Epoch 17, Batch 300, Loss: nan
+2025-05-17 08:03:03,717 - __main__ - INFO - Epoch 17, Batch 400, Loss: nan
+2025-05-17 08:05:19,919 - __main__ - INFO - Epoch 17, Batch 500, Loss: nan
+2025-05-17 08:07:36,060 - __main__ - INFO - Epoch 17, Batch 600, Loss: nan
+2025-05-17 08:09:52,206 - __main__ - INFO - Epoch 17, Batch 700, Loss: nan
+2025-05-17 08:12:08,322 - __main__ - INFO - Epoch 17, Batch 800, Loss: nan
+2025-05-17 08:14:24,402 - __main__ - INFO - Epoch 17, Batch 900, Loss: nan
+2025-05-17 08:16:40,491 - __main__ - INFO - Epoch 17, Batch 1000, Loss: nan
+2025-05-17 08:18:56,548 - __main__ - INFO - Epoch 17, Batch 1100, Loss: nan
+2025-05-17 08:21:12,756 - __main__ - INFO - Epoch 17, Batch 1200, Loss: nan
+2025-05-17 08:23:29,167 - __main__ - INFO - Epoch 17, Batch 1300, Loss: nan
+2025-05-17 08:24:13,640 - __main__ - INFO - Epoch 17, Average Loss: nan
+2025-05-17 08:24:14,995 - __main__ - INFO - Epoch 18, Batch 0, Loss: nan
+2025-05-17 08:26:31,293 - __main__ - INFO - Epoch 18, Batch 100, Loss: nan
+2025-05-17 08:28:47,534 - __main__ - INFO - Epoch 18, Batch 200, Loss: nan
+2025-05-17 08:31:03,819 - __main__ - INFO - Epoch 18, Batch 300, Loss: nan
+2025-05-17 08:33:20,143 - __main__ - INFO - Epoch 18, Batch 400, Loss: nan
+2025-05-17 08:35:36,439 - __main__ - INFO - Epoch 18, Batch 500, Loss: nan
+2025-05-17 08:37:52,600 - __main__ - INFO - Epoch 18, Batch 600, Loss: nan
+2025-05-17 08:40:08,694 - __main__ - INFO - Epoch 18, Batch 700, Loss: nan
+2025-05-17 08:42:24,840 - __main__ - INFO - Epoch 18, Batch 800, Loss: nan
+2025-05-17 08:44:41,055 - __main__ - INFO - Epoch 18, Batch 900, Loss: nan
+2025-05-17 08:46:57,242 - __main__ - INFO - Epoch 18, Batch 1000, Loss: nan
+2025-05-17 08:49:13,402 - __main__ - INFO - Epoch 18, Batch 1100, Loss: nan
+2025-05-17 08:51:29,548 - __main__ - INFO - Epoch 18, Batch 1200, Loss: nan
+2025-05-17 08:53:45,813 - __main__ - INFO - Epoch 18, Batch 1300, Loss: nan
+2025-05-17 08:54:30,504 - __main__ - INFO - Epoch 18, Average Loss: nan
+2025-05-17 08:54:31,869 - __main__ - INFO - Epoch 19, Batch 0, Loss: nan
+2025-05-17 08:56:48,114 - __main__ - INFO - Epoch 19, Batch 100, Loss: nan
+2025-05-17 08:59:04,507 - __main__ - INFO - Epoch 19, Batch 200, Loss: nan
+2025-05-17 09:01:20,620 - __main__ - INFO - Epoch 19, Batch 300, Loss: nan
+2025-05-17 09:03:36,793 - __main__ - INFO - Epoch 19, Batch 400, Loss: nan
+2025-05-17 09:05:52,807 - __main__ - INFO - Epoch 19, Batch 500, Loss: nan
+2025-05-17 09:08:08,763 - __main__ - INFO - Epoch 19, Batch 600, Loss: nan
+2025-05-17 09:10:24,815 - __main__ - INFO - Epoch 19, Batch 700, Loss: nan
+2025-05-17 09:12:41,108 - __main__ - INFO - Epoch 19, Batch 800, Loss: nan
+2025-05-17 09:14:57,409 - __main__ - INFO - Epoch 19, Batch 900, Loss: nan
+2025-05-17 09:17:13,789 - __main__ - INFO - Epoch 19, Batch 1000, Loss: nan
+2025-05-17 09:19:30,070 - __main__ - INFO - Epoch 19, Batch 1100, Loss: nan
+2025-05-17 09:21:46,353 - __main__ - INFO - Epoch 19, Batch 1200, Loss: nan
+2025-05-17 09:24:02,992 - __main__ - INFO - Epoch 19, Batch 1300, Loss: nan
+2025-05-17 09:24:48,017 - __main__ - INFO - Epoch 19, Average Loss: nan
+2025-05-17 09:32:32,886 - __main__ - INFO - Best model saved at epoch 19
+2025-05-17 09:32:32,886 - __main__ - INFO - Dice Score: 0.0, Std: [0.]
+2025-05-17 09:32:34,261 - __main__ - INFO - Epoch 20, Batch 0, Loss: nan
+2025-05-17 09:34:50,479 - __main__ - INFO - Epoch 20, Batch 100, Loss: nan
+2025-05-17 09:37:06,816 - __main__ - INFO - Epoch 20, Batch 200, Loss: nan
+2025-05-17 09:39:22,971 - __main__ - INFO - Epoch 20, Batch 300, Loss: nan
+2025-05-17 09:41:39,112 - __main__ - INFO - Epoch 20, Batch 400, Loss: nan
+2025-05-17 09:43:55,155 - __main__ - INFO - Epoch 20, Batch 500, Loss: nan
+2025-05-17 09:46:11,219 - __main__ - INFO - Epoch 20, Batch 600, Loss: nan
+2025-05-17 09:48:27,348 - __main__ - INFO - Epoch 20, Batch 700, Loss: nan
+2025-05-17 09:50:43,361 - __main__ - INFO - Epoch 20, Batch 800, Loss: nan
+2025-05-17 09:52:59,497 - __main__ - INFO - Epoch 20, Batch 900, Loss: nan
+2025-05-17 09:55:15,752 - __main__ - INFO - Epoch 20, Batch 1000, Loss: nan
+2025-05-17 09:57:31,787 - __main__ - INFO - Epoch 20, Batch 1100, Loss: nan
+2025-05-17 09:59:47,790 - __main__ - INFO - Epoch 20, Batch 1200, Loss: nan
+2025-05-17 10:02:04,215 - __main__ - INFO - Epoch 20, Batch 1300, Loss: nan
+2025-05-17 10:02:48,772 - __main__ - INFO - Epoch 20, Average Loss: nan
+2025-05-17 10:02:50,136 - __main__ - INFO - Epoch 21, Batch 0, Loss: nan
+2025-05-17 10:05:06,361 - __main__ - INFO - Epoch 21, Batch 100, Loss: nan
+2025-05-17 10:07:22,530 - __main__ - INFO - Epoch 21, Batch 200, Loss: nan
+2025-05-17 10:09:38,906 - __main__ - INFO - Epoch 21, Batch 300, Loss: nan
+2025-05-17 10:11:55,258 - __main__ - INFO - Epoch 21, Batch 400, Loss: nan
+2025-05-17 10:14:11,462 - __main__ - INFO - Epoch 21, Batch 500, Loss: nan
+2025-05-17 10:16:27,542 - __main__ - INFO - Epoch 21, Batch 600, Loss: nan
+2025-05-17 10:18:43,720 - __main__ - INFO - Epoch 21, Batch 700, Loss: nan
+2025-05-17 10:20:59,936 - __main__ - INFO - Epoch 21, Batch 800, Loss: nan
+2025-05-17 10:23:16,117 - __main__ - INFO - Epoch 21, Batch 900, Loss: nan
+2025-05-17 10:25:32,244 - __main__ - INFO - Epoch 21, Batch 1000, Loss: nan
+2025-05-17 10:27:48,386 - __main__ - INFO - Epoch 21, Batch 1100, Loss: nan
+2025-05-17 10:30:04,635 - __main__ - INFO - Epoch 21, Batch 1200, Loss: nan
+2025-05-17 10:32:20,910 - __main__ - INFO - Epoch 21, Batch 1300, Loss: nan
+2025-05-17 10:33:05,928 - __main__ - INFO - Epoch 21, Average Loss: nan
+2025-05-17 10:33:07,300 - __main__ - INFO - Epoch 22, Batch 0, Loss: nan
+2025-05-17 10:35:23,762 - __main__ - INFO - Epoch 22, Batch 100, Loss: nan
+2025-05-17 10:37:40,194 - __main__ - INFO - Epoch 22, Batch 200, Loss: nan
+2025-05-17 10:39:56,708 - __main__ - INFO - Epoch 22, Batch 300, Loss: nan
+2025-05-17 10:42:13,132 - __main__ - INFO - Epoch 22, Batch 400, Loss: nan
+2025-05-17 10:44:29,399 - __main__ - INFO - Epoch 22, Batch 500, Loss: nan
+2025-05-17 10:46:45,500 - __main__ - INFO - Epoch 22, Batch 600, Loss: nan
+2025-05-17 10:49:01,638 - __main__ - INFO - Epoch 22, Batch 700, Loss: nan
+2025-05-17 10:51:18,423 - __main__ - INFO - Epoch 22, Batch 800, Loss: nan
+2025-05-17 10:53:34,913 - __main__ - INFO - Epoch 22, Batch 900, Loss: nan
+2025-05-17 10:55:51,336 - __main__ - INFO - Epoch 22, Batch 1000, Loss: nan
+2025-05-17 10:58:07,740 - __main__ - INFO - Epoch 22, Batch 1100, Loss: nan
+2025-05-17 11:00:23,907 - __main__ - INFO - Epoch 22, Batch 1200, Loss: nan
+2025-05-17 11:02:40,278 - __main__ - INFO - Epoch 22, Batch 1300, Loss: nan
+2025-05-17 11:03:25,158 - __main__ - INFO - Epoch 22, Average Loss: nan
+2025-05-17 11:03:26,522 - __main__ - INFO - Epoch 23, Batch 0, Loss: nan
+2025-05-17 11:05:42,476 - __main__ - INFO - Epoch 23, Batch 100, Loss: nan
+2025-05-17 11:07:58,535 - __main__ - INFO - Epoch 23, Batch 200, Loss: nan
+2025-05-17 11:10:14,586 - __main__ - INFO - Epoch 23, Batch 300, Loss: nan
+2025-05-17 11:12:30,649 - __main__ - INFO - Epoch 23, Batch 400, Loss: nan
+2025-05-17 11:14:46,672 - __main__ - INFO - Epoch 23, Batch 500, Loss: nan
+2025-05-17 11:17:02,734 - __main__ - INFO - Epoch 23, Batch 600, Loss: nan
+2025-05-17 11:19:18,779 - __main__ - INFO - Epoch 23, Batch 700, Loss: nan
+2025-05-17 11:21:35,074 - __main__ - INFO - Epoch 23, Batch 800, Loss: nan
+2025-05-17 11:23:51,263 - __main__ - INFO - Epoch 23, Batch 900, Loss: nan
+2025-05-17 11:26:07,513 - __main__ - INFO - Epoch 23, Batch 1000, Loss: nan
+2025-05-17 11:28:23,738 - __main__ - INFO - Epoch 23, Batch 1100, Loss: nan
+2025-05-17 11:30:39,883 - __main__ - INFO - Epoch 23, Batch 1200, Loss: nan
+2025-05-17 11:32:56,379 - __main__ - INFO - Epoch 23, Batch 1300, Loss: nan
+2025-05-17 11:33:41,247 - __main__ - INFO - Epoch 23, Average Loss: nan
+2025-05-17 11:33:42,611 - __main__ - INFO - Epoch 24, Batch 0, Loss: nan
+2025-05-17 11:35:58,786 - __main__ - INFO - Epoch 24, Batch 100, Loss: nan
+2025-05-17 11:38:15,097 - __main__ - INFO - Epoch 24, Batch 200, Loss: nan
+2025-05-17 11:40:31,361 - __main__ - INFO - Epoch 24, Batch 300, Loss: nan
+2025-05-17 11:42:47,628 - __main__ - INFO - Epoch 24, Batch 400, Loss: nan
+2025-05-17 11:45:03,860 - __main__ - INFO - Epoch 24, Batch 500, Loss: nan
+2025-05-17 11:47:19,873 - __main__ - INFO - Epoch 24, Batch 600, Loss: nan
+2025-05-17 11:49:35,976 - __main__ - INFO - Epoch 24, Batch 700, Loss: nan
+2025-05-17 11:51:52,149 - __main__ - INFO - Epoch 24, Batch 800, Loss: nan
+2025-05-17 11:54:08,299 - __main__ - INFO - Epoch 24, Batch 900, Loss: nan
+2025-05-17 11:56:24,345 - __main__ - INFO - Epoch 24, Batch 1000, Loss: nan
+2025-05-17 11:58:40,446 - __main__ - INFO - Epoch 24, Batch 1100, Loss: nan
+2025-05-17 12:00:56,942 - __main__ - INFO - Epoch 24, Batch 1200, Loss: nan
+2025-05-17 12:03:13,160 - __main__ - INFO - Epoch 24, Batch 1300, Loss: nan
+2025-05-17 12:03:57,758 - __main__ - INFO - Epoch 24, Average Loss: nan
+2025-05-17 12:06:11,111 - __main__ - INFO - Best model saved at epoch 24
+2025-05-17 12:06:11,111 - __main__ - INFO - Dice Score: 0.0, Std: [0.]
+2025-05-17 12:06:12,488 - __main__ - INFO - Epoch 25, Batch 0, Loss: nan
+2025-05-17 12:08:28,702 - __main__ - INFO - Epoch 25, Batch 100, Loss: nan
+2025-05-17 12:10:45,120 - __main__ - INFO - Epoch 25, Batch 200, Loss: nan
+2025-05-17 12:13:01,459 - __main__ - INFO - Epoch 25, Batch 300, Loss: nan
+2025-05-17 12:15:17,833 - __main__ - INFO - Epoch 25, Batch 400, Loss: nan
+2025-05-17 12:17:33,960 - __main__ - INFO - Epoch 25, Batch 500, Loss: nan
+2025-05-17 12:19:50,177 - __main__ - INFO - Epoch 25, Batch 600, Loss: nan
+2025-05-17 12:22:06,335 - __main__ - INFO - Epoch 25, Batch 700, Loss: nan
+2025-05-17 12:24:22,591 - __main__ - INFO - Epoch 25, Batch 800, Loss: nan
+2025-05-17 12:26:38,687 - __main__ - INFO - Epoch 25, Batch 900, Loss: nan
+2025-05-17 12:28:54,845 - __main__ - INFO - Epoch 25, Batch 1000, Loss: nan
+2025-05-17 12:31:10,968 - __main__ - INFO - Epoch 25, Batch 1100, Loss: nan
+2025-05-17 12:33:27,045 - __main__ - INFO - Epoch 25, Batch 1200, Loss: nan
+2025-05-17 12:35:43,297 - __main__ - INFO - Epoch 25, Batch 1300, Loss: nan
+2025-05-17 12:36:27,898 - __main__ - INFO - Epoch 25, Average Loss: nan
+2025-05-17 12:36:29,258 - __main__ - INFO - Epoch 26, Batch 0, Loss: nan
+2025-05-17 12:38:45,587 - __main__ - INFO - Epoch 26, Batch 100, Loss: nan
+2025-05-17 12:41:01,967 - __main__ - INFO - Epoch 26, Batch 200, Loss: nan
+2025-05-17 12:43:18,423 - __main__ - INFO - Epoch 26, Batch 300, Loss: nan
+2025-05-17 12:45:34,927 - __main__ - INFO - Epoch 26, Batch 400, Loss: nan
+2025-05-17 12:47:51,312 - __main__ - INFO - Epoch 26, Batch 500, Loss: nan
+2025-05-17 12:50:07,813 - __main__ - INFO - Epoch 26, Batch 600, Loss: nan
+2025-05-17 12:52:24,228 - __main__ - INFO - Epoch 26, Batch 700, Loss: nan
+2025-05-17 12:54:40,675 - __main__ - INFO - Epoch 26, Batch 800, Loss: nan
+2025-05-17 12:56:57,161 - __main__ - INFO - Epoch 26, Batch 900, Loss: nan
+2025-05-17 12:59:13,590 - __main__ - INFO - Epoch 26, Batch 1000, Loss: nan
+2025-05-17 13:01:30,214 - __main__ - INFO - Epoch 26, Batch 1100, Loss: nan
+2025-05-17 13:03:46,459 - __main__ - INFO - Epoch 26, Batch 1200, Loss: nan
+2025-05-17 13:06:02,903 - __main__ - INFO - Epoch 26, Batch 1300, Loss: nan
+2025-05-17 13:06:47,177 - __main__ - INFO - Epoch 26, Average Loss: nan
+2025-05-17 13:06:48,538 - __main__ - INFO - Epoch 27, Batch 0, Loss: nan
+2025-05-17 13:09:05,046 - __main__ - INFO - Epoch 27, Batch 100, Loss: nan
+2025-05-17 13:11:21,595 - __main__ - INFO - Epoch 27, Batch 200, Loss: nan
+2025-05-17 13:13:38,267 - __main__ - INFO - Epoch 27, Batch 300, Loss: nan
+2025-05-17 13:15:55,048 - __main__ - INFO - Epoch 27, Batch 400, Loss: nan
+2025-05-17 13:18:11,688 - __main__ - INFO - Epoch 27, Batch 500, Loss: nan
+2025-05-17 13:20:28,324 - __main__ - INFO - Epoch 27, Batch 600, Loss: nan
+2025-05-17 13:22:44,834 - __main__ - INFO - Epoch 27, Batch 700, Loss: nan
+2025-05-17 13:25:01,337 - __main__ - INFO - Epoch 27, Batch 800, Loss: nan
+2025-05-17 13:27:17,856 - __main__ - INFO - Epoch 27, Batch 900, Loss: nan
+2025-05-17 13:29:34,379 - __main__ - INFO - Epoch 27, Batch 1000, Loss: nan
+2025-05-17 13:31:50,950 - __main__ - INFO - Epoch 27, Batch 1100, Loss: nan
+2025-05-17 13:34:07,597 - __main__ - INFO - Epoch 27, Batch 1200, Loss: nan
+2025-05-17 13:36:24,392 - __main__ - INFO - Epoch 27, Batch 1300, Loss: nan
+2025-05-17 13:37:09,302 - __main__ - INFO - Epoch 27, Average Loss: nan
+2025-05-17 13:37:10,665 - __main__ - INFO - Epoch 28, Batch 0, Loss: nan
+2025-05-17 13:39:27,014 - __main__ - INFO - Epoch 28, Batch 100, Loss: nan
+2025-05-17 13:41:43,647 - __main__ - INFO - Epoch 28, Batch 200, Loss: nan
+2025-05-17 13:44:00,375 - __main__ - INFO - Epoch 28, Batch 300, Loss: nan
+2025-05-17 13:46:17,096 - __main__ - INFO - Epoch 28, Batch 400, Loss: nan
+2025-05-17 13:48:33,726 - __main__ - INFO - Epoch 28, Batch 500, Loss: nan
+2025-05-17 13:50:50,320 - __main__ - INFO - Epoch 28, Batch 600, Loss: nan
+2025-05-17 13:53:06,753 - __main__ - INFO - Epoch 28, Batch 700, Loss: nan
+2025-05-17 13:55:23,207 - __main__ - INFO - Epoch 28, Batch 800, Loss: nan
+2025-05-17 13:57:39,728 - __main__ - INFO - Epoch 28, Batch 900, Loss: nan
+2025-05-17 13:59:56,194 - __main__ - INFO - Epoch 28, Batch 1000, Loss: nan
+2025-05-17 14:02:12,589 - __main__ - INFO - Epoch 28, Batch 1100, Loss: nan
+2025-05-17 14:04:28,987 - __main__ - INFO - Epoch 28, Batch 1200, Loss: nan
+2025-05-17 14:06:45,565 - __main__ - INFO - Epoch 28, Batch 1300, Loss: nan
+2025-05-17 14:07:30,668 - __main__ - INFO - Epoch 28, Average Loss: nan
+2025-05-17 14:07:32,037 - __main__ - INFO - Epoch 29, Batch 0, Loss: nan
+2025-05-17 14:09:48,715 - __main__ - INFO - Epoch 29, Batch 100, Loss: nan
+2025-05-17 14:12:05,465 - __main__ - INFO - Epoch 29, Batch 200, Loss: nan
+2025-05-17 14:14:22,066 - __main__ - INFO - Epoch 29, Batch 300, Loss: nan
+2025-05-17 14:16:38,665 - __main__ - INFO - Epoch 29, Batch 400, Loss: nan
+2025-05-17 14:18:55,362 - __main__ - INFO - Epoch 29, Batch 500, Loss: nan
+2025-05-17 14:21:12,006 - __main__ - INFO - Epoch 29, Batch 600, Loss: nan
+2025-05-17 14:23:28,718 - __main__ - INFO - Epoch 29, Batch 700, Loss: nan
+2025-05-17 14:25:45,357 - __main__ - INFO - Epoch 29, Batch 800, Loss: nan
+2025-05-17 14:28:01,883 - __main__ - INFO - Epoch 29, Batch 900, Loss: nan
+2025-05-17 14:30:18,400 - __main__ - INFO - Epoch 29, Batch 1000, Loss: nan
+2025-05-17 14:32:34,801 - __main__ - INFO - Epoch 29, Batch 1100, Loss: nan
+2025-05-17 14:34:51,417 - __main__ - INFO - Epoch 29, Batch 1200, Loss: nan
+2025-05-17 14:37:07,725 - __main__ - INFO - Epoch 29, Batch 1300, Loss: nan
+2025-05-17 14:37:52,308 - __main__ - INFO - Epoch 29, Average Loss: nan
+2025-05-17 14:45:31,969 - __main__ - INFO - Best model saved at epoch 29
+2025-05-17 14:45:32,022 - __main__ - INFO - Dice Score: 0.0, Std: [0.]
+2025-05-17 14:45:33,405 - __main__ - INFO - Epoch 30, Batch 0, Loss: nan
+2025-05-17 14:47:50,015 - __main__ - INFO - Epoch 30, Batch 100, Loss: nan
+2025-05-17 14:50:06,647 - __main__ - INFO - Epoch 30, Batch 200, Loss: nan
+2025-05-17 14:52:23,364 - __main__ - INFO - Epoch 30, Batch 300, Loss: nan
+2025-05-17 14:54:39,702 - __main__ - INFO - Epoch 30, Batch 400, Loss: nan
+2025-05-17 14:56:55,929 - __main__ - INFO - Epoch 30, Batch 500, Loss: nan
+2025-05-17 14:59:12,050 - __main__ - INFO - Epoch 30, Batch 600, Loss: nan
+2025-05-17 15:01:28,270 - __main__ - INFO - Epoch 30, Batch 700, Loss: nan
+2025-05-17 15:03:44,596 - __main__ - INFO - Epoch 30, Batch 800, Loss: nan
+2025-05-17 15:06:00,935 - __main__ - INFO - Epoch 30, Batch 900, Loss: nan
+2025-05-17 15:08:17,327 - __main__ - INFO - Epoch 30, Batch 1000, Loss: nan
+2025-05-17 15:10:33,586 - __main__ - INFO - Epoch 30, Batch 1100, Loss: nan
+2025-05-17 15:12:49,723 - __main__ - INFO - Epoch 30, Batch 1200, Loss: nan
+2025-05-17 15:15:06,350 - __main__ - INFO - Epoch 30, Batch 1300, Loss: nan
+2025-05-17 15:15:51,316 - __main__ - INFO - Epoch 30, Average Loss: nan
+2025-05-17 15:15:52,692 - __main__ - INFO - Epoch 31, Batch 0, Loss: nan
+2025-05-17 15:18:09,345 - __main__ - INFO - Epoch 31, Batch 100, Loss: nan
+2025-05-17 15:20:26,085 - __main__ - INFO - Epoch 31, Batch 200, Loss: nan
+2025-05-17 15:22:42,930 - __main__ - INFO - Epoch 31, Batch 300, Loss: nan
+2025-05-17 15:24:59,581 - __main__ - INFO - Epoch 31, Batch 400, Loss: nan
+2025-05-17 15:27:15,971 - __main__ - INFO - Epoch 31, Batch 500, Loss: nan
+2025-05-17 15:29:32,366 - __main__ - INFO - Epoch 31, Batch 600, Loss: nan
+2025-05-17 15:31:48,683 - __main__ - INFO - Epoch 31, Batch 700, Loss: nan
+2025-05-17 15:34:04,938 - __main__ - INFO - Epoch 31, Batch 800, Loss: nan
+2025-05-17 15:36:21,168 - __main__ - INFO - Epoch 31, Batch 900, Loss: nan
+2025-05-17 15:38:37,311 - __main__ - INFO - Epoch 31, Batch 1000, Loss: nan
+2025-05-17 15:40:53,372 - __main__ - INFO - Epoch 31, Batch 1100, Loss: nan
+2025-05-17 15:43:09,678 - __main__ - INFO - Epoch 31, Batch 1200, Loss: nan
+2025-05-17 15:45:26,144 - __main__ - INFO - Epoch 31, Batch 1300, Loss: nan
+2025-05-17 15:46:11,397 - __main__ - INFO - Epoch 31, Average Loss: nan
+2025-05-17 15:46:12,761 - __main__ - INFO - Epoch 32, Batch 0, Loss: nan
+2025-05-17 15:48:29,143 - __main__ - INFO - Epoch 32, Batch 100, Loss: nan
+2025-05-17 15:50:45,586 - __main__ - INFO - Epoch 32, Batch 200, Loss: nan
+2025-05-17 15:53:01,901 - __main__ - INFO - Epoch 32, Batch 300, Loss: nan
+2025-05-17 15:55:18,438 - __main__ - INFO - Epoch 32, Batch 400, Loss: nan
+2025-05-17 15:57:34,799 - __main__ - INFO - Epoch 32, Batch 500, Loss: nan
+2025-05-17 15:59:51,052 - __main__ - INFO - Epoch 32, Batch 600, Loss: nan
+2025-05-17 16:02:07,227 - __main__ - INFO - Epoch 32, Batch 700, Loss: nan
+2025-05-17 16:04:23,344 - __main__ - INFO - Epoch 32, Batch 800, Loss: nan
+2025-05-17 16:06:39,507 - __main__ - INFO - Epoch 32, Batch 900, Loss: nan
+2025-05-17 16:08:55,598 - __main__ - INFO - Epoch 32, Batch 1000, Loss: nan
+2025-05-17 16:11:11,591 - __main__ - INFO - Epoch 32, Batch 1100, Loss: nan
+2025-05-17 16:13:28,025 - __main__ - INFO - Epoch 32, Batch 1200, Loss: nan
+2025-05-17 16:15:44,492 - __main__ - INFO - Epoch 32, Batch 1300, Loss: nan
+2025-05-17 16:16:29,302 - __main__ - INFO - Epoch 32, Average Loss: nan
+2025-05-17 16:16:30,663 - __main__ - INFO - Epoch 33, Batch 0, Loss: nan
+2025-05-17 16:18:47,052 - __main__ - INFO - Epoch 33, Batch 100, Loss: nan
+2025-05-17 16:21:03,521 - __main__ - INFO - Epoch 33, Batch 200, Loss: nan
+2025-05-17 16:23:19,865 - __main__ - INFO - Epoch 33, Batch 300, Loss: nan
+2025-05-17 16:25:36,394 - __main__ - INFO - Epoch 33, Batch 400, Loss: nan
+2025-05-17 16:27:52,814 - __main__ - INFO - Epoch 33, Batch 500, Loss: nan
+2025-05-17 16:30:09,030 - __main__ - INFO - Epoch 33, Batch 600, Loss: nan
+2025-05-17 16:32:25,212 - __main__ - INFO - Epoch 33, Batch 700, Loss: nan
+2025-05-17 16:34:41,329 - __main__ - INFO - Epoch 33, Batch 800, Loss: nan
+2025-05-17 16:36:57,557 - __main__ - INFO - Epoch 33, Batch 900, Loss: nan
+2025-05-17 16:39:13,877 - __main__ - INFO - Epoch 33, Batch 1000, Loss: nan
+2025-05-17 16:41:30,136 - __main__ - INFO - Epoch 33, Batch 1100, Loss: nan
+2025-05-17 16:43:46,410 - __main__ - INFO - Epoch 33, Batch 1200, Loss: nan
+2025-05-17 16:46:02,802 - __main__ - INFO - Epoch 33, Batch 1300, Loss: nan
+2025-05-17 16:46:47,216 - __main__ - INFO - Epoch 33, Average Loss: nan
+2025-05-17 16:46:48,577 - __main__ - INFO - Epoch 34, Batch 0, Loss: nan
+2025-05-17 16:49:05,029 - __main__ - INFO - Epoch 34, Batch 100, Loss: nan
+2025-05-17 16:51:21,616 - __main__ - INFO - Epoch 34, Batch 200, Loss: nan
+2025-05-17 16:53:38,956 - __main__ - INFO - Epoch 34, Batch 300, Loss: nan
+2025-05-17 16:55:55,639 - __main__ - INFO - Epoch 34, Batch 400, Loss: nan
+2025-05-17 16:58:12,454 - __main__ - INFO - Epoch 34, Batch 500, Loss: nan
+2025-05-17 17:00:29,271 - __main__ - INFO - Epoch 34, Batch 600, Loss: nan
+2025-05-17 17:02:46,062 - __main__ - INFO - Epoch 34, Batch 700, Loss: nan
+2025-05-17 17:05:02,911 - __main__ - INFO - Epoch 34, Batch 800, Loss: nan
+2025-05-17 17:07:19,651 - __main__ - INFO - Epoch 34, Batch 900, Loss: nan
+2025-05-17 17:09:36,384 - __main__ - INFO - Epoch 34, Batch 1000, Loss: nan
+2025-05-17 17:11:53,133 - __main__ - INFO - Epoch 34, Batch 1100, Loss: nan
+2025-05-17 17:14:09,696 - __main__ - INFO - Epoch 34, Batch 1200, Loss: nan
+2025-05-17 17:16:26,040 - __main__ - INFO - Epoch 34, Batch 1300, Loss: nan
+2025-05-17 17:17:10,869 - __main__ - INFO - Epoch 34, Average Loss: nan
+2025-05-17 17:19:26,841 - __main__ - INFO - Best model saved at epoch 34
+2025-05-17 17:19:26,841 - __main__ - INFO - Dice Score: 0.0, Std: [0.]
+2025-05-17 17:19:28,210 - __main__ - INFO - Epoch 35, Batch 0, Loss: nan
+2025-05-17 17:21:44,841 - __main__ - INFO - Epoch 35, Batch 100, Loss: nan
+2025-05-17 17:24:01,221 - __main__ - INFO - Epoch 35, Batch 200, Loss: nan
+2025-05-17 17:26:17,729 - __main__ - INFO - Epoch 35, Batch 300, Loss: nan
+2025-05-17 17:28:34,266 - __main__ - INFO - Epoch 35, Batch 400, Loss: nan
+2025-05-17 17:30:50,651 - __main__ - INFO - Epoch 35, Batch 500, Loss: nan
+2025-05-17 17:33:06,901 - __main__ - INFO - Epoch 35, Batch 600, Loss: nan
+2025-05-17 17:35:23,185 - __main__ - INFO - Epoch 35, Batch 700, Loss: nan
+2025-05-17 17:37:39,429 - __main__ - INFO - Epoch 35, Batch 800, Loss: nan
+2025-05-17 17:39:55,518 - __main__ - INFO - Epoch 35, Batch 900, Loss: nan
+2025-05-17 17:42:11,731 - __main__ - INFO - Epoch 35, Batch 1000, Loss: nan
+2025-05-17 17:44:27,837 - __main__ - INFO - Epoch 35, Batch 1100, Loss: nan
+2025-05-17 17:46:43,967 - __main__ - INFO - Epoch 35, Batch 1200, Loss: nan
+2025-05-17 17:49:00,098 - __main__ - INFO - Epoch 35, Batch 1300, Loss: nan
+2025-05-17 17:49:45,327 - __main__ - INFO - Epoch 35, Average Loss: nan
+2025-05-17 17:49:46,684 - __main__ - INFO - Epoch 36, Batch 0, Loss: nan
+2025-05-17 17:52:02,992 - __main__ - INFO - Epoch 36, Batch 100, Loss: nan
+2025-05-17 17:54:19,307 - __main__ - INFO - Epoch 36, Batch 200, Loss: nan
+2025-05-17 17:56:35,681 - __main__ - INFO - Epoch 36, Batch 300, Loss: nan
+2025-05-17 17:58:52,139 - __main__ - INFO - Epoch 36, Batch 400, Loss: nan
+2025-05-17 18:01:08,473 - __main__ - INFO - Epoch 36, Batch 500, Loss: nan
+2025-05-17 18:03:24,827 - __main__ - INFO - Epoch 36, Batch 600, Loss: nan
+2025-05-17 18:05:40,953 - __main__ - INFO - Epoch 36, Batch 700, Loss: nan
+2025-05-17 18:07:57,175 - __main__ - INFO - Epoch 36, Batch 800, Loss: nan
+2025-05-17 18:10:13,419 - __main__ - INFO - Epoch 36, Batch 900, Loss: nan
+2025-05-17 18:12:29,433 - __main__ - INFO - Epoch 36, Batch 1000, Loss: nan
+2025-05-17 18:14:45,394 - __main__ - INFO - Epoch 36, Batch 1100, Loss: nan
+2025-05-17 18:17:01,526 - __main__ - INFO - Epoch 36, Batch 1200, Loss: nan
+2025-05-17 18:19:17,623 - __main__ - INFO - Epoch 36, Batch 1300, Loss: nan
+2025-05-17 18:20:02,367 - __main__ - INFO - Epoch 36, Average Loss: nan
+2025-05-17 18:20:03,729 - __main__ - INFO - Epoch 37, Batch 0, Loss: nan
+2025-05-17 18:22:20,001 - __main__ - INFO - Epoch 37, Batch 100, Loss: nan
+2025-05-17 18:24:36,354 - __main__ - INFO - Epoch 37, Batch 200, Loss: nan
+2025-05-17 18:26:52,714 - __main__ - INFO - Epoch 37, Batch 300, Loss: nan
+2025-05-17 18:29:09,302 - __main__ - INFO - Epoch 37, Batch 400, Loss: nan
+2025-05-17 18:31:25,846 - __main__ - INFO - Epoch 37, Batch 500, Loss: nan
+2025-05-17 18:33:42,325 - __main__ - INFO - Epoch 37, Batch 600, Loss: nan
+2025-05-17 18:35:58,831 - __main__ - INFO - Epoch 37, Batch 700, Loss: nan
+2025-05-17 18:38:15,098 - __main__ - INFO - Epoch 37, Batch 800, Loss: nan
+2025-05-17 18:40:31,425 - __main__ - INFO - Epoch 37, Batch 900, Loss: nan
+2025-05-17 18:42:47,702 - __main__ - INFO - Epoch 37, Batch 1000, Loss: nan
+2025-05-17 18:45:04,053 - __main__ - INFO - Epoch 37, Batch 1100, Loss: nan
+2025-05-17 18:47:20,416 - __main__ - INFO - Epoch 37, Batch 1200, Loss: nan
+2025-05-17 18:49:36,501 - __main__ - INFO - Epoch 37, Batch 1300, Loss: nan
+2025-05-17 18:50:21,177 - __main__ - INFO - Epoch 37, Average Loss: nan
+2025-05-17 18:50:22,544 - __main__ - INFO - Epoch 38, Batch 0, Loss: nan
+2025-05-17 18:52:38,903 - __main__ - INFO - Epoch 38, Batch 100, Loss: nan
+2025-05-17 18:54:55,273 - __main__ - INFO - Epoch 38, Batch 200, Loss: nan
+2025-05-17 18:57:11,768 - __main__ - INFO - Epoch 38, Batch 300, Loss: nan
+2025-05-17 18:59:28,276 - __main__ - INFO - Epoch 38, Batch 400, Loss: nan
+2025-05-17 19:01:44,772 - __main__ - INFO - Epoch 38, Batch 500, Loss: nan
+2025-05-17 19:04:01,399 - __main__ - INFO - Epoch 38, Batch 600, Loss: nan
+2025-05-17 19:06:17,930 - __main__ - INFO - Epoch 38, Batch 700, Loss: nan
+2025-05-17 19:08:34,462 - __main__ - INFO - Epoch 38, Batch 800, Loss: nan
+2025-05-17 19:10:50,766 - __main__ - INFO - Epoch 38, Batch 900, Loss: nan
+2025-05-17 19:13:07,218 - __main__ - INFO - Epoch 38, Batch 1000, Loss: nan
+2025-05-17 19:15:23,688 - __main__ - INFO - Epoch 38, Batch 1100, Loss: nan
+2025-05-17 19:17:39,960 - __main__ - INFO - Epoch 38, Batch 1200, Loss: nan
+2025-05-17 19:19:56,242 - __main__ - INFO - Epoch 38, Batch 1300, Loss: nan
+2025-05-17 19:20:41,414 - __main__ - INFO - Epoch 38, Average Loss: nan
+2025-05-17 19:20:42,781 - __main__ - INFO - Epoch 39, Batch 0, Loss: nan
+2025-05-17 19:22:59,307 - __main__ - INFO - Epoch 39, Batch 100, Loss: nan
+2025-05-17 19:25:15,671 - __main__ - INFO - Epoch 39, Batch 200, Loss: nan
+2025-05-17 19:27:32,224 - __main__ - INFO - Epoch 39, Batch 300, Loss: nan
+2025-05-17 19:29:48,793 - __main__ - INFO - Epoch 39, Batch 400, Loss: nan
+2025-05-17 19:32:05,235 - __main__ - INFO - Epoch 39, Batch 500, Loss: nan
+2025-05-17 19:34:21,653 - __main__ - INFO - Epoch 39, Batch 600, Loss: nan
+2025-05-17 19:36:38,235 - __main__ - INFO - Epoch 39, Batch 700, Loss: nan
+2025-05-17 19:38:54,651 - __main__ - INFO - Epoch 39, Batch 800, Loss: nan
+2025-05-17 19:41:11,015 - __main__ - INFO - Epoch 39, Batch 900, Loss: nan
+2025-05-17 19:43:27,354 - __main__ - INFO - Epoch 39, Batch 1000, Loss: nan
+2025-05-17 19:45:43,597 - __main__ - INFO - Epoch 39, Batch 1100, Loss: nan
+2025-05-17 19:47:59,793 - __main__ - INFO - Epoch 39, Batch 1200, Loss: nan
+2025-05-17 19:50:16,005 - __main__ - INFO - Epoch 39, Batch 1300, Loss: nan
+2025-05-17 19:51:01,268 - __main__ - INFO - Epoch 39, Average Loss: nan
+2025-05-17 19:57:57,409 - __main__ - INFO - Best model saved at epoch 39
+2025-05-17 19:57:57,409 - __main__ - INFO - Dice Score: 0.0, Std: [0.]
+data length: 1333
+using the first image as the atlas
+data length: 287
+2.0 0.0
+atlas saved at epoch 9
+data length: 287
+data length: 287
+0.0 0.0
+atlas saved at epoch 19
+data length: 287
+data length: 287
+0.0 0.0
+atlas saved at epoch 29
+data length: 287
+data length: 287
+0.0 0.0
+atlas saved at epoch 39
+data length: 287
