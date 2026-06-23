@@ -77,6 +77,7 @@ def save_config(args, save_dir: str):
 def setup_logger(save_dir: str):
     logger = logging.getLogger(__name__)
     logger.setLevel(logging.INFO)
+    logger.handlers.clear()
 
     formatter = logging.Formatter('%(asctime)s - %(name)s - %(levelname)s - %(message)s')
     file_handler = logging.FileHandler(join(save_dir, 'train.log'))
@@ -89,6 +90,38 @@ def setup_logger(save_dir: str):
     logger.addHandler(console_handler)
 
     return logger
+
+
+def atlas_to_tensors(atlas, mask_atlas, device):
+    """Convert atlas arrays to model-ready tensors."""
+    atlas_t2 = torch.from_numpy(atlas.astype(np.float32)).unsqueeze(0).unsqueeze(0).to(device)
+    mask_atlas = mask_atlas.astype(np.int64)
+    atlas_cg = torch.from_numpy((mask_atlas == 1).astype(np.float32)).unsqueeze(0).unsqueeze(0).to(device)
+    atlas_pz = torch.from_numpy((mask_atlas == 2).astype(np.float32)).unsqueeze(0).unsqueeze(0).to(device)
+    return atlas_t2, atlas_cg, atlas_pz
+
+
+def priors_to_mask(pi_cg, pi_pz):
+    """Convert CG/PZ prior tensors with shape (1,1,D,H,W) to a hard atlas mask."""
+    probs = torch.cat([torch.zeros_like(pi_cg), pi_cg, pi_pz], dim=1)
+    return probs.argmax(dim=1)[0].cpu().numpy().astype(np.float32)
+
+
+def atlas_batch(atlas_t2, atlas_cg, atlas_pz, batch_size):
+    atlas_t2_b = atlas_t2.expand(batch_size, -1, -1, -1, -1)
+    atlas_probs = {
+        'CG': atlas_cg.expand(batch_size, -1, -1, -1, -1),
+        'PZ': atlas_pz.expand(batch_size, -1, -1, -1, -1),
+    }
+    return atlas_t2_b, atlas_probs
+
+
+def supervised_prior_loss(warped_probs, labels):
+    """Dice loss between warped atlas priors and subject zone labels."""
+    target = F.one_hot(labels.long().squeeze(1), num_classes=3).permute(0, 4, 1, 2, 3).float()
+    pred = torch.cat([warped_probs['CG'], warped_probs['PZ']], dim=1).clamp(0, 1)
+    target = torch.cat([target[:, 1:2], target[:, 2:3]], dim=1)
+    return 1.0 - dice_soft(pred, target).mean()
 
 def inverse_ddf(ddf, num_iters=20):
     """
@@ -190,106 +223,89 @@ def train(args):
     save_dir = join(args.save_dir, f'{args.model_type}_{args.path}')
     os.makedirs(save_dir, exist_ok=True)
 
-    writer = SummaryWriter(log_dir=join(save_dir, args.log_dir))  # TensorBoard logger
+    writer = SummaryWriter(log_dir=join(save_dir, args.log_dir))
     data_path = join(args.data_root, args.path)
     train_dataloader = get_dataloader(data_path, 'train', args.batch_size, args.crop_size)
-    # atlas = np.load('atlas/atlas.npy')
-    # mask_atlas = np.load('atlas/mode_mask.npy') 
-    
+
     save_config(args, save_dir)
     logger = setup_logger(save_dir)
 
-    # Model setup
-    model = setup_model(args, )
+    model = setup_model(args)
     optimizer = torch.optim.Adam(model.parameters(), lr=args.lr)
-    scaler = GradScaler(enabled=(device=='cuda'))
-    # Load pretrained weights if resuming training
+    use_amp = device.startswith('cuda')
+    scaler = GradScaler(enabled=use_amp)
+
     if args.continue_train:
         model_path = join(save_dir, f'epoch_{args.epoch_load}.pth')
         model.load_state_dict(torch.load(model_path, map_location=device))
 
-    atlas, mask_atlas = np.load('atlas/atlas4.npz')['atlas'], np.load('atlas/atlas4.npz')['mask_atlas']
-    atlas_pz = mask_atlas==2
-    atlas_cg = mask_atlas==1
-    atlas = atlas.astype(np.float32)
-    atlas_PZ = torch.from_numpy(atlas_pz.astype(np.float32)).to(device)
-    atlas_CG = torch.from_numpy(atlas_cg.astype(np.float32)).to(device)
-    # Training loop
+    atlas_npz = np.load('atlas/atlas4.npz')
+    atlas_np = atlas_npz['atlas'].astype(np.float32)
+    mask_atlas_np = atlas_npz['mask_atlas'].astype(np.float32)
+    atlas_t2, atlas_CG, atlas_PZ = atlas_to_tensors(atlas_np, mask_atlas_np, device)
+
+    best_dice = -1.0
+    last_dice = 0.0
     for epoch in range(args.epochs):
         model.train()
-        epoch_loss = 0
-        best_acc = 10
-        imgs, msks = [], []
-        move, mlabels = train_dataloader.dataset[0]['img0'], train_dataloader.dataset[0]['seg0']
-       
+        epoch_loss = 0.0
+
         for i, data in enumerate(train_dataloader):
-            B,_, D, H, W = data['img0'].shape
-            move, mlabels = data['img0'].to(device), data['seg0'].to(device)
-            atlas = np.expand_dims(atlas, axis=[0,1]).repeat(move.size(0), axis=0)
-            atlas = torch.from_numpy(atlas).to(device)
-            atlas_probs = {'CG': atlas_CG.repeat(move.size(0),1,1,1,1),
-                           'PZ': atlas_PZ.repeat(move.size(0),1,1,1,1)}
-            optimizer.zero_grad()
-            out = model(atlas.float(), move.float(), atlas_probs=atlas_probs)
-            priors = out['warped_probs'] 
-            loss = out['loss']
-            g_inv = inv_grid_total(out['A'], out['b'], out['v'], move.shape, steps=model.steps)
+            move = data['img0'].to(device).float()
+            mlabels = data['seg0'].to(device).long()
+            atlas_t2_b, atlas_probs = atlas_batch(atlas_t2, atlas_CG, atlas_PZ, move.size(0))
 
-            I_back = F.grid_sample(move, g_inv, mode='bilinear', padding_mode='border', align_corners=True)
-            Y = F.one_hot(mlabels.long().squeeze(1), num_classes=3).permute(0,4,1,2,3).float()  # [B,3,D,H,W]
-            Y_back = F.grid_sample(Y, g_inv, mode='nearest', padding_mode='zeros', align_corners=True)
+            optimizer.zero_grad(set_to_none=True)
+            with autocast(enabled=use_amp):
+                out = model(atlas_t2_b, move, atlas_probs=atlas_probs)
+                loss = out['loss'] + args.label_loss_weight * supervised_prior_loss(out['warped_probs'], mlabels)
 
-            s_i = model.lncc(atlas, I_back)   # scalar
-            u_i = (jac_det(out['grid_total']) > 0).float().mean()
-            w_i = (s_i.detach() * u_i.detach()).clamp_min(1e-3)
-
-            scaler.scale(loss).backward()   # <-- THIS is where you backprop
+            scaler.scale(loss).backward()
             scaler.step(optimizer)
             scaler.update()
 
             epoch_loss += loss.item()
-            # _, _ = validate(args, model, atlas, mask_atlas)
+            global_step = epoch * len(train_dataloader) + i
             if i % args.print_freq == 0:
-                writer.add_scalar('Loss/train', loss.item(), epoch * len(train_dataloader) + i)
+                writer.add_scalar('Loss/train', loss.item(), global_step)
                 logger.info(f'Epoch {epoch}, Batch {i}, Loss: {loss.item():.4f}')
-                zlice = 48
-                input_show = [move[..., zlice].cpu(), atlas[..., zlice].cpu()]
-                for c in range(2):
-                    writer.add_images(f'Input{c}', input_show[c].repeat(1,3,1,1), epoch * len(train_dataloader) + i,
-                                  dataformats='NCHW')
-                for c in range(3):
-                    writer.add_images('Output{c}', g_inv[:,c,...].cpu().detach().numpy()[:,None,:,:, zlice],
-                                  epoch * len(train_dataloader) + i, dataformats='NCHW')
-                
+                zlice = min(48, move.shape[-1] - 1)
+                input_show = [move[..., zlice].detach().cpu(), atlas_t2_b[..., zlice].detach().cpu()]
+                for c, img_show in enumerate(input_show):
+                    writer.add_images(f'Input{c}', img_show.repeat(1, 3, 1, 1), global_step, dataformats='NCHW')
+                for c, name in enumerate(('x', 'y', 'z')):
+                    grid_img = out['grid_total'][..., c].detach().cpu()[:, None, :, :, zlice]
+                    writer.add_images(f'Grid/{name}', grid_img, global_step, dataformats='NCHW')
+
         avg_epoch_loss = epoch_loss / len(train_dataloader)
         logger.info(f'Epoch {epoch}, Average Loss: {avg_epoch_loss:.4f}')
         writer.add_scalar('Loss/epoch', avg_epoch_loss, epoch)
 
-        #generate_new_atlas(imgs, msks)
-        if (epoch + 1) % (args.save_freq) == 0:
-            if (epoch+1)%(args.save_freq*5)==0:
-                atlas, mask_atlas = generate_new_atlas(imgs, msks)
-                cat_img = np.concatenate([atlas[...,46]*255, mask_atlas[...,46]*127+1], axis=1)
-                cv2.imwrite(f'atlas/atlas{epoch}.png', cat_img)
-                # print(mask_atlas.max(), mask_atlas.min())
-                np.savez(f'atlas/atlas{epoch}.npz', atlas=atlas, mask_atlas=mask_atlas)
-              
-                nib.save(nib.Nifti1Image(atlas, affine_m), f'atlas/atlas{epoch}.nii.gz')
-                nib.save(nib.Nifti1Image(mask_atlas, affine_m), f'atlas/mask{epoch}.nii.gz')
-                print(f'atlas saved at epoch {epoch}')
-                test_dataloader = get_dataloader(data_path, 'test', 1, args.crop_size, istest=True)
-                atlas, atlas_CG, atlas_PZ, dice = evaluate_registration(model, test_dataloader, atlas, atlas_CG, atlas_PZ, device)
-            
-            
-            if dice.mean() < best_acc:
-                best_acc = dice.mean()
-                torch.save(model.state_dict(), join(save_dir, f'best.pth'))
-                
-                logger.info(f'Best model saved at epoch {epoch}')
-            logger.info(f'Dice Score: {dice.mean()}, Std: {std}')
-            
-    torch.save(model.state_dict(), join(save_dir, f'epoch_{epoch}.pth'))
+        if (epoch + 1) % args.save_freq == 0:
+            torch.save(model.state_dict(), join(save_dir, f'epoch_{epoch}.pth'))
 
+        if (epoch + 1) % args.atlas_update_freq == 0:
+            atlas_t2, atlas_CG, atlas_PZ, last_dice = evaluate_registration(
+                model, train_dataloader, atlas_t2, atlas_CG, atlas_PZ, device
+            )
+            atlas_np = atlas_t2[0, 0].detach().cpu().numpy().astype(np.float32)
+            mask_atlas_np = priors_to_mask(atlas_CG, atlas_PZ)
+
+            zlice = min(46, atlas_np.shape[-1] - 1)
+            cat_img = np.concatenate([atlas_np[..., zlice] * 255, mask_atlas_np[..., zlice] * 127 + 1], axis=1)
+            cv2.imwrite(f'atlas/atlas{epoch}.png', cat_img)
+            np.savez(f'atlas/atlas{epoch}.npz', atlas=atlas_np, mask_atlas=mask_atlas_np)
+            nib.save(nib.Nifti1Image(atlas_np, affine_m), f'atlas/atlas{epoch}.nii.gz')
+            nib.save(nib.Nifti1Image(mask_atlas_np, affine_m), f'atlas/mask{epoch}.nii.gz')
+
+            writer.add_scalar('Dice/train_population_update', last_dice, epoch)
+            logger.info(f'Atlas updated at epoch {epoch}; population Dice: {last_dice:.4f}')
+            if last_dice > best_dice:
+                best_dice = last_dice
+                torch.save(model.state_dict(), join(save_dir, 'best.pth'))
+                logger.info(f'Best model saved at epoch {epoch}')
+
+    torch.save(model.state_dict(), join(save_dir, f'epoch_{epoch}.pth'))
     writer.close()
 
 def generate_new_atlas(imgs, msks):
@@ -300,62 +316,48 @@ def generate_new_atlas(imgs, msks):
     return atlas, mask_atlas.astype(np.float32) 
 
 def evaluate_registration(reg, loader, psi_t2, pi_cg, pi_pz, device, max_iters=5):
+    """Register the population to the atlas and build a weighted mean atlas."""
     reg.eval()
     with torch.no_grad():
-        sum_w = 0.0
+        sum_w = torch.zeros((), device=device, dtype=psi_t2.dtype)
         sum_I = torch.zeros_like(psi_t2)
         sum_CG = torch.zeros_like(pi_cg)
         sum_PZ = torch.zeros_like(pi_pz)
         sum_dice = 0.0
+        n_subjects = 0
+
         for batch in loader:
-            I = batch['image'].to(device)        # (B,1,D,H,W)
-            M = batch['label'].to(device).long() # (B,1,D,H,W) integers {0,1,2}
+            I = batch['img0'].to(device).float()
+            M = batch['seg0'].to(device).long()
+            atlas_t2_b, atlas_probs = atlas_batch(psi_t2, pi_cg, pi_pz, I.size(0))
+            out = reg(atlas_t2_b, I, atlas_probs=atlas_probs)
 
-            # forward atlas->image to get A,b,v  (atlas_t2 must match batch size)
-            atlas_t2_b = psi_t2.repeat(I.size(0),1,1,1,1)
-            out = reg(atlas_t2_b, I, atlas_probs=None)
-
-            # inverse warp: image->atlas grid
             g_inv = inv_grid_total(out['A'], out['b'], out['v'], I.shape, steps=reg.steps)
-
-            # warp image back
             I_back = F.grid_sample(I, g_inv, mode='bilinear', padding_mode='border', align_corners=True)
 
-            # warp labels back as one-hot with nearest
-            Y = torch.nn.functional.one_hot(M.squeeze(1), num_classes=3).permute(0,4,1,2,3).float()  # (B,3,D,H,W)
-            Y_back = F.grid_sample(Y, g_inv, mode='nearest', padding_mode='zeros', align_corners=True)  # (B,3,...)
-            Y_back = Y_back.clamp(0,1)
-            dice = dice_multiclass_hard(Y_back, torch.cat([pi_cg, pi_pz], dim=1).repeat(I.size(0),1,1,1,1))
-            sum_dice += dice.sum().item()
-            # simple quality weights (LNCC to current atlas + topology fraction)
-            s_i = reg.lncc(psi_t2.repeat(I.size(0),1,1,1,1), I_back)                 # scalar tensor
-            u_i = ( (out['grid_total'].det() if hasattr(out['grid_total'], 'det') else
-                      ( ( ( (out['grid_total'][:,:,:,1:,:] - out['grid_total'][:,:,:,:-1,:]).abs().mean() ) > 0 ) ) ) )
-            # the above is a placeholder; use your jac_det function as in RegLite3D to compute pos_jac fraction:
-            # u_i = (jac_det(out['grid_total']) > 0).float().mean()
+            Y = F.one_hot(M.squeeze(1), num_classes=3).permute(0, 4, 1, 2, 3).float()
+            Y_back = F.grid_sample(Y, g_inv, mode='nearest', padding_mode='zeros', align_corners=True).clamp(0, 1)
 
-            w = (s_i.detach())   # * u_i if you also compute pos-Jac fraction here
-            w = w.view(-1,1,1,1,1)
+            target_atlas = torch.cat([torch.zeros_like(pi_cg), pi_cg, pi_pz], dim=1).expand(I.size(0), -1, -1, -1, -1)
+            _, dice_mean = dice_multiclass_hard(Y_back, target_atlas, C=3)
+            sum_dice += dice_mean.item() * I.size(0)
+            n_subjects += I.size(0)
 
-            sum_w  += w.sum()
-            sum_I  += (w * I_back).sum(dim=0, keepdim=True)
-            sum_CG += (w * Y_back[:,1:2]).sum(dim=0, keepdim=True)
-            sum_PZ += (w * Y_back[:,2:3]).sum(dim=0, keepdim=True)
+            s_i = reg.lncc(atlas_t2_b, I_back).detach().clamp_min(1e-3)
+            u_i = (jac_det(out['grid_total']) > 0).float().mean().detach().clamp_min(1e-3)
+            w = (s_i * u_i).view(1, 1, 1, 1, 1)
 
-        # recompute atlases (weighted means). For intensity you can use trimmed mean/median if you want extra robustness.
-        psi_t2 = (sum_I / (sum_w + 1e-6)).clamp_min(0).to(device)
-        pi_cg  = (sum_CG / (sum_w + 1e-6)).clamp(0,1).to(device)
-        pi_pz  = (sum_PZ / (sum_w + 1e-6)).clamp(0,1).to(device)
+            sum_w += w.squeeze() * I.size(0)
+            sum_I += (w * I_back).sum(dim=0, keepdim=True)
+            sum_CG += (w * Y_back[:, 1:2]).sum(dim=0, keepdim=True)
+            sum_PZ += (w * Y_back[:, 2:3]).sum(dim=0, keepdim=True)
 
-        psi_t2.requires_grad_(False)
-        pi_cg.requires_grad_(False)
-        pi_pz.requires_grad_(False)
-        
-    return psi_t2, pi_cg, pi_pz, sum_dice / len(loader.dataset)
+        psi_t2 = (sum_I / (sum_w + 1e-6)).clamp(0, 1).detach()
+        pi_cg = (sum_CG / (sum_w + 1e-6)).clamp(0, 1).detach()
+        pi_pz = (sum_PZ / (sum_w + 1e-6)).clamp(0, 1).detach()
+        mean_dice = sum_dice / max(n_subjects, 1)
 
-    # (optional) check convergence on sharpness change; break if small
-    # sharp_prev, sharp_new = ..., ...
-    # if (sharp_new - sharp_prev)/sharp_prev < 0.005: break
+    return psi_t2, pi_cg, pi_pz, mean_dice
 
 
 def validate(args, model, atlas, mask_atlas, save_output: bool = False, istest=False):
@@ -429,7 +431,7 @@ def parse_args():
     parser = argparse.ArgumentParser(description="3D UNet Prostate Segmentation")
     
     # General arguments
-    parser.add_argument('--data_root', type=str, default='../../Dataset/ProstateDatasets/data_split_files', help='Path to data')
+    parser.add_argument('--data_root', type=str, default='../../Datasets/ProstateDatasets/data_split_files', help='Path to data')
     parser.add_argument('--path', type=str, default='picai_zones_ratio0.7', help='Path to data')
     parser.add_argument('--phase', type=str, choices=['train', 'test'], default='train', help='Train or test phase')
     parser.add_argument('--batch_size', type=int, default=1, help='Batch size')
@@ -449,6 +451,8 @@ def parse_args():
     parser.add_argument('--gpus', type=int, default=0, help='GPU IDs')
     parser.add_argument('--log_dir', type=str, default='logs', help='Directory for TensorBoard logs')
     parser.add_argument('--continue_train', action='store_true', help='Resume training from a checkpoint')
+    parser.add_argument('--atlas_update_freq', type=int, default=5, help='Update the population atlas every N epochs')
+    parser.add_argument('--label_loss_weight', type=float, default=0.1, help='Weight for supervised CG/PZ prior Dice loss')
 
     # Testing
     parser.add_argument('--load_from_dir', type=str, default='checkpoints', help='Directory to load model')

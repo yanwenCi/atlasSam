@@ -111,20 +111,25 @@ def s_and_s(v, steps=7):
     return phi
 
 def jac_det(grid):
-    dx = grid[:,:,:,1:,:] - grid[:,:,:,:-1,:]
-    dy = grid[:,:,1:,:,:] - grid[:,:,:-1,:,:]
-    dz = grid[:,1:,:,:,:] - grid[:,:-1,:,:,:]
-    print( grid.shape, dx.shape, dy.shape, dz.shape )
-    def padx(t): return F.pad(t, (0,0,0,0,0,0,0,0,0,1))
-    def pady(t): return F.pad(t, (0,0,0,0,0,0,0,1,0,0))
-    def padz(t): return F.pad(t, (0,0,0,0,0,0,1,0,0,0))
-    dx, dy, dz = padx(dx), pady(dy), padz(dz)
-    print( grid.shape, dx.shape, dy.shape, dz.shape )
-    J = torch.stack([dx, dy, dz], dim=-1)  # (B,D,H,W,3,3)
+    """Jacobian determinant of a normalized grid; identity has determinant 1."""
+    _, D, H, W, _ = grid.shape
+    sx = 2.0 / max(W - 1, 1)
+    sy = 2.0 / max(H - 1, 1)
+    sz = 2.0 / max(D - 1, 1)
+
+    dx = (grid[:, :, :, 1:, :] - grid[:, :, :, :-1, :]) / sx
+    dy = (grid[:, :, 1:, :, :] - grid[:, :, :-1, :, :]) / sy
+    dz = (grid[:, 1:, :, :, :] - grid[:, :-1, :, :, :]) / sz
+
+    dx = torch.cat([dx, dx[:, :, :, -1:, :]], dim=3)
+    dy = torch.cat([dy, dy[:, :, -1:, :, :]], dim=2)
+    dz = torch.cat([dz, dz[:, -1:, :, :, :]], dim=1)
+
+    J = torch.stack([dx, dy, dz], dim=-1)  # (B,D,H,W,3,3), columns are x/y/z derivatives
     det = (
-        J[...,0,0]*(J[...,1,1]*J[...,2,2]-J[...,1,2]*J[...,2,1])
-        - J[...,0,1]*(J[...,1,0]*J[...,2,2]-J[...,1,2]*J[...,2,0])
-        + J[...,0,2]*(J[...,1,0]*J[...,2,1]-J[...,1,1]*J[...,2,0])
+        J[..., 0, 0] * (J[..., 1, 1] * J[..., 2, 2] - J[..., 1, 2] * J[..., 2, 1])
+        - J[..., 0, 1] * (J[..., 1, 0] * J[..., 2, 2] - J[..., 1, 2] * J[..., 2, 0])
+        + J[..., 0, 2] * (J[..., 1, 0] * J[..., 2, 1] - J[..., 1, 1] * J[..., 2, 0])
     )
     return det
 
