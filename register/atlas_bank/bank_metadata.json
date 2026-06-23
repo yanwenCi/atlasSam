@@ -1,0 +1,37 @@
+{
+  "case_list": "/raid/candi/Wen/Dataset/ProstateDatasets/3-picai-data/data-ROI-192-96/data_split_files/data_include_missing/path_list.txt",
+  "data_root": "/raid/candi/Wen/Dataset/ProstateDatasets/3-picai-data/data-ROI-192-96",
+  "feature_columns": [
+    "whole_volume_ml",
+    "pz_volume_ml",
+    "cg_volume_ml",
+    "pz_whole_ratio",
+    "cg_whole_ratio",
+    "pz_cg_ratio",
+    "bbox_x_mm",
+    "bbox_y_mm",
+    "bbox_z_mm",
+    "elongation",
+    "flatness",
+    "whole_t2_mean",
+    "whole_t2_std",
+    "pz_t2_mean",
+    "cg_t2_mean",
+    "pz_cg_mean_ratio"
+  ],
+  "n_total_cases": 4957,
+  "n_reference_cases": 18,
+  "clusters": [
+    0,
+    1,
+    2,
+    3,
+    4,
+    5
+  ],
+  "n_clusters": 6,
+  "n_per_cluster": 3,
+  "pz_label": 2,
+  "cg_label": 1,
+  "copy_files": false
+}
