@@ -49,3 +49,5 @@ regiter/checkpoints
 test_data
 notebooks
 assets
+segment/inference
+segment/logs
