@@ -20,6 +20,7 @@ import cv2
 from monai.networks.blocks import Warp
 from networks import Voxelmorph
 from AtlasNet import *
+from light_register import LightRegistrationNet, warp_mask_with_ddf
 from torch.cuda.amp import autocast, GradScaler
 
 
@@ -114,6 +115,79 @@ def atlas_batch(atlas_t2, atlas_cg, atlas_pz, batch_size):
         'PZ': atlas_pz.expand(batch_size, -1, -1, -1, -1),
     }
     return atlas_t2_b, atlas_probs
+
+
+def setup_light_register(checkpoint_path, device):
+    """Load the pretrained lightweight atlas->image registration model."""
+    if not checkpoint_path:
+        return None
+    checkpoint = torch.load(checkpoint_path, map_location=device)
+    ckpt_args = checkpoint.get('args', {})
+    model = LightRegistrationNet(
+        transform=ckpt_args.get('transform', 'ddf'),
+        grid_size=ckpt_args.get('grid_size', [10, 10, 10]),
+        max_disp=ckpt_args.get('max_disp', 0.20),
+    ).to(device)
+    model.load_state_dict(checkpoint.get('model', checkpoint))
+    model.eval()
+    for param in model.parameters():
+        param.requires_grad_(False)
+    print(f'Loaded pretrained light registration from {checkpoint_path}')
+    return model
+
+
+def warp_light_prob(light_model, prob, fixed, theta, ddf):
+    if light_model.transform == 'affine':
+        grid = F.affine_grid(theta, fixed.shape, align_corners=True)
+        return F.grid_sample(prob, grid, mode='bilinear', padding_mode='zeros', align_corners=True)
+    return warp_mask_with_ddf(prob, ddf)
+
+
+def apply_light_register(light_model, atlas_t2_b, atlas_probs, move):
+    """Pre-warp atlas image and priors to account for per-image atlas differences."""
+    if light_model is None:
+        return atlas_t2_b, atlas_probs
+    with torch.no_grad():
+        registered_t2, theta, ddf = light_model(atlas_t2_b, move)
+        registered_probs = {
+            name: warp_light_prob(light_model, prob, move, theta, ddf).clamp(0, 1)
+            for name, prob in atlas_probs.items()
+        }
+    return registered_t2.detach(), registered_probs
+
+
+def normalize_slice_uint8(img):
+    img = np.asarray(img, dtype=np.float32)
+    lo, hi = np.percentile(img, (1, 99))
+    if hi <= lo:
+        hi = lo + 1.0
+    return np.clip((img - lo) / (hi - lo) * 255.0, 0, 255).astype(np.uint8)
+
+
+def color_mask_slice(cg, pz):
+    mask = np.zeros((*cg.shape, 3), dtype=np.uint8)
+    mask[cg > 0.5] = (255, 80, 80)
+    mask[pz > 0.5] = (80, 180, 255)
+    return mask
+
+
+def save_light_register_example(save_dir, global_step, move, registered_t2, registered_probs):
+    """Save fixed image, registered atlas image, and registered atlas mask in one PNG."""
+    out_dir = os.path.join(save_dir, 'light_register_examples')
+    os.makedirs(out_dir, exist_ok=True)
+    cg = registered_probs['CG'][0, 0].detach().cpu().numpy()
+    pz = registered_probs['PZ'][0, 0].detach().cpu().numpy()
+    mask_sum = cg + pz
+    z_candidates = np.where(mask_sum.reshape(-1, mask_sum.shape[-1]).sum(axis=0) > 0)[0]
+    zlice = int(z_candidates[len(z_candidates) // 2]) if len(z_candidates) else mask_sum.shape[-1] // 2
+
+    fixed = normalize_slice_uint8(move[0, 0, ..., zlice].detach().cpu().numpy())
+    reg = normalize_slice_uint8(registered_t2[0, 0, ..., zlice].detach().cpu().numpy())
+    fixed_rgb = np.repeat(fixed[..., None], 3, axis=-1)
+    reg_rgb = np.repeat(reg[..., None], 3, axis=-1)
+    mask_rgb = color_mask_slice(cg[..., zlice], pz[..., zlice])
+    canvas = np.concatenate([fixed_rgb, reg_rgb, mask_rgb], axis=1)
+    cv2.imwrite(os.path.join(out_dir, f'step_{global_step:06d}.png'), cv2.cvtColor(canvas, cv2.COLOR_RGB2BGR))
 
 
 def supervised_prior_loss(warped_probs, labels):
@@ -231,6 +305,7 @@ def train(args):
     logger = setup_logger(save_dir)
 
     model = setup_model(args)
+    light_register = setup_light_register(args.pretrained_light_register, device)
     optimizer = torch.optim.Adam(model.parameters(), lr=args.lr)
     use_amp = device.startswith('cuda')
     scaler = GradScaler(enabled=use_amp)
@@ -254,6 +329,7 @@ def train(args):
             move = data['img0'].to(device).float()
             mlabels = data['seg0'].to(device).long()
             atlas_t2_b, atlas_probs = atlas_batch(atlas_t2, atlas_CG, atlas_PZ, move.size(0))
+            atlas_t2_b, atlas_probs = apply_light_register(light_register, atlas_t2_b, atlas_probs, move)
 
             optimizer.zero_grad(set_to_none=True)
             with autocast(enabled=use_amp):
@@ -276,6 +352,8 @@ def train(args):
                 for c, name in enumerate(('x', 'y', 'z')):
                     grid_img = out['grid_total'][..., c].detach().cpu()[:, None, :, :, zlice]
                     writer.add_images(f'Grid/{name}', grid_img, global_step, dataformats='NCHW')
+                if light_register is not None and global_step < args.light_register_examples:
+                    save_light_register_example(save_dir, global_step, move, atlas_t2_b, atlas_probs)
 
         avg_epoch_loss = epoch_loss / len(train_dataloader)
         logger.info(f'Epoch {epoch}, Average Loss: {avg_epoch_loss:.4f}')
@@ -286,7 +364,7 @@ def train(args):
 
         if (epoch + 1) % args.atlas_update_freq == 0:
             atlas_t2, atlas_CG, atlas_PZ, last_dice = evaluate_registration(
-                model, train_dataloader, atlas_t2, atlas_CG, atlas_PZ, device
+                model, train_dataloader, atlas_t2, atlas_CG, atlas_PZ, device, light_register=light_register
             )
             atlas_np = atlas_t2[0, 0].detach().cpu().numpy().astype(np.float32)
             mask_atlas_np = priors_to_mask(atlas_CG, atlas_PZ)
@@ -315,7 +393,7 @@ def generate_new_atlas(imgs, msks):
     mask_atlas, _ = stats.mode(mask_atlas, axis=0, keepdims=False)
     return atlas, mask_atlas.astype(np.float32) 
 
-def evaluate_registration(reg, loader, psi_t2, pi_cg, pi_pz, device, max_iters=5):
+def evaluate_registration(reg, loader, psi_t2, pi_cg, pi_pz, device, max_iters=5, light_register=None):
     """Register the population to the atlas and build a weighted mean atlas."""
     reg.eval()
     with torch.no_grad():
@@ -330,6 +408,7 @@ def evaluate_registration(reg, loader, psi_t2, pi_cg, pi_pz, device, max_iters=5
             I = batch['img0'].to(device).float()
             M = batch['seg0'].to(device).long()
             atlas_t2_b, atlas_probs = atlas_batch(psi_t2, pi_cg, pi_pz, I.size(0))
+            atlas_t2_b, atlas_probs = apply_light_register(light_register, atlas_t2_b, atlas_probs, I)
             out = reg(atlas_t2_b, I, atlas_probs=atlas_probs)
 
             g_inv = inv_grid_total(out['A'], out['b'], out['v'], I.shape, steps=reg.steps)
@@ -453,6 +532,11 @@ def parse_args():
     parser.add_argument('--continue_train', action='store_true', help='Resume training from a checkpoint')
     parser.add_argument('--atlas_update_freq', type=int, default=5, help='Update the population atlas every N epochs')
     parser.add_argument('--label_loss_weight', type=float, default=0.1, help='Weight for supervised CG/PZ prior Dice loss')
+    parser.add_argument('--pretrained_light_register', type=str,
+                        default='/cluster/project7/longitude/atlasSam/register/checkpoints/light_register/latest_light_register.pth',
+                        help='Pretrained lightweight atlas-to-image registration checkpoint used to pre-warp atlas priors; empty disables it')
+    parser.add_argument('--light_register_examples', type=int, default=8,
+                        help='Number of early training examples to save as PNGs under the checkpoint directory')
 
     # Testing
     parser.add_argument('--load_from_dir', type=str, default='checkpoints', help='Directory to load model')

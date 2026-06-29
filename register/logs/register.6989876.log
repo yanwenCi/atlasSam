@@ -1,0 +1,140 @@
+GPU Prolog Script v1.14
+This is a GPU node.
+Enough GPUs available.
+Allocating card 0
+gonzo-605-5.local
+Tue Jun 23 23:22:33 2026       
++-----------------------------------------------------------------------------------------+
+| NVIDIA-SMI 550.127.05             Driver Version: 550.127.05     CUDA Version: 12.4     |
+|-----------------------------------------+------------------------+----------------------+
+| GPU  Name                 Persistence-M | Bus-Id          Disp.A | Volatile Uncorr. ECC |
+| Fan  Temp   Perf          Pwr:Usage/Cap |           Memory-Usage | GPU-Util  Compute M. |
+|                                         |                        |               MIG M. |
+|=========================================+========================+======================|
+|   0  NVIDIA GeForce GTX 1080 Ti     On  |   00000000:02:00.0 Off |                  N/A |
+| 23%   22C    P8              8W /  250W |       0MiB /  11264MiB |      0%   E. Process |
+|                                         |                        |                  N/A |
++-----------------------------------------+------------------------+----------------------+
+|   1  NVIDIA GeForce GTX 1080 Ti     On  |   00000000:03:00.0 Off |                  N/A |
+| 23%   23C    P8              9W /  250W |       0MiB /  11264MiB |      0%   E. Process |
+|                                         |                        |                  N/A |
++-----------------------------------------+------------------------+----------------------+
+|   2  NVIDIA GeForce GTX 1080 Ti     On  |   00000000:81:00.0 Off |                  N/A |
+| 23%   22C    P8              8W /  250W |       0MiB /  11264MiB |      0%   E. Process |
+|                                         |                        |                  N/A |
++-----------------------------------------+------------------------+----------------------+
+|   3  NVIDIA GeForce GTX 1080 Ti     On  |   00000000:82:00.0 Off |                  N/A |
+| 23%   25C    P8              9W /  250W |       0MiB /  11264MiB |      0%   E. Process |
+|                                         |                        |                  N/A |
++-----------------------------------------+------------------------+----------------------+
+                                                                                         
++-----------------------------------------------------------------------------------------+
+| Processes:                                                                              |
+|  GPU   GI   CI        PID   Type   Process name                              GPU Memory |
+|        ID   ID                                                               Usage      |
+|=========================================================================================|
+|  No running processes found                                                             |
++-----------------------------------------------------------------------------------------+
+Selected GPU 
+Using atlas P-10155 from ../register/atlas_bank/reference_bank.csv
+epoch 0, loss=0.51593
+epoch 1, loss=0.44256
+epoch 2, loss=0.42686
+epoch 3, loss=0.41944
+epoch 4, loss=0.41457
+epoch 5, loss=0.41132
+epoch 6, loss=0.40927
+epoch 7, loss=0.40792
+epoch 8, loss=0.40703
+epoch 9, loss=0.40623
+epoch 10, loss=0.40566
+epoch 11, loss=0.40475
+epoch 12, loss=0.40284
+epoch 13, loss=0.40013
+epoch 14, loss=0.39621
+epoch 15, loss=0.39187
+epoch 16, loss=0.38761
+epoch 17, loss=0.38300
+epoch 18, loss=0.37823
+epoch 19, loss=0.37469
+epoch 20, loss=0.37128
+epoch 21, loss=0.36850
+epoch 22, loss=0.36639
+epoch 23, loss=0.36483
+epoch 24, loss=0.36350
+epoch 25, loss=0.36261
+epoch 26, loss=0.36187
+epoch 27, loss=0.36115
+epoch 28, loss=0.36065
+epoch 29, loss=0.36001
+epoch 30, loss=0.35949
+epoch 31, loss=0.35908
+epoch 32, loss=0.35866
+epoch 33, loss=0.35829
+epoch 34, loss=0.35796
+epoch 35, loss=0.35766
+epoch 36, loss=0.35738
+epoch 37, loss=0.35705
+epoch 38, loss=0.35672
+epoch 39, loss=0.35643
+epoch 40, loss=0.35617
+epoch 41, loss=0.35590
+epoch 42, loss=0.35564
+epoch 43, loss=0.35539
+epoch 44, loss=0.35505
+epoch 45, loss=0.35490
+epoch 46, loss=0.35460
+epoch 47, loss=0.35444
+epoch 48, loss=0.35417
+epoch 49, loss=0.35395
+epoch 50, loss=0.35378
+epoch 51, loss=0.35351
+epoch 52, loss=0.35339
+epoch 53, loss=0.35320
+epoch 54, loss=0.35292
+epoch 55, loss=0.35276
+epoch 56, loss=0.35256
+epoch 57, loss=0.35238
+epoch 58, loss=0.35221
+epoch 59, loss=0.35204
+epoch 60, loss=0.35190
+epoch 61, loss=0.35175
+epoch 62, loss=0.35159
+epoch 63, loss=0.35140
+epoch 64, loss=0.35125
+epoch 65, loss=0.35112
+epoch 66, loss=0.35095
+epoch 67, loss=0.35084
+epoch 68, loss=0.35070
+epoch 69, loss=0.35063
+epoch 70, loss=0.35047
+epoch 71, loss=0.35032
+epoch 72, loss=0.35019
+epoch 73, loss=0.35006
+epoch 74, loss=0.34997
+epoch 75, loss=0.34985
+epoch 76, loss=0.34969
+epoch 77, loss=0.34963
+epoch 78, loss=0.34949
+epoch 79, loss=0.34932
+epoch 80, loss=0.34926
+epoch 81, loss=0.34911
+epoch 82, loss=0.34901
+epoch 83, loss=0.34892
+epoch 84, loss=0.34881
+epoch 85, loss=0.34874
+epoch 86, loss=0.34857
+epoch 87, loss=0.34850
+epoch 88, loss=0.34843
+epoch 89, loss=0.34836
+epoch 90, loss=0.34823
+epoch 91, loss=0.34821
+epoch 92, loss=0.34806
+epoch 93, loss=0.34798
+epoch 94, loss=0.34783
+epoch 95, loss=0.34786
+epoch 96, loss=0.34770
+epoch 97, loss=0.34759
+epoch 98, loss=0.34754
+epoch 99, loss=0.34744
+GPU Epilog Script v0.30

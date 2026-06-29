@@ -1,0 +1,335 @@
+GPU Prolog Script v1.14
+This is a GPU node.
+Enough GPUs available.
+Allocating card 6
+drteeth.local
+Wed Jun 24 09:37:22 2026       
++-----------------------------------------------------------------------------------------+
+| NVIDIA-SMI 550.127.05             Driver Version: 550.127.05     CUDA Version: 12.4     |
+|-----------------------------------------+------------------------+----------------------+
+| GPU  Name                 Persistence-M | Bus-Id          Disp.A | Volatile Uncorr. ECC |
+| Fan  Temp   Perf          Pwr:Usage/Cap |           Memory-Usage | GPU-Util  Compute M. |
+|                                         |                        |               MIG M. |
+|=========================================+========================+======================|
+|   0  Quadro RTX 6000                On  |   00000000:01:00.0 Off |                  Off |
+| 33%   60C    P2            192W /  260W |    1975MiB /  24576MiB |     76%   E. Process |
+|                                         |                        |                  N/A |
++-----------------------------------------+------------------------+----------------------+
+|   1  Quadro RTX 6000                On  |   00000000:25:00.0 Off |                  Off |
+| 33%   54C    P2            179W /  260W |    1973MiB /  24576MiB |     67%   E. Process |
+|                                         |                        |                  N/A |
++-----------------------------------------+------------------------+----------------------+
+|   2  Quadro RTX 6000                On  |   00000000:41:00.0 Off |                  Off |
+| 33%   30C    P8             34W /  260W |       3MiB /  24576MiB |      0%   E. Process |
+|                                         |                        |                  N/A |
++-----------------------------------------+------------------------+----------------------+
+|   3  Quadro RTX 6000                On  |   00000000:61:00.0 Off |                  Off |
+| 51%   72C    P2            184W /  260W |    1977MiB /  24576MiB |     67%   E. Process |
+|                                         |                        |                  N/A |
++-----------------------------------------+------------------------+----------------------+
+|   4  Quadro RTX 6000                On  |   00000000:81:00.0 Off |                  Off |
+| 51%   75C    P2            189W /  260W |    1975MiB /  24576MiB |     55%   E. Process |
+|                                         |                        |                  N/A |
++-----------------------------------------+------------------------+----------------------+
+|   5  Quadro RTX 6000                On  |   00000000:A1:00.0 Off |                  Off |
+| 33%   53C    P2            178W /  260W |    1973MiB /  24576MiB |     62%   E. Process |
+|                                         |                        |                  N/A |
++-----------------------------------------+------------------------+----------------------+
+|   6  Quadro RTX 6000                On  |   00000000:C1:00.0 Off |                  Off |
+| 33%   36C    P8             29W /  260W |       5MiB /  24576MiB |      0%   E. Process |
+|                                         |                        |                  N/A |
++-----------------------------------------+------------------------+----------------------+
+|   7  Quadro RTX 6000                On  |   00000000:E1:00.0 Off |                  Off |
+| 33%   28C    P8             22W /  260W |       3MiB /  24576MiB |      0%   E. Process |
+|                                         |                        |                  N/A |
++-----------------------------------------+------------------------+----------------------+
+                                                                                         
++-----------------------------------------------------------------------------------------+
+| Processes:                                                                              |
+|  GPU   GI   CI        PID   Type   Process name                              GPU Memory |
+|        ID   ID                                                               Usage      |
+|=========================================================================================|
+|    0   N/A  N/A     22360      C   python                                       1970MiB |
+|    1   N/A  N/A     26173      C   python                                       1970MiB |
+|    3   N/A  N/A     17933      C   python                                       1972MiB |
+|    4   N/A  N/A     22512      C   python                                       1970MiB |
+|    5   N/A  N/A     14716      C   python                                       1970MiB |
++-----------------------------------------------------------------------------------------+
+Selected GPU 0
+creating model SAM-Med3D
+try to load pretrained weights from https://huggingface.co/blueyo0/SAM-Med3D/blob/main/sam_med3d_turbo.pth
+cache found, use pretrained weights in /home/wenyan/.local/share/checkpoint/huggingface_hub/blueyo0/SAM-Med3D/sam_med3d_turbo.pth
+Loaded 6 selected atlas masks from ../register/atlas_bank/reference_bank.csv
+Loaded frozen light registration from /cluster/project7/longitude/atlasSam/register/checkpoints/light_register/latest_light_register.pth
+data length: 134
+(array([0, 1, 2], dtype=uint8), array([818394,  62263,   4079]))
+0: Patient874087940_study_0, CG Dice=0.1552, PZ Dice=0.2626, prostate Dice=0.8393
+[ WARN:0@11.625] global loadsave.cpp:1063 imwrite_ Unsupported depth image for selected encoder is fallbacked to CV_8U.
+(array([0, 1, 2], dtype=uint8), array([843916,  30650,  10170]))
+1: Patient807931277_study_0, CG Dice=0.4663, PZ Dice=0.2091, prostate Dice=0.8315
+(array([0, 1, 2], dtype=uint8), array([791279,  47335,  46122]))
+2: Patient917627230_study_0, CG Dice=0.7882, PZ Dice=0.2481, prostate Dice=0.8735
+(array([0, 1, 2], dtype=uint8), array([853735,  16146,  14855]))
+3: Patient985762726_study_0, CG Dice=0.6291, PZ Dice=0.2015, prostate Dice=0.8726
+(array([0, 1, 2], dtype=uint8), array([854541,  21633,   8562]))
+4: Patient908092997_study_0, CG Dice=0.5158, PZ Dice=0.2412, prostate Dice=0.8426
+(array([0, 1, 2], dtype=uint8), array([826098,  28729,  29909]))
+5: Patient845768704_study_0, CG Dice=0.8812, PZ Dice=0.5589, prostate Dice=0.8474
+(array([0, 1, 2], dtype=uint8), array([823276,  23822,  37638]))
+6: Patient912706323_study_0, CG Dice=0.8402, PZ Dice=0.1179, prostate Dice=0.8620
+(array([0, 1, 2], dtype=uint8), array([857099,  19651,   7986]))
+7: Patient975631273_study_0, CG Dice=0.5457, PZ Dice=0.2916, prostate Dice=0.8642
+(array([0, 1, 2], dtype=uint8), array([859407,  18444,   6885]))
+8: Patient842946741_study_0, CG Dice=0.5077, PZ Dice=0.3992, prostate Dice=0.8962
+(array([0, 1, 2], dtype=uint8), array([837906,  36579,  10251]))
+9: Patient841484403_study_0, CG Dice=0.4627, PZ Dice=0.3809, prostate Dice=0.8172
+(array([0, 1, 2], dtype=uint8), array([825112,  48084,  11540]))
+10: Patient947535985_study_0, CG Dice=0.6524, PZ Dice=0.4014, prostate Dice=0.6463
+(array([0, 1, 2], dtype=uint8), array([863377,  11739,   9620]))
+11: Patient833660745_study_0, CG Dice=0.8039, PZ Dice=0.5609, prostate Dice=0.8645
+(array([0, 1, 2], dtype=uint8), array([856959,  15051,  12726]))
+12: Patient947170572_study_0, CG Dice=0.6500, PZ Dice=0.3979, prostate Dice=0.8078
+(array([0, 1, 2], dtype=uint8), array([844794,  31218,   8724]))
+13: Patient864283391_study_0, CG Dice=0.6285, PZ Dice=0.2668, prostate Dice=0.7245
+(array([0, 1, 2], dtype=uint8), array([859348,  18332,   7056]))
+14: Patient859950816_study_0, CG Dice=0.5847, PZ Dice=0.1640, prostate Dice=0.8290
+(array([0, 1, 2], dtype=uint8), array([823782,  28162,  32792]))
+15: Patient828086439_study_0, CG Dice=0.7211, PZ Dice=0.2274, prostate Dice=0.8788
+(array([0, 1, 2], dtype=uint8), array([831982,  31044,  21710]))
+16: Patient801454842_study_0, CG Dice=0.7711, PZ Dice=0.3523, prostate Dice=0.8195
+(array([0, 1, 2], dtype=uint8), array([718488,  32058, 134190]))
+17: Patient965251812_study_0, CG Dice=0.8937, PZ Dice=0.1992, prostate Dice=0.8520
+(array([0, 1, 2], dtype=uint8), array([838650,  28793,  17293]))
+18: Patient909419281_study_0, CG Dice=0.7160, PZ Dice=0.2199, prostate Dice=0.6991
+(array([0, 1, 2], dtype=uint8), array([831881,  34712,  18143]))
+19: Patient981742409_study_0, CG Dice=0.7082, PZ Dice=0.5002, prostate Dice=0.8819
+(array([0, 1, 2], dtype=uint8), array([825691,  20424,  38621]))
+20: Patient951135893_study_0, CG Dice=0.8128, PZ Dice=0.2011, prostate Dice=0.8849
+(array([0, 1, 2], dtype=uint8), array([850343,  19804,  14589]))
+21: Patient940027058_study_0, CG Dice=0.6876, PZ Dice=0.1552, prostate Dice=0.8329
+(array([0, 1, 2], dtype=uint8), array([854959,  17408,  12369]))
+22: Patient994434010_study_0, CG Dice=0.7289, PZ Dice=0.3102, prostate Dice=0.8147
+(array([0, 1, 2], dtype=uint8), array([844990,  27358,  12388]))
+23: Patient907231890_study_0, CG Dice=0.5142, PZ Dice=0.1854, prostate Dice=0.8822
+(array([0, 1, 2], dtype=uint8), array([816297,  41493,  26946]))
+24: Patient897701819_study_0, CG Dice=0.7795, PZ Dice=0.5590, prostate Dice=0.8441
+(array([0, 1, 2], dtype=uint8), array([854201,  17221,  13314]))
+25: Patient940614618_study_0, CG Dice=0.6093, PZ Dice=0.3235, prostate Dice=0.8532
+(array([0, 1, 2], dtype=uint8), array([833156,  30732,  20848]))
+26: Patient996244487_study_0, CG Dice=0.8322, PZ Dice=0.1408, prostate Dice=0.6568
+(array([0, 1, 2], dtype=uint8), array([821463,  32563,  30710]))
+27: Patient909623892_study_0, CG Dice=0.7305, PZ Dice=0.3300, prostate Dice=0.9022
+(array([0, 1, 2], dtype=uint8), array([841477,  27964,  15295]))
+28: Patient982554660_study_0, CG Dice=0.7217, PZ Dice=0.1728, prostate Dice=0.7340
+(array([0, 1, 2], dtype=uint8), array([814212,  40304,  30220]))
+29: Patient866076620_study_0, CG Dice=0.7836, PZ Dice=0.4871, prostate Dice=0.8522
+(array([0, 1, 2], dtype=uint8), array([807309,  42665,  34762]))
+30: Patient907602254_study_0, CG Dice=0.7604, PZ Dice=0.1772, prostate Dice=0.8349
+(array([0, 1, 2], dtype=uint8), array([851717,  20747,  12272]))
+31: Patient995907312_study_0, CG Dice=0.7589, PZ Dice=0.5862, prostate Dice=0.8563
+(array([0, 1, 2], dtype=uint8), array([842710,  31402,  10624]))
+32: Patient816630551_study_0, CG Dice=0.5169, PZ Dice=0.2514, prostate Dice=0.8318
+(array([0, 1, 2], dtype=uint8), array([849414,  22392,  12930]))
+33: Patient930889108_study_0, CG Dice=0.5700, PZ Dice=0.2714, prostate Dice=0.8113
+(array([0, 1, 2], dtype=uint8), array([786831,  48896,  49009]))
+34: Patient886774322_study_0, CG Dice=0.8138, PZ Dice=0.3754, prostate Dice=0.8824
+(array([0, 1, 2], dtype=uint8), array([852922,  22831,   8983]))
+35: Patient989997499_study_0, CG Dice=0.4788, PZ Dice=0.2899, prostate Dice=0.8242
+(array([0, 1, 2], dtype=uint8), array([843819,  28670,  12247]))
+36: Patient846659801_study_0, CG Dice=0.5410, PZ Dice=0.1153, prostate Dice=0.8077
+(array([0, 1, 2], dtype=uint8), array([852663,  21852,  10221]))
+37: Patient848809546_study_0, CG Dice=0.5627, PZ Dice=0.3301, prostate Dice=0.6817
+(array([0, 1, 2], dtype=uint8), array([836743,  28522,  19471]))
+38: Patient946849365_study_0, CG Dice=0.5892, PZ Dice=0.2017, prostate Dice=0.8526
+(array([0, 1, 2], dtype=uint8), array([858906,  17875,   7955]))
+39: Patient973816846_study_0, CG Dice=0.4697, PZ Dice=0.2795, prostate Dice=0.7961
+(array([0, 1, 2], dtype=uint8), array([813572,  37682,  33482]))
+40: Patient878281488_study_0, CG Dice=0.7995, PZ Dice=0.3632, prostate Dice=0.8504
+(array([0, 1, 2], dtype=uint8), array([809354,  30490,  44892]))
+41: Patient910743815_study_0, CG Dice=0.8343, PZ Dice=0.1792, prostate Dice=0.8718
+(array([0, 1, 2], dtype=uint8), array([845215,  25977,  13544]))
+42: Patient833373915_study_0, CG Dice=0.6042, PZ Dice=0.2234, prostate Dice=0.8351
+(array([0, 1, 2], dtype=uint8), array([726998,  32881, 124857]))
+43: Patient984057610_study_0, CG Dice=0.8786, PZ Dice=0.0871, prostate Dice=0.8279
+(array([0, 1, 2], dtype=uint8), array([813412,  30403,  40921]))
+44: Patient923716667_study_0, CG Dice=0.7272, PZ Dice=0.1681, prostate Dice=0.8817
+(array([0, 1, 2], dtype=uint8), array([845603,  28940,  10193]))
+45: Patient959814554_study_0, CG Dice=0.5271, PZ Dice=0.4132, prostate Dice=0.8702
+(array([0, 1, 2], dtype=uint8), array([852893,  18356,  13487]))
+46: Patient991142573_study_0, CG Dice=0.6101, PZ Dice=0.2518, prostate Dice=0.8024
+(array([0, 1, 2], dtype=uint8), array([837299,  32040,  15397]))
+47: Patient896555169_study_0, CG Dice=0.7229, PZ Dice=0.3856, prostate Dice=0.8089
+(array([0, 1, 2], dtype=uint8), array([853757,  18546,  12433]))
+48: Patient857551265_study_0, CG Dice=0.7725, PZ Dice=0.4616, prostate Dice=0.8285
+(array([0, 1, 2], dtype=uint8), array([791164,  38672,  54900]))
+49: Patient994800837_study_0, CG Dice=0.8094, PZ Dice=0.4677, prostate Dice=0.8542
+(array([0, 1, 2], dtype=uint8), array([828483,  36769,  19484]))
+50: Patient913099765_study_0, CG Dice=0.6542, PZ Dice=0.3103, prostate Dice=0.8638
+(array([0, 1, 2], dtype=uint8), array([820125,  32133,  32478]))
+51: Patient998123438_study_0, CG Dice=0.7799, PZ Dice=0.4121, prostate Dice=0.8820
+(array([0, 1, 2], dtype=uint8), array([835814,  33333,  15589]))
+52: Patient931730120_study_0, CG Dice=0.6854, PZ Dice=0.3621, prostate Dice=0.8046
+(array([0, 1, 2], dtype=uint8), array([858681,  15067,  10988]))
+53: Patient836053162_study_0, CG Dice=0.5727, PZ Dice=0.0605, prostate Dice=0.8777
+(array([0, 1, 2], dtype=uint8), array([836746,  26706,  21284]))
+54: Patient890871995_study_0, CG Dice=0.6168, PZ Dice=0.2012, prostate Dice=0.8326
+(array([0, 1, 2], dtype=uint8), array([862494,  14313,   7929]))
+55: Patient815940060_study_0, CG Dice=0.4982, PZ Dice=0.2185, prostate Dice=0.8253
+(array([0, 1, 2], dtype=uint8), array([785023,  47316,  52397]))
+56: Patient909065182_study_0, CG Dice=0.8144, PZ Dice=0.1974, prostate Dice=0.8436
+(array([0, 1, 2], dtype=uint8), array([840175,  26729,  17832]))
+57: Patient910907550_study_0, CG Dice=0.6667, PZ Dice=0.2857, prostate Dice=0.8771
+(array([0, 1, 2], dtype=uint8), array([857346,  18048,   9342]))
+58: Patient910053655_study_0, CG Dice=0.5750, PZ Dice=0.2640, prostate Dice=0.8459
+(array([0, 1, 2], dtype=uint8), array([847436,  25846,  11454]))
+59: Patient820466562_study_0, CG Dice=0.6631, PZ Dice=0.2671, prostate Dice=0.7810
+(array([0, 1, 2], dtype=uint8), array([850508,  27645,   6583]))
+60: Patient999341630_study_0, CG Dice=0.4014, PZ Dice=0.2365, prostate Dice=0.8437
+(array([0, 1, 2], dtype=uint8), array([824471,  30766,  29499]))
+61: Patient927034577_study_0, CG Dice=0.8217, PZ Dice=0.1528, prostate Dice=0.7636
+(array([0, 1, 2], dtype=uint8), array([828133,  28384,  28219]))
+62: Patient941592504_study_0, CG Dice=0.6612, PZ Dice=0.1164, prostate Dice=0.9152
+(array([0, 1, 2], dtype=uint8), array([858725,  15260,  10751]))
+63: Patient799300347_study_0, CG Dice=0.5342, PZ Dice=0.1757, prostate Dice=0.8260
+(array([0, 1, 2], dtype=uint8), array([826536,  29062,  29138]))
+64: Patient890113667_study_0, CG Dice=0.7832, PZ Dice=0.4341, prostate Dice=0.8626
+(array([0, 1, 2], dtype=uint8), array([823558,  32086,  29092]))
+65: Patient816101315_study_0, CG Dice=0.6676, PZ Dice=0.2908, prostate Dice=0.8818
+(array([0, 1, 2], dtype=uint8), array([854605,  15528,  14603]))
+66: Patient946250678_study_0, CG Dice=0.6967, PZ Dice=0.3360, prostate Dice=0.8913
+(array([0, 1, 2], dtype=uint8), array([837434,  36367,  10935]))
+67: Patient848616772_study_0, CG Dice=0.5670, PZ Dice=0.4332, prostate Dice=0.8346
+(array([0, 1, 2], dtype=uint8), array([819899,  35984,  28853]))
+68: Patient954554801_study_0, CG Dice=0.8307, PZ Dice=0.3932, prostate Dice=0.7623
+(array([0, 1, 2], dtype=uint8), array([837156,  28669,  18911]))
+69: Patient913575499_study_0, CG Dice=0.7917, PZ Dice=0.4275, prostate Dice=0.7453
+(array([0, 1, 2], dtype=uint8), array([854307,  20499,   9930]))
+70: Patient890199685_study_0, CG Dice=0.6368, PZ Dice=0.2631, prostate Dice=0.8213
+(array([0, 1, 2], dtype=uint8), array([850596,  21672,  12468]))
+71: Patient992290047_study_0, CG Dice=0.6915, PZ Dice=0.3832, prostate Dice=0.8627
+(array([0, 1, 2], dtype=uint8), array([773079,  55040,  56617]))
+72: Patient885725027_study_0, CG Dice=0.7929, PZ Dice=0.1321, prostate Dice=0.8357
+(array([0, 1, 2], dtype=uint8), array([845998,  28061,  10677]))
+73: Patient989809536_study_0, CG Dice=0.4521, PZ Dice=0.2295, prostate Dice=0.8891
+(array([0, 1, 2], dtype=uint8), array([832463,  33826,  18447]))
+74: Patient870474535_study_0, CG Dice=0.7016, PZ Dice=0.4525, prostate Dice=0.8588
+(array([0, 1, 2], dtype=uint8), array([804935,  30480,  49321]))
+75: Patient972534934_study_0, CG Dice=0.8083, PZ Dice=0.2616, prostate Dice=0.8800
+(array([0, 1, 2], dtype=uint8), array([834154,  32256,  18326]))
+76: Patient927268952_study_0, CG Dice=0.6257, PZ Dice=0.3642, prostate Dice=0.8764
+(array([0, 1, 2], dtype=uint8), array([848713,  25400,  10623]))
+77: Patient923194593_study_0, CG Dice=0.6692, PZ Dice=0.3293, prostate Dice=0.8110
+(array([0, 1, 2], dtype=uint8), array([853843,  19461,  11432]))
+78: Patient829954743_study_0, CG Dice=0.7024, PZ Dice=0.3009, prostate Dice=0.8172
+(array([0, 1, 2], dtype=uint8), array([798470,  29652,  56614]))
+79: Patient946782415_study_0, CG Dice=0.8947, PZ Dice=0.2053, prostate Dice=0.8412
+(array([0, 1, 2], dtype=uint8), array([843321,  23335,  18080]))
+80: Patient860955368_study_0, CG Dice=0.7946, PZ Dice=0.2922, prostate Dice=0.7525
+(array([0, 1, 2], dtype=uint8), array([836003,  32923,  15810]))
+81: Patient805528367_study_0, CG Dice=0.6307, PZ Dice=0.2374, prostate Dice=0.8320
+(array([0, 1, 2], dtype=uint8), array([856524,  21722,   6490]))
+82: Patient832052752_study_0, CG Dice=0.4369, PZ Dice=0.2187, prostate Dice=0.8388
+(array([0, 1, 2], dtype=uint8), array([855029,  26791,   2916]))
+83: Patient855235476_study_0, CG Dice=0.4090, PZ Dice=0.4229, prostate Dice=0.6893
+(array([0, 1, 2], dtype=uint8), array([815642,  19528,  49566]))
+84: Patient892640977_study_0, CG Dice=0.8373, PZ Dice=0.3238, prostate Dice=0.8368
+(array([0, 1, 2], dtype=uint8), array([828660,  24478,  31598]))
+85: Patient827240789_study_0, CG Dice=0.8078, PZ Dice=0.1346, prostate Dice=0.7095
+(array([0, 1, 2], dtype=uint8), array([833280,  29985,  21471]))
+86: Patient968013665_study_0, CG Dice=0.6372, PZ Dice=0.2794, prostate Dice=0.8097
+(array([0, 1, 2], dtype=uint8), array([772456,  42149,  70131]))
+87: Patient953755708_study_0, CG Dice=0.8599, PZ Dice=0.1801, prostate Dice=0.8795
+(array([0, 1, 2], dtype=uint8), array([845658,  21981,  17097]))
+88: Patient910489986_study_0, CG Dice=0.7635, PZ Dice=0.0729, prostate Dice=0.7675
+(array([0, 1, 2], dtype=uint8), array([830164,  34848,  19724]))
+89: Patient850881477_study_0, CG Dice=0.5497, PZ Dice=0.1841, prostate Dice=0.8438
+(array([0, 1, 2], dtype=uint8), array([848554,  18341,  17841]))
+90: Patient873305257_study_0, CG Dice=0.7121, PZ Dice=0.2474, prostate Dice=0.8519
+(array([0, 1, 2], dtype=uint8), array([865528,  13763,   5445]))
+91: Patient846807280_study_0, CG Dice=0.4177, PZ Dice=0.2116, prostate Dice=0.7550
+(array([0, 1, 2], dtype=uint8), array([851956,  18933,  13847]))
+92: Patient976673643_study_0, CG Dice=0.5307, PZ Dice=0.1055, prostate Dice=0.8630
+(array([0, 1, 2], dtype=uint8), array([782471,  43884,  58381]))
+93: Patient985916122_study_0, CG Dice=0.8273, PZ Dice=0.2005, prostate Dice=0.8369
+(array([0, 1, 2], dtype=uint8), array([826400,  37765,  20571]))
+94: Patient879207934_study_0, CG Dice=0.8199, PZ Dice=0.5582, prostate Dice=0.8097
+(array([0, 1, 2], dtype=uint8), array([852991,  16708,  15037]))
+95: Patient948084900_study_0, CG Dice=0.7372, PZ Dice=0.3928, prostate Dice=0.8753
+(array([0, 1, 2], dtype=uint8), array([835814,  30815,  18107]))
+96: Patient962056378_study_0, CG Dice=0.8181, PZ Dice=0.1490, prostate Dice=0.6337
+(array([0, 1, 2], dtype=uint8), array([862451,  10113,  12172]))
+97: Patient951795211_study_0, CG Dice=0.6873, PZ Dice=0.4013, prostate Dice=0.8413
+(array([0, 1, 2], dtype=uint8), array([858298,  20637,   5801]))
+98: Patient806991235_study_0, CG Dice=0.4122, PZ Dice=0.2516, prostate Dice=0.8529
+(array([0, 1, 2], dtype=uint8), array([856593,  20259,   7884]))
+99: Patient853303953_study_0, CG Dice=0.4246, PZ Dice=0.2004, prostate Dice=0.8005
+(array([0, 1, 2], dtype=uint8), array([810774,  29984,  43978]))
+100: Patient871031213_study_0, CG Dice=0.7848, PZ Dice=0.3123, prostate Dice=0.8977
+(array([0, 1, 2], dtype=uint8), array([855328,  22744,   6664]))
+101: Patient881613793_study_0, CG Dice=0.4475, PZ Dice=0.2275, prostate Dice=0.8568
+(array([0, 1, 2], dtype=uint8), array([861672,  14606,   8458]))
+102: Patient861941190_study_0, CG Dice=0.4904, PZ Dice=0.1434, prostate Dice=0.8652
+(array([0, 1, 2], dtype=uint8), array([840369,  32291,  12076]))
+103: Patient909335475_study_0, CG Dice=0.7027, PZ Dice=0.3397, prostate Dice=0.7268
+(array([0, 1, 2], dtype=uint8), array([855972,  20849,   7915]))
+104: Patient850564213_study_0, CG Dice=0.6081, PZ Dice=0.3344, prostate Dice=0.7904
+(array([0, 1, 2], dtype=uint8), array([795418,  34799,  54519]))
+105: Patient861626844_study_0, CG Dice=0.8457, PZ Dice=0.2636, prostate Dice=0.8477
+(array([0, 1, 2], dtype=uint8), array([840597,  28906,  15233]))
+106: Patient908835948_study_0, CG Dice=0.7503, PZ Dice=0.2239, prostate Dice=0.7262
+(array([0, 1, 2], dtype=uint8), array([840039,  27140,  17557]))
+107: Patient965633848_study_0, CG Dice=0.7062, PZ Dice=0.3565, prostate Dice=0.8540
+(array([0, 1, 2], dtype=uint8), array([821361,  32167,  31208]))
+108: Patient832853324_study_0, CG Dice=0.7052, PZ Dice=0.2373, prostate Dice=0.8667
+(array([0, 1, 2], dtype=uint8), array([810912,  37927,  35897]))
+109: Patient893391546_study_0, CG Dice=0.8169, PZ Dice=0.4246, prostate Dice=0.7614
+(array([0, 1, 2], dtype=uint8), array([848378,  24074,  12284]))
+110: Patient859345992_study_0, CG Dice=0.7431, PZ Dice=0.2292, prostate Dice=0.7097
+(array([0, 1, 2], dtype=uint8), array([793130,  34987,  56619]))
+111: Patient797475060_study_0, CG Dice=0.8234, PZ Dice=0.2319, prostate Dice=0.8710
+(array([0, 1, 2], dtype=uint8), array([844375,  30837,   9524]))
+112: Patient976331109_study_0, CG Dice=0.8455, PZ Dice=0.6163, prostate Dice=0.7455
+(array([0, 1, 2], dtype=uint8), array([844518,  15507,  24711]))
+113: Patient808136284_study_0, CG Dice=0.7695, PZ Dice=0.1335, prostate Dice=0.8733
+(array([0, 1, 2], dtype=uint8), array([837654,  44321,   2761]))
+114: Patient925772295_study_0, CG Dice=0.1305, PZ Dice=0.1814, prostate Dice=0.8883
+(array([0, 1, 2], dtype=uint8), array([856360,  17004,  11372]))
+115: Patient869970961_study_0, CG Dice=0.6576, PZ Dice=0.0913, prostate Dice=0.8156
+(array([0, 1, 2], dtype=uint8), array([844693,  30115,   9928]))
+116: Patient905783150_study_0, CG Dice=0.6423, PZ Dice=0.0660, prostate Dice=0.6755
+(array([0, 1, 2], dtype=uint8), array([844745,  33458,   6533]))
+117: Patient861846728_study_0, CG Dice=0.3804, PZ Dice=0.4226, prostate Dice=0.8484
+(array([0, 1, 2], dtype=uint8), array([791614,  32275,  60847]))
+118: Patient929874313_study_0, CG Dice=0.8445, PZ Dice=0.3293, prostate Dice=0.8292
+(array([0, 1, 2], dtype=uint8), array([849952,  22789,  11995]))
+119: Patient899795838_study_0, CG Dice=0.6056, PZ Dice=0.3095, prostate Dice=0.8966
+(array([0, 1, 2], dtype=uint8), array([803541,  36488,  44707]))
+120: Patient858552566_study_0, CG Dice=0.8381, PZ Dice=0.3596, prostate Dice=0.8557
+(array([0, 1, 2], dtype=uint8), array([814263,  33558,  36915]))
+121: Patient928575900_study_0, CG Dice=0.8373, PZ Dice=0.4515, prostate Dice=0.8051
+(array([0, 1, 2], dtype=uint8), array([823077,  18614,  43045]))
+122: Patient995663925_study_0, CG Dice=0.8412, PZ Dice=0.2769, prostate Dice=0.8704
+(array([0, 1, 2], dtype=uint8), array([847470,  30766,   6500]))
+123: Patient982554659_study_0, CG Dice=0.4333, PZ Dice=0.5052, prostate Dice=0.8595
+(array([0, 1, 2], dtype=uint8), array([839000,  26846,  18890]))
+124: Patient922970529_study_0, CG Dice=0.8334, PZ Dice=0.3802, prostate Dice=0.7731
+(array([0, 1, 2], dtype=uint8), array([794184,  51787,  38765]))
+125: Patient897544385_study_0, CG Dice=0.7438, PZ Dice=0.2297, prostate Dice=0.8437
+(array([0, 1, 2], dtype=uint8), array([791785,  32092,  60859]))
+126: Patient871446219_study_0, CG Dice=0.8579, PZ Dice=0.4170, prostate Dice=0.8957
+(array([0, 1, 2], dtype=uint8), array([833716,  23932,  27088]))
+127: Patient812964223_study_0, CG Dice=0.7121, PZ Dice=0.2459, prostate Dice=0.8769
+(array([0, 1, 2], dtype=uint8), array([842863,  29487,  12386]))
+128: Patient884816159_study_0, CG Dice=0.7705, PZ Dice=0.0438, prostate Dice=0.5271
+(array([0, 1, 2], dtype=uint8), array([855629,  25790,   3317]))
+129: Patient877767576_study_0, CG Dice=0.3313, PZ Dice=0.5570, prostate Dice=0.7834
+(array([0, 1, 2], dtype=uint8), array([836645,  37986,  10105]))
+130: Patient812415908_study_0, CG Dice=0.5216, PZ Dice=0.1654, prostate Dice=0.7521
+(array([0, 1, 2], dtype=uint8), array([799661,  37680,  47395]))
+131: Patient945134395_study_0, CG Dice=0.8667, PZ Dice=0.5098, prostate Dice=0.8858
+(array([0, 1, 2], dtype=uint8), array([854223,  19683,  10830]))
+132: Patient872282004_study_0, CG Dice=0.5051, PZ Dice=0.2281, prostate Dice=0.8157
+(array([0, 1, 2], dtype=uint8), array([826872,  42135,  15729]))
+133: Patient912361214_study_0, CG Dice=0.7084, PZ Dice=0.5977, prostate Dice=0.8671
+SAM-Med3D atlas CG/PZ Dice: CG=0.6712+/-0.1506, PZ=0.2907+/-0.1267
+GPU Epilog Script v0.30

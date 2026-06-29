@@ -1,0 +1,198 @@
+GPU Prolog Script v1.14
+This is a GPU node.
+Enough GPUs available.
+Allocating card 1
+sweetums-609-8.local
+Wed Jun 24 11:18:31 2026       
++-----------------------------------------------------------------------------------------+
+| NVIDIA-SMI 550.127.05             Driver Version: 550.127.05     CUDA Version: 12.4     |
+|-----------------------------------------+------------------------+----------------------+
+| GPU  Name                 Persistence-M | Bus-Id          Disp.A | Volatile Uncorr. ECC |
+| Fan  Temp   Perf          Pwr:Usage/Cap |           Memory-Usage | GPU-Util  Compute M. |
+|                                         |                        |               MIG M. |
+|=========================================+========================+======================|
+|   0  NVIDIA GeForce RTX 2080 Ti     On  |   00000000:3D:00.0 Off |                  N/A |
+| 30%   29C    P8             12W /  250W |       1MiB /  11264MiB |      0%   E. Process |
+|                                         |                        |                  N/A |
++-----------------------------------------+------------------------+----------------------+
+|   1  NVIDIA GeForce RTX 2080 Ti     On  |   00000000:3E:00.0 Off |                  N/A |
+| 29%   28C    P8             21W /  250W |       1MiB /  11264MiB |      0%   E. Process |
+|                                         |                        |                  N/A |
++-----------------------------------------+------------------------+----------------------+
+|   2  NVIDIA GeForce RTX 2080 Ti     On  |   00000000:60:00.0 Off |                  N/A |
+| 30%   44C    P2            245W /  250W |    2069MiB /  11264MiB |     94%   E. Process |
+|                                         |                        |                  N/A |
++-----------------------------------------+------------------------+----------------------+
+|   3  NVIDIA GeForce RTX 2080 Ti     On  |   00000000:61:00.0 Off |                  N/A |
+| 30%   31C    P8             19W /  250W |       1MiB /  11264MiB |      0%   E. Process |
+|                                         |                        |                  N/A |
++-----------------------------------------+------------------------+----------------------+
+|   4  NVIDIA GeForce RTX 2080 Ti     On  |   00000000:B1:00.0 Off |                  N/A |
+| 31%   29C    P8             34W /  250W |       1MiB /  11264MiB |      0%   E. Process |
+|                                         |                        |                  N/A |
++-----------------------------------------+------------------------+----------------------+
+|   5  NVIDIA GeForce RTX 2080 Ti     On  |   00000000:B2:00.0 Off |                  N/A |
+| 31%   30C    P8             22W /  250W |       1MiB /  11264MiB |      0%   E. Process |
+|                                         |                        |                  N/A |
++-----------------------------------------+------------------------+----------------------+
+|   6  NVIDIA GeForce RTX 2080 Ti     On  |   00000000:DA:00.0 Off |                  N/A |
+| 31%   28C    P8             19W /  250W |       1MiB /  11264MiB |      0%   E. Process |
+|                                         |                        |                  N/A |
++-----------------------------------------+------------------------+----------------------+
+|   7  NVIDIA GeForce RTX 2080 Ti     On  |   00000000:DB:00.0 Off |                  N/A |
+| 31%   24C    P8              1W /  250W |       1MiB /  11264MiB |      0%   E. Process |
+|                                         |                        |                  N/A |
++-----------------------------------------+------------------------+----------------------+
+                                                                                         
++-----------------------------------------------------------------------------------------+
+| Processes:                                                                              |
+|  GPU   GI   CI        PID   Type   Process name                              GPU Memory |
+|        ID   ID                                                               Usage      |
+|=========================================================================================|
+|    2   N/A  N/A    132706      C   ...ic/Cardiac_SUMMIT/env/TS/bin/python       2066MiB |
++-----------------------------------------------------------------------------------------+
+Selected GPU 0
+creating model SAM-Med3D
+try to load pretrained weights from https://huggingface.co/blueyo0/SAM-Med3D/blob/main/sam_med3d_turbo.pth
+cache found, use pretrained weights in /home/wenyan/.local/share/checkpoint/huggingface_hub/blueyo0/SAM-Med3D/sam_med3d_turbo.pth
+Loaded 6 selected atlas masks from ../register/atlas_bank/reference_bank.csv
+Loaded frozen light registration from /cluster/project7/longitude/atlasSam/register/checkpoints/light_register/latest_light_register.pth
+data length: 134
+inference/sammed3d_atlas_picai_zones_ratio0.7/1-uclH-data_ratio0.8_sammed3d_atlas
+0: Patient812415908_study_0, CG Dice=0.0489, PZ Dice=0.6342, prostate Dice=0.5525, CG Dist=24.6982, PZ Dist=2.9155, prostate Dist=11.7047
+[ WARN:0@29.676] global loadsave.cpp:1063 imwrite_ Unsupported depth image for selected encoder is fallbacked to CV_8U.
+1: Patient992290047_study_0, CG Dice=0.3056, PZ Dice=0.2616, prostate Dice=0.7258, CG Dist=15.7242, PZ Dist=4.7170, prostate Dist=4.3012
+2: Patient861941190_study_0, CG Dice=0.3820, PZ Dice=0.0189, prostate Dice=0.7245, CG Dist=5.6789, PZ Dist=9.6047, prostate Dist=3.0000
+3: Patient946849365_study_0, CG Dice=0.4655, PZ Dice=0.0328, prostate Dice=0.7954, CG Dist=6.5765, PZ Dist=7.8740, prostate Dist=3.0000
+4: Patient912361214_study_0, CG Dice=0.4598, PZ Dice=0.1873, prostate Dice=0.8596, CG Dist=7.6322, PZ Dist=5.3852, prostate Dist=1.4142
+5: Patient892640977_study_0, CG Dice=0.7457, PZ Dice=0.1468, prostate Dice=0.8316, CG Dist=3.9370, PZ Dist=5.1962, prostate Dist=2.2361
+6: Patient846659801_study_0, CG Dice=0.0001, PZ Dice=0.5790, prostate Dice=0.5863, CG Dist=17.2409, PZ Dist=3.2016, prostate Dist=10.8743
+7: Patient899795838_study_0, CG Dice=0.3560, PZ Dice=0.2264, prostate Dice=0.8217, CG Dist=10.9550, PZ Dist=5.0990, prostate Dist=2.0616
+8: Patient878281488_study_0, CG Dice=0.6909, PZ Dice=0.0740, prostate Dice=0.8711, CG Dist=4.5826, PZ Dist=9.2331, prostate Dist=1.1180
+9: Patient832853324_study_0, CG Dice=0.6316, PZ Dice=0.1095, prostate Dice=0.8508, CG Dist=4.7170, PZ Dist=7.8835, prostate Dist=1.5000
+10: Patient922970529_study_0, CG Dice=0.6740, PZ Dice=0.1267, prostate Dice=0.8350, CG Dist=3.3541, PZ Dist=4.3875, prostate Dist=1.5000
+11: Patient927268952_study_0, CG Dice=0.5096, PZ Dice=0.1208, prostate Dice=0.9033, CG Dist=6.3443, PZ Dist=6.5955, prostate Dist=0.7071
+12: Patient857551265_study_0, CG Dice=0.3408, PZ Dice=0.1232, prostate Dice=0.5910, CG Dist=16.3783, PZ Dist=9.0000, prostate Dist=11.4455
+13: Patient947535985_study_0, CG Dice=0.0755, PZ Dice=0.2244, prostate Dice=0.7622, CG Dist=13.4629, PZ Dist=5.0000, prostate Dist=4.0311
+14: Patient910053655_study_0, CG Dice=0.4245, PZ Dice=0.0867, prostate Dice=0.8551, CG Dist=5.0990, PZ Dist=9.4074, prostate Dist=1.4142
+15: Patient946782415_study_0, CG Dice=0.8336, PZ Dice=0.0434, prostate Dice=0.8288, CG Dist=1.8708, PZ Dist=10.4403, prostate Dist=1.7321
+16: Patient833373915_study_0, CG Dice=0.4629, PZ Dice=0.1181, prostate Dice=0.8412, CG Dist=7.0000, PZ Dist=7.5664, prostate Dist=1.7321
+17: Patient981742409_study_0, CG Dice=0.5334, PZ Dice=0.2754, prostate Dice=0.8670, CG Dist=6.0208, PZ Dist=3.9051, prostate Dist=1.4142
+18: Patient973816846_study_0, CG Dice=0.1314, PZ Dice=0.2089, prostate Dice=0.3910, CG Dist=20.8926, PZ Dist=7.0711, prostate Dist=15.2971
+19: Patient909335475_study_0, CG Dice=0.3744, PZ Dice=0.3828, prostate Dice=0.7513, CG Dist=13.8384, PZ Dist=4.1231, prostate Dist=5.0000
+20: Patient859345992_study_0, CG Dice=0.3889, PZ Dice=0.2419, prostate Dice=0.8228, CG Dist=5.6125, PZ Dist=5.5227, prostate Dist=2.5000
+21: Patient909623892_study_0, CG Dice=0.7120, PZ Dice=0.1867, prostate Dice=0.8981, CG Dist=5.0000, PZ Dist=7.8740, prostate Dist=0.7071
+22: Patient816630551_study_0, CG Dice=0.3598, PZ Dice=0.0489, prostate Dice=0.8001, CG Dist=13.2759, PZ Dist=8.9022, prostate Dist=2.0000
+23: Patient975631273_study_0, CG Dice=0.3121, PZ Dice=0.1223, prostate Dice=0.7303, CG Dist=8.3666, PZ Dist=6.8007, prostate Dist=5.1235
+24: Patient874087940_study_0, CG Dice=0.0211, PZ Dice=0.6063, prostate Dice=0.6537, CG Dist=22.2823, PZ Dist=3.0822, prostate Dist=13.8022
+25: Patient999341630_study_0, CG Dice=0.2025, PZ Dice=0.1525, prostate Dice=0.6265, CG Dist=24.2745, PZ Dist=8.8218, prostate Dist=11.0454
+26: Patient989997499_study_0, CG Dice=0.3857, PZ Dice=0.1745, prostate Dice=0.8174, CG Dist=5.2202, PZ Dist=5.4083, prostate Dist=1.8028
+27: Patient850564213_study_0, CG Dice=0.1813, PZ Dice=0.0046, prostate Dice=0.5914, CG Dist=12.4599, PZ Dist=10.7819, prostate Dist=6.4807
+28: Patient858552566_study_0, CG Dice=0.6674, PZ Dice=0.0551, prostate Dice=0.7890, CG Dist=4.1231, PZ Dist=8.8034, prostate Dist=3.6056
+29: Patient797475060_study_0, CG Dice=0.8190, PZ Dice=0.2420, prostate Dice=0.8549, CG Dist=2.0616, PZ Dist=4.6368, prostate Dist=1.7321
+30: Patient929874313_study_0, CG Dice=0.5476, PZ Dice=0.1082, prostate Dice=0.8198, CG Dist=5.0249, PZ Dist=7.5498, prostate Dist=2.0616
+31: Patient953755708_study_0, CG Dice=0.5881, PZ Dice=0.0873, prostate Dice=0.8305, CG Dist=8.2614, PZ Dist=7.2284, prostate Dist=2.0616
+32: Patient917627230_study_0, CG Dice=0.5910, PZ Dice=0.1329, prostate Dice=0.8864, CG Dist=4.5826, PZ Dist=8.4410, prostate Dist=1.1180
+33: Patient994800837_study_0, CG Dice=0.7038, PZ Dice=0.1520, prostate Dice=0.8653, CG Dist=3.6401, PZ Dist=7.8262, prostate Dist=1.4142
+34: Patient870474535_study_0, CG Dice=0.5194, PZ Dice=0.1825, prostate Dice=0.8200, CG Dist=8.0000, PZ Dist=5.6789, prostate Dist=2.2913
+35: Patient931730120_study_0, CG Dice=0.5798, PZ Dice=0.2047, prostate Dice=0.8450, CG Dist=4.0000, PZ Dist=4.8477, prostate Dist=1.4142
+36: Patient908092997_study_0, CG Dice=0.0936, PZ Dice=0.5250, prostate Dice=0.4367, CG Dist=24.3156, PZ Dist=2.2361, prostate Dist=15.8114
+37: Patient890113667_study_0, CG Dice=0.4748, PZ Dice=0.0579, prostate Dice=0.7033, CG Dist=13.0096, PZ Dist=10.4043, prostate Dist=5.9161
+38: Patient873305257_study_0, CG Dice=0.4759, PZ Dice=0.0098, prostate Dice=0.6964, CG Dist=6.0000, PZ Dist=11.7473, prostate Dist=3.9051
+39: Patient968013665_study_0, CG Dice=0.5378, PZ Dice=0.0969, prostate Dice=0.8249, CG Dist=6.1033, PZ Dist=7.2457, prostate Dist=2.0616
+40: Patient881613793_study_0, CG Dice=0.3225, PZ Dice=0.2102, prostate Dice=0.7534, CG Dist=10.0125, PZ Dist=6.1033, prostate Dist=2.5000
+41: Patient985762726_study_0, CG Dice=0.5654, PZ Dice=0.2713, prostate Dice=0.8553, CG Dist=3.9370, PZ Dist=4.5000, prostate Dist=1.1180
+42: Patient954554801_study_0, CG Dice=0.2338, PZ Dice=0.1817, prostate Dice=0.6526, CG Dist=15.4353, PZ Dist=8.5586, prostate Dist=11.5109
+43: Patient841484403_study_0, CG Dice=0.3150, PZ Dice=0.0822, prostate Dice=0.7628, CG Dist=14.0000, PZ Dist=7.4833, prostate Dist=2.9155
+44: Patient910743815_study_0, CG Dice=0.7642, PZ Dice=0.2006, prostate Dice=0.8879, CG Dist=2.8723, PZ Dist=7.5166, prostate Dist=1.0000
+45: Patient941592504_study_0, CG Dice=0.6124, PZ Dice=0.1131, prostate Dice=0.8818, CG Dist=4.3875, PZ Dist=7.5000, prostate Dist=1.0000
+46: Patient879207934_study_0, CG Dice=0.6463, PZ Dice=0.2049, prostate Dice=0.7826, CG Dist=3.5355, PZ Dist=5.3852, prostate Dist=2.1213
+47: Patient951135893_study_0, CG Dice=0.7743, PZ Dice=0.0352, prostate Dice=0.8641, CG Dist=2.6926, PZ Dist=12.3390, prostate Dist=1.4142
+48: Patient994434010_study_0, CG Dice=0.1755, PZ Dice=0.3773, prostate Dice=0.5472, CG Dist=19.7231, PZ Dist=3.9051, prostate Dist=10.5475
+49: Patient910907550_study_0, CG Dice=0.4849, PZ Dice=0.3842, prostate Dice=0.7883, CG Dist=9.8615, PZ Dist=4.7434, prostate Dist=3.0000
+50: Patient928575900_study_0, CG Dice=0.6178, PZ Dice=0.1311, prostate Dice=0.7864, CG Dist=9.3875, PZ Dist=6.9642, prostate Dist=4.3875
+51: Patient909419281_study_0, CG Dice=0.6220, PZ Dice=0.1708, prostate Dice=0.7780, CG Dist=4.0000, PZ Dist=7.0356, prostate Dist=2.5000
+52: Patient940614618_study_0, CG Dice=0.4944, PZ Dice=0.0391, prostate Dice=0.8353, CG Dist=7.2284, PZ Dist=7.9687, prostate Dist=1.8708
+53: Patient951795211_study_0, CG Dice=0.5396, PZ Dice=0.0913, prostate Dice=0.7478, CG Dist=5.4083, PZ Dist=10.2956, prostate Dist=3.0822
+54: Patient940027058_study_0, CG Dice=0.3175, PZ Dice=0.2328, prostate Dice=0.6789, CG Dist=14.8661, PZ Dist=7.3655, prostate Dist=9.7596
+55: Patient976673643_study_0, CG Dice=0.4054, PZ Dice=0.2654, prostate Dice=0.7401, CG Dist=13.0000, PZ Dist=4.9244, prostate Dist=7.0000
+56: Patient912706323_study_0, CG Dice=0.7282, PZ Dice=0.1941, prostate Dice=0.8886, CG Dist=2.6926, PZ Dist=9.7082, prostate Dist=1.0000
+57: Patient861846728_study_0, CG Dice=0.2707, PZ Dice=0.1803, prostate Dice=0.8310, CG Dist=9.4868, PZ Dist=7.2284, prostate Dist=2.0616
+58: Patient910489986_study_0, CG Dice=0.6367, PZ Dice=0.1305, prostate Dice=0.8469, CG Dist=3.2016, PZ Dist=5.5902, prostate Dist=1.4142
+59: Patient959814554_study_0, CG Dice=0.3162, PZ Dice=0.1793, prostate Dice=0.8209, CG Dist=11.0000, PZ Dist=6.8739, prostate Dist=3.2016
+60: Patient866076620_study_0, CG Dice=0.3588, PZ Dice=0.1608, prostate Dice=0.7737, CG Dist=11.1131, PZ Dist=9.6047, prostate Dist=3.3166
+61: Patient890199685_study_0, CG Dice=0.1233, PZ Dice=0.3209, prostate Dice=0.4160, CG Dist=17.3277, PZ Dist=4.4721, prostate Dist=13.8384
+62: Patient848616772_study_0, CG Dice=0.3767, PZ Dice=0.2234, prostate Dice=0.8308, CG Dist=8.6603, PZ Dist=5.1235, prostate Dist=1.8028
+63: Patient833660745_study_0, CG Dice=0.4857, PZ Dice=0.0316, prostate Dice=0.8029, CG Dist=6.2650, PZ Dist=12.1037, prostate Dist=2.0616
+64: Patient886774322_study_0, CG Dice=0.7375, PZ Dice=0.1034, prostate Dice=0.8279, CG Dist=4.0000, PZ Dist=6.8739, prostate Dist=1.8028
+65: Patient842946741_study_0, CG Dice=0.3906, PZ Dice=0.3131, prostate Dice=0.8412, CG Dist=8.0156, PZ Dist=5.6125, prostate Dist=2.0000
+66: Patient846807280_study_0, CG Dice=0.0778, PZ Dice=0.3745, prostate Dice=0.3414, CG Dist=26.4055, PZ Dist=5.8310, prostate Dist=18.7156
+67: Patient836053162_study_0, CG Dice=0.4280, PZ Dice=0.1826, prostate Dice=0.7339, CG Dist=8.7892, PZ Dist=5.5902, prostate Dist=3.9051
+68: Patient808136284_study_0, CG Dice=0.6635, PZ Dice=0.1132, prostate Dice=0.8082, CG Dist=4.4721, PZ Dist=7.2111, prostate Dist=2.0000
+69: Patient945134395_study_0, CG Dice=0.7629, PZ Dice=0.0953, prostate Dice=0.8742, CG Dist=3.5000, PZ Dist=8.9582, prostate Dist=1.1180
+70: Patient905783150_study_0, CG Dice=0.4764, PZ Dice=0.2312, prostate Dice=0.8270, CG Dist=5.3385, PZ Dist=5.3852, prostate Dist=2.2361
+71: Patient995907312_study_0, CG Dice=0.4652, PZ Dice=0.1695, prostate Dice=0.8502, CG Dist=9.2399, PZ Dist=6.2650, prostate Dist=1.4142
+72: Patient965251812_study_0, CG Dice=0.5587, PZ Dice=0.0823, prostate Dice=0.7558, CG Dist=8.0000, PZ Dist=9.8615, prostate Dist=5.0990
+73: Patient996244487_study_0, CG Dice=0.3010, PZ Dice=0.2488, prostate Dice=0.7715, CG Dist=9.1125, PZ Dist=4.6098, prostate Dist=2.6926
+74: Patient896555169_study_0, CG Dice=0.4174, PZ Dice=0.0124, prostate Dice=0.8458, CG Dist=7.0178, PZ Dist=10.7005, prostate Dist=1.5811
+75: Patient871031213_study_0, CG Dice=0.7408, PZ Dice=0.1579, prostate Dice=0.9032, CG Dist=3.6742, PZ Dist=4.4721, prostate Dist=1.0000
+76: Patient913099765_study_0, CG Dice=0.6371, PZ Dice=0.1418, prostate Dice=0.8667, CG Dist=3.3541, PZ Dist=7.2284, prostate Dist=1.2247
+77: Patient877767576_study_0, CG Dice=0.2044, PZ Dice=0.1514, prostate Dice=0.7393, CG Dist=13.9642, PZ Dist=7.6322, prostate Dist=3.0414
+78: Patient982554660_study_0, CG Dice=0.0046, PZ Dice=0.4496, prostate Dice=0.5271, CG Dist=19.0853, PZ Dist=4.2426, prostate Dist=11.6297
+79: Patient859950816_study_0, CG Dice=0.1008, PZ Dice=0.2381, prostate Dice=0.5020, CG Dist=24.0052, PZ Dist=6.9282, prostate Dist=11.5758
+80: Patient947170572_study_0, CG Dice=0.4456, PZ Dice=0.1041, prostate Dice=0.7154, CG Dist=6.3443, PZ Dist=5.8523, prostate Dist=3.3541
+81: Patient848809546_study_0, CG Dice=0.4730, PZ Dice=0.1244, prostate Dice=0.5820, CG Dist=6.9462, PZ Dist=10.7238, prostate Dist=9.7082
+82: Patient801454842_study_0, CG Dice=0.5096, PZ Dice=0.0773, prostate Dice=0.7715, CG Dist=6.7454, PZ Dist=8.3066, prostate Dist=3.7417
+83: Patient989809536_study_0, CG Dice=0.3847, PZ Dice=0.0603, prostate Dice=0.8486, CG Dist=6.8007, PZ Dist=7.2801, prostate Dist=1.5000
+84: Patient923716667_study_0, CG Dice=0.4782, PZ Dice=0.2272, prostate Dice=0.6978, CG Dist=17.2409, PZ Dist=6.3640, prostate Dist=10.4881
+85: Patient799300347_study_0, CG Dice=0.3295, PZ Dice=0.0568, prostate Dice=0.5837, CG Dist=13.3041, PZ Dist=7.8262, prostate Dist=8.3815
+86: Patient805528367_study_0, CG Dice=0.4858, PZ Dice=0.0807, prostate Dice=0.8359, CG Dist=6.0000, PZ Dist=6.4031, prostate Dist=1.8028
+87: Patient806991235_study_0, CG Dice=0.4081, PZ Dice=0.1574, prostate Dice=0.8315, CG Dist=5.2440, PZ Dist=7.1414, prostate Dist=1.5000
+88: Patient909065182_study_0, CG Dice=0.8069, PZ Dice=0.2325, prostate Dice=0.8273, CG Dist=2.0616, PZ Dist=5.1962, prostate Dist=1.8028
+89: Patient816101315_study_0, CG Dice=0.6430, PZ Dice=0.2098, prostate Dice=0.8828, CG Dist=6.1033, PZ Dist=4.3875, prostate Dist=1.0000
+90: Patient962056378_study_0, CG Dice=0.2599, PZ Dice=0.2331, prostate Dice=0.5964, CG Dist=16.8003, PZ Dist=4.1231, prostate Dist=9.5525
+91: Patient985916122_study_0, CG Dice=0.6781, PZ Dice=0.2131, prostate Dice=0.8297, CG Dist=4.0311, PZ Dist=5.5902, prostate Dist=2.0616
+92: Patient897701819_study_0, CG Dice=0.6167, PZ Dice=0.1504, prostate Dice=0.8419, CG Dist=5.0990, PZ Dist=8.0777, prostate Dist=1.8028
+93: Patient861626844_study_0, CG Dice=0.8082, PZ Dice=0.1341, prostate Dice=0.8447, CG Dist=2.2913, PZ Dist=6.7082, prostate Dist=1.5811
+94: Patient832052752_study_0, CG Dice=0.3713, PZ Dice=0.2709, prostate Dice=0.8486, CG Dist=6.1847, PZ Dist=4.1231, prostate Dist=1.4142
+95: Patient907231890_study_0, CG Dice=0.3782, PZ Dice=0.1072, prostate Dice=0.7879, CG Dist=10.7703, PZ Dist=7.8102, prostate Dist=3.6401
+96: Patient948084900_study_0, CG Dice=0.3494, PZ Dice=0.1837, prostate Dice=0.7663, CG Dist=11.1915, PZ Dist=5.3151, prostate Dist=3.5000
+97: Patient946250678_study_0, CG Dice=0.2347, PZ Dice=0.2562, prostate Dice=0.6446, CG Dist=15.8114, PZ Dist=6.1644, prostate Dist=8.8600
+98: Patient984057610_study_0, CG Dice=0.8826, PZ Dice=0.1335, prostate Dice=0.8762, CG Dist=1.1180, PZ Dist=7.6322, prostate Dist=1.4142
+99: Patient864283391_study_0, CG Dice=0.4737, PZ Dice=0.0414, prostate Dice=0.7456, CG Dist=4.6098, PZ Dist=7.2973, prostate Dist=2.3452
+100: Patient890871995_study_0, CG Dice=0.5212, PZ Dice=0.0893, prostate Dice=0.8182, CG Dist=7.0000, PZ Dist=6.5000, prostate Dist=2.2361
+101: Patient812964223_study_0, CG Dice=0.6665, PZ Dice=0.1469, prostate Dice=0.8823, CG Dist=3.9051, PZ Dist=7.0356, prostate Dist=1.0000
+102: Patient991142573_study_0, CG Dice=0.3379, PZ Dice=0.1512, prostate Dice=0.6640, CG Dist=15.3704, PZ Dist=5.4083, prostate Dist=6.5000
+103: Patient869970961_study_0, CG Dice=0.2710, PZ Dice=0.3197, prostate Dice=0.6954, CG Dist=15.0416, PZ Dist=4.2720, prostate Dist=6.5000
+104: Patient871446219_study_0, CG Dice=0.7607, PZ Dice=0.0102, prostate Dice=0.8430, CG Dist=3.0414, PZ Dist=13.1909, prostate Dist=1.7321
+105: Patient860955368_study_0, CG Dice=0.6121, PZ Dice=0.0085, prostate Dice=0.7941, CG Dist=4.2720, PZ Dist=13.1244, prostate Dist=2.0616
+106: Patient897544385_study_0, CG Dice=0.6771, PZ Dice=0.1516, prostate Dice=0.8331, CG Dist=3.7749, PZ Dist=7.6485, prostate Dist=1.8028
+107: Patient908835948_study_0, CG Dice=0.6033, PZ Dice=0.0812, prostate Dice=0.7606, CG Dist=4.6904, PZ Dist=7.5166, prostate Dist=2.4495
+108: Patient820466562_study_0, CG Dice=0.2282, PZ Dice=0.5284, prostate Dice=0.5192, CG Dist=21.1955, PZ Dist=4.0620, prostate Dist=14.5000
+109: Patient807931277_study_0, CG Dice=0.3215, PZ Dice=0.2455, prostate Dice=0.7858, CG Dist=12.9817, PZ Dist=6.4031, prostate Dist=2.7386
+110: Patient850881477_study_0, CG Dice=0.5099, PZ Dice=0.1044, prostate Dice=0.8582, CG Dist=6.8191, PZ Dist=7.3485, prostate Dist=1.5000
+111: Patient907602254_study_0, CG Dice=0.7217, PZ Dice=0.0619, prostate Dice=0.8132, CG Dist=3.2016, PZ Dist=7.7621, prostate Dist=2.2913
+112: Patient927034577_study_0, CG Dice=0.6241, PZ Dice=0.1417, prostate Dice=0.8183, CG Dist=4.7170, PZ Dist=7.0000, prostate Dist=2.0000
+113: Patient855235476_study_0, CG Dice=0.0365, PZ Dice=0.4231, prostate Dice=0.8041, CG Dist=9.8995, PZ Dist=5.1235, prostate Dist=2.0616
+114: Patient995663925_study_0, CG Dice=0.4425, PZ Dice=0.2433, prostate Dice=0.7107, CG Dist=14.2829, PZ Dist=5.1235, prostate Dist=9.1241
+115: Patient923194593_study_0, CG Dice=0.1132, PZ Dice=0.3695, prostate Dice=0.5344, CG Dist=19.9060, PZ Dist=4.7170, prostate Dist=17.0000
+116: Patient913575499_study_0, CG Dice=0.3978, PZ Dice=0.0194, prostate Dice=0.7508, CG Dist=10.0000, PZ Dist=11.7898, prostate Dist=4.0000
+117: Patient976331109_study_0, CG Dice=0.3445, PZ Dice=0.0462, prostate Dice=0.7020, CG Dist=9.8107, PZ Dist=7.8899, prostate Dist=3.2016
+118: Patient965633848_study_0, CG Dice=0.5515, PZ Dice=0.0938, prostate Dice=0.8256, CG Dist=5.5902, PZ Dist=9.4340, prostate Dist=2.0000
+119: Patient885725027_study_0, CG Dice=0.6341, PZ Dice=0.1483, prostate Dice=0.8272, CG Dist=4.2720, PZ Dist=8.0156, prostate Dist=1.8708
+120: Patient872282004_study_0, CG Dice=0.1882, PZ Dice=0.1859, prostate Dice=0.4601, CG Dist=21.0000, PZ Dist=7.8740, prostate Dist=12.4599
+121: Patient845768704_study_0, CG Dice=0.5172, PZ Dice=0.0965, prostate Dice=0.8189, CG Dist=7.8740, PZ Dist=10.0623, prostate Dist=2.8723
+122: Patient853303953_study_0, CG Dice=0.3068, PZ Dice=0.0487, prostate Dice=0.6825, CG Dist=9.0000, PZ Dist=5.6789, prostate Dist=3.0822
+123: Patient982554659_study_0, CG Dice=0.2327, PZ Dice=0.2004, prostate Dice=0.7965, CG Dist=15.0665, PZ Dist=5.8737, prostate Dist=2.0616
+124: Patient884816159_study_0, CG Dice=0.5984, PZ Dice=0.0739, prostate Dice=0.6861, CG Dist=3.2016, PZ Dist=7.3485, prostate Dist=3.6401
+125: Patient930889108_study_0, CG Dice=0.4706, PZ Dice=0.0653, prostate Dice=0.8035, CG Dist=8.0777, PZ Dist=9.1104, prostate Dist=2.5000
+126: Patient815940060_study_0, CG Dice=0.3451, PZ Dice=0.2219, prostate Dice=0.6602, CG Dist=9.5131, PZ Dist=4.4159, prostate Dist=4.6368
+127: Patient893391546_study_0, CG Dice=0.3704, PZ Dice=0.0845, prostate Dice=0.7998, CG Dist=11.0000, PZ Dist=7.1764, prostate Dist=2.5000
+128: Patient828086439_study_0, CG Dice=0.6695, PZ Dice=0.0974, prostate Dice=0.8670, CG Dist=5.4314, PZ Dist=6.5765, prostate Dist=1.4142
+129: Patient829954743_study_0, CG Dice=0.4442, PZ Dice=0.1120, prostate Dice=0.7146, CG Dist=4.7170, PZ Dist=7.0887, prostate Dist=4.0311
+130: Patient998123438_study_0, CG Dice=0.6771, PZ Dice=0.1248, prostate Dice=0.8780, CG Dist=4.6368, PZ Dist=5.7587, prostate Dist=1.1180
+131: Patient972534934_study_0, CG Dice=0.7825, PZ Dice=0.1245, prostate Dice=0.9024, CG Dist=2.5000, PZ Dist=5.3151, prostate Dist=1.0000
+132: Patient827240789_study_0, CG Dice=0.0376, PZ Dice=0.2033, prostate Dice=0.5634, CG Dist=18.0000, PZ Dist=5.3852, prostate Dist=9.3408
+133: Patient925772295_study_0, CG Dice=0.0984, PZ Dice=0.2794, prostate Dice=0.8369, CG Dist=13.0000, PZ Dist=4.8990, prostate Dist=1.8028
+SAM-Med3D atlas CG/PZ Dice: CG=0.4544+/-0.2084, PZ=0.1732+/-0.1215, WG=0.7626+/-0.1172
+GPU Epilog Script v0.30

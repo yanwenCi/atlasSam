@@ -3,7 +3,6 @@
 #$ -N register
 #$ -l tmem=16G
 #$ -l gpu=true
-#$ -l gpu_type=!(v100|titanxp|titanx|l40s)
 #$ -l h_rt=50:00:00
 #$ -wd /cluster/project7/longitude/atlasSam/register
 #$ -o /cluster/project7/longitude/atlasSam/register/logs/$JOB_NAME.$JOB_ID.log
@@ -14,7 +13,7 @@ nvidia-smi
 echo "Selected GPU $GPU_ID"
 
 source ~/miniconda3/etc/profile.d/conda.sh
-conda activate ../env
+conda activate /cluster/project7/longitude/env
 
 export PYTHONUNBUFFERED=1
 mkdir -p logs checkpoints atlas
@@ -26,4 +25,8 @@ python -u register_atlas.py \
   --batch_size 4 \
   --save_freq 1 \
   --atlas_update_freq 5 \
-  --label_loss_weight 0.1
+  --label_loss_weight 0.1 \
+  --pretrained_light_register /cluster/project7/longitude/atlasSam/register/checkpoints/light_register/latest_light_register.pth \
+  --light_register_examples 8
+
+# To retrain the lightweight pre-registration model, run light_register.py separately.

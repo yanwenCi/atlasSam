@@ -1,7 +1,10 @@
 import os
 import numpy as np
 import torch.utils.data as data
-import torchio as tio
+try:
+    import torchio as tio
+except ImportError:
+    tio = None
 import PIL.Image as Image
 import scipy
 
@@ -24,7 +27,7 @@ class dataset_loaders(data.Dataset):
         self.ifbin  = ifbin
         self.transforms = transform
         self.path_list=open(os.path.join(self.path, self.phase+'.txt'), 'r').readlines()
-        t2w_to_dwi = {x.strip().split(' ')[0]: x.strip().split(' ')[0].replace('t2.nii', 'prostate_mask.nii') for x in self.path_list}
+        t2w_to_dwi = {x.strip().split(' ')[0]: x.strip().split(' ')[0].replace('t2.nii', 'prostate_zones.nii') for x in self.path_list}
         # self.zone_filenames = [i.replace('t2.', 'prostate_zones.') for i in self.t2w_filenames]
         self.t2w_filenames = list(t2w_to_dwi.keys())
         self.zone_filenames = [t2w_to_dwi[t2w] for t2w in self.t2w_filenames]
@@ -70,6 +73,8 @@ class dataset_loaders(data.Dataset):
         scan = self.norm(scan)
         dict_data = {'img': scan, 'seg': seg,
                      'key': self.t2w_filenames[idx].split('/')[-2],
+                     't2_path': self.t2w_filenames[idx],
+                     'seg_path': self.zone_filenames[idx],
                      'affine': affine,}
         return dict_data
  

@@ -1,0 +1,84 @@
+GPU Prolog Script v1.14
+This is a GPU node.
+Enough GPUs available.
+Allocating card 7
+sameagle.local
+Tue Jun 23 20:48:56 2026       
++-----------------------------------------------------------------------------------------+
+| NVIDIA-SMI 550.54.15              Driver Version: 550.54.15      CUDA Version: 12.4     |
+|-----------------------------------------+------------------------+----------------------+
+| GPU  Name                 Persistence-M | Bus-Id          Disp.A | Volatile Uncorr. ECC |
+| Fan  Temp   Perf          Pwr:Usage/Cap |           Memory-Usage | GPU-Util  Compute M. |
+|                                         |                        |               MIG M. |
+|=========================================+========================+======================|
+|   0  Quadro RTX 6000                On  |   00000000:01:00.0 Off |                  Off |
+| 33%   58C    P2            219W /  260W |    6560MiB /  24576MiB |     85%   E. Process |
+|                                         |                        |                  N/A |
++-----------------------------------------+------------------------+----------------------+
+|   1  Quadro RTX 6000                On  |   00000000:25:00.0 Off |                  Off |
+| 33%   33C    P8             28W /  260W |       0MiB /  24576MiB |      0%   E. Process |
+|                                         |                        |                  N/A |
++-----------------------------------------+------------------------+----------------------+
+|   2  Quadro RTX 6000                On  |   00000000:41:00.0 Off |                  Off |
+| 53%   77C    P2            260W /  260W |    1678MiB /  24576MiB |     92%   E. Process |
+|                                         |                        |                  N/A |
++-----------------------------------------+------------------------+----------------------+
+|   3  Quadro RTX 6000                On  |   00000000:61:00.0 Off |                  Off |
+| 51%   73C    P2            237W /  260W |    6560MiB /  24576MiB |     82%   E. Process |
+|                                         |                        |                  N/A |
++-----------------------------------------+------------------------+----------------------+
+|   4  Quadro RTX 6000                On  |   00000000:81:00.0 Off |                  Off |
+| 33%   33C    P8             21W /  260W |       0MiB /  24576MiB |      0%   E. Process |
+|                                         |                        |                  N/A |
++-----------------------------------------+------------------------+----------------------+
+|   5  Quadro RTX 6000                On  |   00000000:A1:00.0 Off |                  Off |
+| 34%   48C    P2             60W /  260W |    6560MiB /  24576MiB |      0%   E. Process |
+|                                         |                        |                  N/A |
++-----------------------------------------+------------------------+----------------------+
+|   6  Quadro RTX 6000                On  |   00000000:C1:00.0 Off |                  Off |
+| 58%   79C    P2            248W /  260W |    6560MiB /  24576MiB |     87%   E. Process |
+|                                         |                        |                  N/A |
++-----------------------------------------+------------------------+----------------------+
+|   7  Quadro RTX 6000                On  |   00000000:E1:00.0 Off |                  Off |
+| 33%   32C    P8             18W /  260W |       0MiB /  24576MiB |      0%   E. Process |
+|                                         |                        |                  N/A |
++-----------------------------------------+------------------------+----------------------+
+                                                                                         
++-----------------------------------------------------------------------------------------+
+| Processes:                                                                              |
+|  GPU   GI   CI        PID   Type   Process name                              GPU Memory |
+|        ID   ID                                                               Usage      |
+|=========================================================================================|
+|    0   N/A  N/A     13137      C   python                                       6556MiB |
+|    2   N/A  N/A     19530      C   python                                       1674MiB |
+|    3   N/A  N/A     19818      C   python                                       6556MiB |
+|    5   N/A  N/A     19978      C   python                                       6556MiB |
+|    6   N/A  N/A     30095      C   python                                       6556MiB |
++-----------------------------------------------------------------------------------------+
+Selected GPU 0
+creating model SAM-Med3D
+try to load pretrained weights from https://huggingface.co/blueyo0/SAM-Med3D/blob/main/sam_med3d_turbo.pth
+cache found, use pretrained weights in /home/wenyan/.local/share/checkpoint/huggingface_hub/blueyo0/SAM-Med3D/sam_med3d_turbo.pth
+Loaded 6 selected atlas masks from ../register/atlas_bank/reference_bank.csv
+data length: 254
+Traceback (most recent call last):
+  File "/cluster/project7/longitude/atlasSam/segment/segment.py", line 996, in <module>
+    atlas_conditioned_sammed3d_test(args)
+  File "/cluster/project7/longitude/atlasSam/segment/segment.py", line 570, in atlas_conditioned_sammed3d_test
+    for i, data in enumerate(loader):
+  File "/cluster/project7/longitude/env/lib/python3.10/site-packages/torch/utils/data/dataloader.py", line 708, in __next__
+    data = self._next_data()
+  File "/cluster/project7/longitude/env/lib/python3.10/site-packages/torch/utils/data/dataloader.py", line 764, in _next_data
+    data = self._dataset_fetcher.fetch(index)  # may raise StopIteration
+  File "/cluster/project7/longitude/env/lib/python3.10/site-packages/torch/utils/data/_utils/fetch.py", line 52, in fetch
+    data = [self.dataset[idx] for idx in possibly_batched_index]
+  File "/cluster/project7/longitude/env/lib/python3.10/site-packages/torch/utils/data/_utils/fetch.py", line 52, in <listcomp>
+    data = [self.dataset[idx] for idx in possibly_batched_index]
+  File "/cluster/project7/longitude/atlasSam/segment/dataloader3d.py", line 69, in __getitem__
+    scan, seg = self.load_data(idx)
+  File "/cluster/project7/longitude/atlasSam/segment/dataloader3d.py", line 48, in load_data
+    vols=load_volfile(self.t2w_filenames[indices], **load_params)
+  File "/cluster/project7/longitude/atlasSam/segment/dataloader3d.py", line 107, in load_volfile
+    raise ValueError("'%s' is not a file." % filename)
+ValueError: '/raid/candi/Wen/Dataset/ProstateDatasets/3-picai-data/data-ROI-192-96/P-11062/t2.nii.gz' is not a file.
+GPU Epilog Script v0.30

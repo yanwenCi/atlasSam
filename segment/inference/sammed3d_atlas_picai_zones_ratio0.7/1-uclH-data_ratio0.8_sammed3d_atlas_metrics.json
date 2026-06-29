@@ -1,0 +1,2432 @@
+{
+    "Patient812415908_study_0": {
+        "CG Dice": 0.04889646382823368,
+        "PZ Dice": 0.6341608122917146,
+        "WG Dice": 0.5525135086361315,
+        "Prostate Dice": 0.5525135086361315,
+        "CG Dist": 24.698178070456937,
+        "PZ Dist": 2.9154759474226504,
+        "WG Dist": 11.704699910719626,
+        "Prostate Dist": 11.704699910719626,
+        "Atlas Weights": [
+            {
+                "case_id": "P-10155",
+                "weight": 1.0,
+                "similarity_weight": 1.0,
+                "prompt_weight": 0.46685090462895484
+            }
+        ]
+    },
+    "Patient992290047_study_0": {
+        "CG Dice": 0.3056240920675716,
+        "PZ Dice": 0.26160232048255644,
+        "WG Dice": 0.7258004534636237,
+        "Prostate Dice": 0.7258004534636237,
+        "CG Dist": 15.724185193516387,
+        "PZ Dist": 4.716990566028302,
+        "WG Dist": 4.301162633521313,
+        "Prostate Dist": 4.301162633521313,
+        "Atlas Weights": [
+            {
+                "case_id": "P-10601",
+                "weight": 1.0,
+                "similarity_weight": 1.0,
+                "prompt_weight": 0.5016011034728594
+            }
+        ]
+    },
+    "Patient861941190_study_0": {
+        "CG Dice": 0.38203823098332684,
+        "PZ Dice": 0.01891498654027671,
+        "WG Dice": 0.7244873835722472,
+        "Prostate Dice": 0.7244873835722472,
+        "CG Dist": 5.678908345800274,
+        "PZ Dist": 9.604686356149273,
+        "WG Dist": 3.0,
+        "Prostate Dist": 3.0,
+        "Atlas Weights": [
+            {
+                "case_id": "P-10205",
+                "weight": 1.0,
+                "similarity_weight": 1.0,
+                "prompt_weight": 0.5307276954142113
+            }
+        ]
+    },
+    "Patient946849365_study_0": {
+        "CG Dice": 0.46552210090970286,
+        "PZ Dice": 0.03276869161703363,
+        "WG Dice": 0.7953868598033943,
+        "Prostate Dice": 0.7953868598033943,
+        "CG Dist": 6.576473218982953,
+        "PZ Dist": 7.874007874011811,
+        "WG Dist": 3.0,
+        "Prostate Dist": 3.0,
+        "Atlas Weights": [
+            {
+                "case_id": "P-10121",
+                "weight": 1.0,
+                "similarity_weight": 1.0,
+                "prompt_weight": 0.6432535752043879
+            }
+        ]
+    },
+    "Patient912361214_study_0": {
+        "CG Dice": 0.4598015407217903,
+        "PZ Dice": 0.1873376559160205,
+        "WG Dice": 0.8595531559704156,
+        "Prostate Dice": 0.8595531559704156,
+        "CG Dist": 7.632168761236874,
+        "PZ Dist": 5.385164807134504,
+        "WG Dist": 1.4142135623730951,
+        "Prostate Dist": 1.4142135623730951,
+        "Atlas Weights": [
+            {
+                "case_id": "P-11388",
+                "weight": 1.0,
+                "similarity_weight": 1.0,
+                "prompt_weight": 0.6415620299213579
+            }
+        ]
+    },
+    "Patient892640977_study_0": {
+        "CG Dice": 0.7457064728070021,
+        "PZ Dice": 0.14681234754263245,
+        "WG Dice": 0.8315916588533174,
+        "Prostate Dice": 0.8315916588533174,
+        "CG Dist": 3.9370039370059056,
+        "PZ Dist": 5.196152422706632,
+        "WG Dist": 2.23606797749979,
+        "Prostate Dist": 2.23606797749979,
+        "Atlas Weights": [
+            {
+                "case_id": "P-10837",
+                "weight": 1.0,
+                "similarity_weight": 1.0,
+                "prompt_weight": 0.6735871141562744
+            }
+        ]
+    },
+    "Patient846659801_study_0": {
+        "CG Dice": 8.543542151508073e-05,
+        "PZ Dice": 0.5790353516764498,
+        "WG Dice": 0.5863499536934013,
+        "Prostate Dice": 0.5863499536934013,
+        "CG Dist": 17.240939649566666,
+        "PZ Dist": 3.2015621187164243,
+        "WG Dist": 10.874281585465774,
+        "Prostate Dist": 10.874281585465774,
+        "Atlas Weights": [
+            {
+                "case_id": "P-10155",
+                "weight": 1.0,
+                "similarity_weight": 1.0,
+                "prompt_weight": 0.43174118485287033
+            }
+        ]
+    },
+    "Patient899795838_study_0": {
+        "CG Dice": 0.35603167211560244,
+        "PZ Dice": 0.22644707479797602,
+        "WG Dice": 0.8216852397934403,
+        "Prostate Dice": 0.8216852397934403,
+        "CG Dist": 10.95502139758464,
+        "PZ Dist": 5.0990195135927845,
+        "WG Dist": 2.0615528128088303,
+        "Prostate Dist": 2.0615528128088303,
+        "Atlas Weights": [
+            {
+                "case_id": "P-10601",
+                "weight": 1.0,
+                "similarity_weight": 1.0,
+                "prompt_weight": 0.49775517941731084
+            }
+        ]
+    },
+    "Patient878281488_study_0": {
+        "CG Dice": 0.6908691343162531,
+        "PZ Dice": 0.07398344730541001,
+        "WG Dice": 0.8711128292442283,
+        "Prostate Dice": 0.8711128292442283,
+        "CG Dist": 4.58257569495584,
+        "PZ Dist": 9.233092656309694,
+        "WG Dist": 1.118033988749895,
+        "Prostate Dist": 1.118033988749895,
+        "Atlas Weights": [
+            {
+                "case_id": "P-10205",
+                "weight": 1.0,
+                "similarity_weight": 1.0,
+                "prompt_weight": 0.5861909925996452
+            }
+        ]
+    },
+    "Patient832853324_study_0": {
+        "CG Dice": 0.6315509498467408,
+        "PZ Dice": 0.10949336790364433,
+        "WG Dice": 0.8508201888021278,
+        "Prostate Dice": 0.8508201888021278,
+        "CG Dist": 4.716990566028302,
+        "PZ Dist": 7.883523301022551,
+        "WG Dist": 1.5,
+        "Prostate Dist": 1.5,
+        "Atlas Weights": [
+            {
+                "case_id": "P-10121",
+                "weight": 1.0,
+                "similarity_weight": 1.0,
+                "prompt_weight": 0.6358337751329581
+            }
+        ]
+    },
+    "Patient922970529_study_0": {
+        "CG Dice": 0.6739937845889109,
+        "PZ Dice": 0.126685950173009,
+        "WG Dice": 0.8349912019267786,
+        "Prostate Dice": 0.8349912019267786,
+        "CG Dist": 3.3541019662496847,
+        "PZ Dist": 4.387482193696061,
+        "WG Dist": 1.5,
+        "Prostate Dist": 1.5,
+        "Atlas Weights": [
+            {
+                "case_id": "P-11388",
+                "weight": 1.0,
+                "similarity_weight": 1.0,
+                "prompt_weight": 0.5881079137067524
+            }
+        ]
+    },
+    "Patient927268952_study_0": {
+        "CG Dice": 0.5096301048375111,
+        "PZ Dice": 0.1207855542606884,
+        "WG Dice": 0.9033251347148633,
+        "Prostate Dice": 0.9033251347148633,
+        "CG Dist": 6.34428877022476,
+        "PZ Dist": 6.59545297913646,
+        "WG Dist": 0.7071067811865476,
+        "Prostate Dist": 0.7071067811865476,
+        "Atlas Weights": [
+            {
+                "case_id": "P-10837",
+                "weight": 1.0,
+                "similarity_weight": 1.0,
+                "prompt_weight": 0.6345759235304174
+            }
+        ]
+    },
+    "Patient857551265_study_0": {
+        "CG Dice": 0.3408353579681855,
+        "PZ Dice": 0.12321738210399456,
+        "WG Dice": 0.590952204218824,
+        "Prostate Dice": 0.590952204218824,
+        "CG Dist": 16.3783393541592,
+        "PZ Dist": 9.0,
+        "WG Dist": 11.445523142259598,
+        "Prostate Dist": 11.445523142259598,
+        "Atlas Weights": [
+            {
+                "case_id": "P-10155",
+                "weight": 1.0,
+                "similarity_weight": 1.0,
+                "prompt_weight": 0.4525841603398414
+            }
+        ]
+    },
+    "Patient947535985_study_0": {
+        "CG Dice": 0.07549094620533438,
+        "PZ Dice": 0.22435391752825165,
+        "WG Dice": 0.7621529447793087,
+        "Prostate Dice": 0.7621529447793087,
+        "CG Dist": 13.46291201783626,
+        "PZ Dist": 5.0,
+        "WG Dist": 4.031128874149275,
+        "Prostate Dist": 4.031128874149275,
+        "Atlas Weights": [
+            {
+                "case_id": "P-10601",
+                "weight": 1.0,
+                "similarity_weight": 1.0,
+                "prompt_weight": 0.482772013753118
+            }
+        ]
+    },
+    "Patient910053655_study_0": {
+        "CG Dice": 0.42450178523145776,
+        "PZ Dice": 0.08672917422075689,
+        "WG Dice": 0.8550952573999985,
+        "Prostate Dice": 0.8550952573999985,
+        "CG Dist": 5.0990195135927845,
+        "PZ Dist": 9.40744386111339,
+        "WG Dist": 1.4142135623730951,
+        "Prostate Dist": 1.4142135623730951,
+        "Atlas Weights": [
+            {
+                "case_id": "P-10205",
+                "weight": 1.0,
+                "similarity_weight": 1.0,
+                "prompt_weight": 0.5095591760883815
+            }
+        ]
+    },
+    "Patient946782415_study_0": {
+        "CG Dice": 0.8336416727069897,
+        "PZ Dice": 0.04336342979413539,
+        "WG Dice": 0.8288434974687278,
+        "Prostate Dice": 0.8288434974687278,
+        "CG Dist": 1.8708286933869707,
+        "PZ Dist": 10.44030650891055,
+        "WG Dist": 1.7320508075688772,
+        "Prostate Dist": 1.7320508075688772,
+        "Atlas Weights": [
+            {
+                "case_id": "P-10121",
+                "weight": 1.0,
+                "similarity_weight": 1.0,
+                "prompt_weight": 0.6269225367854623
+            }
+        ]
+    },
+    "Patient833373915_study_0": {
+        "CG Dice": 0.46291125868806765,
+        "PZ Dice": 0.11814152030477289,
+        "WG Dice": 0.8412350382823378,
+        "Prostate Dice": 0.8412350382823378,
+        "CG Dist": 7.0,
+        "PZ Dist": 7.566372975210778,
+        "WG Dist": 1.7320508075688772,
+        "Prostate Dist": 1.7320508075688772,
+        "Atlas Weights": [
+            {
+                "case_id": "P-11388",
+                "weight": 1.0,
+                "similarity_weight": 1.0,
+                "prompt_weight": 0.5850792224776749
+            }
+        ]
+    },
+    "Patient981742409_study_0": {
+        "CG Dice": 0.5333886884116279,
+        "PZ Dice": 0.2754387135678602,
+        "WG Dice": 0.8670006599322687,
+        "Prostate Dice": 0.8670006599322687,
+        "CG Dist": 6.020797289396148,
+        "PZ Dist": 3.905124837953327,
+        "WG Dist": 1.4142135623730951,
+        "Prostate Dist": 1.4142135623730951,
+        "Atlas Weights": [
+            {
+                "case_id": "P-10837",
+                "weight": 1.0,
+                "similarity_weight": 1.0,
+                "prompt_weight": 0.6063079304516099
+            }
+        ]
+    },
+    "Patient973816846_study_0": {
+        "CG Dice": 0.13141264757173596,
+        "PZ Dice": 0.2089466297474018,
+        "WG Dice": 0.3909866733981504,
+        "Prostate Dice": 0.3909866733981504,
+        "CG Dist": 20.89258241577618,
+        "PZ Dist": 7.0710678118654755,
+        "WG Dist": 15.297058540778355,
+        "Prostate Dist": 15.297058540778355,
+        "Atlas Weights": [
+            {
+                "case_id": "P-10155",
+                "weight": 1.0,
+                "similarity_weight": 1.0,
+                "prompt_weight": 0.4943818615612877
+            }
+        ]
+    },
+    "Patient909335475_study_0": {
+        "CG Dice": 0.3743980660251029,
+        "PZ Dice": 0.38276920701699585,
+        "WG Dice": 0.7513290132343396,
+        "Prostate Dice": 0.7513290132343396,
+        "CG Dist": 13.838352503098047,
+        "PZ Dist": 4.123105625617661,
+        "WG Dist": 5.0,
+        "Prostate Dist": 5.0,
+        "Atlas Weights": [
+            {
+                "case_id": "P-10601",
+                "weight": 1.0,
+                "similarity_weight": 1.0,
+                "prompt_weight": 0.5050810604697925
+            }
+        ]
+    },
+    "Patient859345992_study_0": {
+        "CG Dice": 0.3888855763106289,
+        "PZ Dice": 0.2418971380648862,
+        "WG Dice": 0.8228122987551062,
+        "Prostate Dice": 0.8228122987551062,
+        "CG Dist": 5.612486080160912,
+        "PZ Dist": 5.522680508593631,
+        "WG Dist": 2.5,
+        "Prostate Dist": 2.5,
+        "Atlas Weights": [
+            {
+                "case_id": "P-10205",
+                "weight": 1.0,
+                "similarity_weight": 1.0,
+                "prompt_weight": 0.4899268180390979
+            }
+        ]
+    },
+    "Patient909623892_study_0": {
+        "CG Dice": 0.7120492307727748,
+        "PZ Dice": 0.18666878191516173,
+        "WG Dice": 0.8981028126084596,
+        "Prostate Dice": 0.8981028126084596,
+        "CG Dist": 5.0,
+        "PZ Dist": 7.874007874011811,
+        "WG Dist": 0.7071067811865476,
+        "Prostate Dist": 0.7071067811865476,
+        "Atlas Weights": [
+            {
+                "case_id": "P-10121",
+                "weight": 1.0,
+                "similarity_weight": 1.0,
+                "prompt_weight": 0.605399795228842
+            }
+        ]
+    },
+    "Patient816630551_study_0": {
+        "CG Dice": 0.35977433388798646,
+        "PZ Dice": 0.04889571951705101,
+        "WG Dice": 0.8001361933967469,
+        "Prostate Dice": 0.8001361933967469,
+        "CG Dist": 13.275918047351754,
+        "PZ Dist": 8.902246907382429,
+        "WG Dist": 2.0,
+        "Prostate Dist": 2.0,
+        "Atlas Weights": [
+            {
+                "case_id": "P-11388",
+                "weight": 1.0,
+                "similarity_weight": 1.0,
+                "prompt_weight": 0.6204025073183206
+            }
+        ]
+    },
+    "Patient975631273_study_0": {
+        "CG Dice": 0.3120747381112411,
+        "PZ Dice": 0.12234219272747748,
+        "WG Dice": 0.7303161201693449,
+        "Prostate Dice": 0.7303161201693449,
+        "CG Dist": 8.366600265340756,
+        "PZ Dist": 6.800735254367722,
+        "WG Dist": 5.123475382979799,
+        "Prostate Dist": 5.123475382979799,
+        "Atlas Weights": [
+            {
+                "case_id": "P-10837",
+                "weight": 1.0,
+                "similarity_weight": 1.0,
+                "prompt_weight": 0.5359109127432891
+            }
+        ]
+    },
+    "Patient874087940_study_0": {
+        "CG Dice": 0.021077883060591128,
+        "PZ Dice": 0.6063135147255763,
+        "WG Dice": 0.6536643937493601,
+        "Prostate Dice": 0.6536643937493601,
+        "CG Dist": 22.282279955157193,
+        "PZ Dist": 3.082207001484488,
+        "WG Dist": 13.80217374184226,
+        "Prostate Dist": 13.80217374184226,
+        "Atlas Weights": [
+            {
+                "case_id": "P-10155",
+                "weight": 1.0,
+                "similarity_weight": 1.0,
+                "prompt_weight": 0.49114614742582313
+            }
+        ]
+    },
+    "Patient999341630_study_0": {
+        "CG Dice": 0.20253769886819686,
+        "PZ Dice": 0.15252283410586764,
+        "WG Dice": 0.6265091522817964,
+        "Prostate Dice": 0.6265091522817964,
+        "CG Dist": 24.27447218787671,
+        "PZ Dist": 8.82183751390347,
+        "WG Dist": 11.045361017187261,
+        "Prostate Dist": 11.045361017187261,
+        "Atlas Weights": [
+            {
+                "case_id": "P-10601",
+                "weight": 1.0,
+                "similarity_weight": 1.0,
+                "prompt_weight": 0.5697057674043537
+            }
+        ]
+    },
+    "Patient989997499_study_0": {
+        "CG Dice": 0.38569844791059593,
+        "PZ Dice": 0.17445709748495575,
+        "WG Dice": 0.8173726768070033,
+        "Prostate Dice": 0.8173726768070033,
+        "CG Dist": 5.220153254455275,
+        "PZ Dist": 5.408326913195984,
+        "WG Dist": 1.8027756377319946,
+        "Prostate Dist": 1.8027756377319946,
+        "Atlas Weights": [
+            {
+                "case_id": "P-10205",
+                "weight": 1.0,
+                "similarity_weight": 1.0,
+                "prompt_weight": 0.5104312827860666
+            }
+        ]
+    },
+    "Patient850564213_study_0": {
+        "CG Dice": 0.1813003788953823,
+        "PZ Dice": 0.004611907992223774,
+        "WG Dice": 0.5914112440650482,
+        "Prostate Dice": 0.5914112440650482,
+        "CG Dist": 12.459935794377111,
+        "PZ Dist": 10.781929326423912,
+        "WG Dist": 6.48074069840786,
+        "Prostate Dist": 6.48074069840786,
+        "Atlas Weights": [
+            {
+                "case_id": "P-10121",
+                "weight": 1.0,
+                "similarity_weight": 1.0,
+                "prompt_weight": 0.48886878774659526
+            }
+        ]
+    },
+    "Patient858552566_study_0": {
+        "CG Dice": 0.6674411850165197,
+        "PZ Dice": 0.05514498271366483,
+        "WG Dice": 0.7890004594095585,
+        "Prostate Dice": 0.7890004594095585,
+        "CG Dist": 4.123105625617661,
+        "PZ Dist": 8.803408430829505,
+        "WG Dist": 3.605551275463989,
+        "Prostate Dist": 3.605551275463989,
+        "Atlas Weights": [
+            {
+                "case_id": "P-11388",
+                "weight": 1.0,
+                "similarity_weight": 1.0,
+                "prompt_weight": 0.6436752237833352
+            }
+        ]
+    },
+    "Patient797475060_study_0": {
+        "CG Dice": 0.819042583077325,
+        "PZ Dice": 0.2420211578975579,
+        "WG Dice": 0.8549324650274064,
+        "Prostate Dice": 0.8549324650274064,
+        "CG Dist": 2.0615528128088303,
+        "PZ Dist": 4.636809247747852,
+        "WG Dist": 1.7320508075688772,
+        "Prostate Dist": 1.7320508075688772,
+        "Atlas Weights": [
+            {
+                "case_id": "P-10837",
+                "weight": 1.0,
+                "similarity_weight": 1.0,
+                "prompt_weight": 0.6798822576380354
+            }
+        ]
+    },
+    "Patient929874313_study_0": {
+        "CG Dice": 0.5475831191481006,
+        "PZ Dice": 0.10816030904540372,
+        "WG Dice": 0.8198066018239714,
+        "Prostate Dice": 0.8198066018239714,
+        "CG Dist": 5.024937810560445,
+        "PZ Dist": 7.54983443527075,
+        "WG Dist": 2.0615528128088303,
+        "Prostate Dist": 2.0615528128088303,
+        "Atlas Weights": [
+            {
+                "case_id": "P-10155",
+                "weight": 1.0,
+                "similarity_weight": 1.0,
+                "prompt_weight": 0.4865545957893972
+            }
+        ]
+    },
+    "Patient953755708_study_0": {
+        "CG Dice": 0.5881268688331116,
+        "PZ Dice": 0.08728583765186729,
+        "WG Dice": 0.8305324831180473,
+        "Prostate Dice": 0.8305324831180473,
+        "CG Dist": 8.261355820929152,
+        "PZ Dist": 7.22841614740048,
+        "WG Dist": 2.0615528128088303,
+        "Prostate Dist": 2.0615528128088303,
+        "Atlas Weights": [
+            {
+                "case_id": "P-10601",
+                "weight": 1.0,
+                "similarity_weight": 1.0,
+                "prompt_weight": 0.6295076137256113
+            }
+        ]
+    },
+    "Patient917627230_study_0": {
+        "CG Dice": 0.5909956311833434,
+        "PZ Dice": 0.13291545636549587,
+        "WG Dice": 0.8863812559227818,
+        "Prostate Dice": 0.8863812559227818,
+        "CG Dist": 4.58257569495584,
+        "PZ Dist": 8.440971508067067,
+        "WG Dist": 1.118033988749895,
+        "Prostate Dist": 1.118033988749895,
+        "Atlas Weights": [
+            {
+                "case_id": "P-10205",
+                "weight": 1.0,
+                "similarity_weight": 1.0,
+                "prompt_weight": 0.6064548999502035
+            }
+        ]
+    },
+    "Patient994800837_study_0": {
+        "CG Dice": 0.7038094433676508,
+        "PZ Dice": 0.15204229089333915,
+        "WG Dice": 0.8653118300702921,
+        "Prostate Dice": 0.8653118300702921,
+        "CG Dist": 3.640054944640259,
+        "PZ Dist": 7.826237921249264,
+        "WG Dist": 1.4142135623730951,
+        "Prostate Dist": 1.4142135623730951,
+        "Atlas Weights": [
+            {
+                "case_id": "P-10121",
+                "weight": 1.0,
+                "similarity_weight": 1.0,
+                "prompt_weight": 0.6355328732028626
+            }
+        ]
+    },
+    "Patient870474535_study_0": {
+        "CG Dice": 0.5194293582284206,
+        "PZ Dice": 0.1825003678654544,
+        "WG Dice": 0.8200064467624368,
+        "Prostate Dice": 0.8200064467624368,
+        "CG Dist": 8.0,
+        "PZ Dist": 5.678908345800274,
+        "WG Dist": 2.29128784747792,
+        "Prostate Dist": 2.29128784747792,
+        "Atlas Weights": [
+            {
+                "case_id": "P-11388",
+                "weight": 1.0,
+                "similarity_weight": 1.0,
+                "prompt_weight": 0.5830415184913126
+            }
+        ]
+    },
+    "Patient931730120_study_0": {
+        "CG Dice": 0.5798185385078507,
+        "PZ Dice": 0.20473116112164,
+        "WG Dice": 0.8449902921406399,
+        "Prostate Dice": 0.8449902921406399,
+        "CG Dist": 4.0,
+        "PZ Dist": 4.847679857416329,
+        "WG Dist": 1.4142135623730951,
+        "Prostate Dist": 1.4142135623730951,
+        "Atlas Weights": [
+            {
+                "case_id": "P-10837",
+                "weight": 1.0,
+                "similarity_weight": 1.0,
+                "prompt_weight": 0.5538090192933022
+            }
+        ]
+    },
+    "Patient908092997_study_0": {
+        "CG Dice": 0.09362712190594578,
+        "PZ Dice": 0.524994114428183,
+        "WG Dice": 0.43668050475205167,
+        "Prostate Dice": 0.43668050475205167,
+        "CG Dist": 24.315632831575655,
+        "PZ Dist": 2.23606797749979,
+        "WG Dist": 15.811388300841896,
+        "Prostate Dist": 15.811388300841896,
+        "Atlas Weights": [
+            {
+                "case_id": "P-10155",
+                "weight": 1.0,
+                "similarity_weight": 1.0,
+                "prompt_weight": 0.4925466340040653
+            }
+        ]
+    },
+    "Patient890113667_study_0": {
+        "CG Dice": 0.47480498776333957,
+        "PZ Dice": 0.057928028841199485,
+        "WG Dice": 0.703256055890425,
+        "Prostate Dice": 0.703256055890425,
+        "CG Dist": 13.009611831257688,
+        "PZ Dist": 10.404326023342406,
+        "WG Dist": 5.916079783099616,
+        "Prostate Dist": 5.916079783099616,
+        "Atlas Weights": [
+            {
+                "case_id": "P-10601",
+                "weight": 1.0,
+                "similarity_weight": 1.0,
+                "prompt_weight": 0.5699025803658233
+            }
+        ]
+    },
+    "Patient873305257_study_0": {
+        "CG Dice": 0.475892764115633,
+        "PZ Dice": 0.009833664661061111,
+        "WG Dice": 0.6964089134072284,
+        "Prostate Dice": 0.6964089134072284,
+        "CG Dist": 6.0,
+        "PZ Dist": 11.74734012447073,
+        "WG Dist": 3.905124837953327,
+        "Prostate Dist": 3.905124837953327,
+        "Atlas Weights": [
+            {
+                "case_id": "P-10205",
+                "weight": 1.0,
+                "similarity_weight": 1.0,
+                "prompt_weight": 0.5359891011525453
+            }
+        ]
+    },
+    "Patient968013665_study_0": {
+        "CG Dice": 0.5378312765585446,
+        "PZ Dice": 0.09690617646292718,
+        "WG Dice": 0.8248527515437141,
+        "Prostate Dice": 0.8248527515437141,
+        "CG Dist": 6.103277807866851,
+        "PZ Dist": 7.245688373094719,
+        "WG Dist": 2.0615528128088303,
+        "Prostate Dist": 2.0615528128088303,
+        "Atlas Weights": [
+            {
+                "case_id": "P-10121",
+                "weight": 1.0,
+                "similarity_weight": 1.0,
+                "prompt_weight": 0.6247375089611972
+            }
+        ]
+    },
+    "Patient881613793_study_0": {
+        "CG Dice": 0.32254596890176673,
+        "PZ Dice": 0.2101921470606452,
+        "WG Dice": 0.7534278054423067,
+        "Prostate Dice": 0.7534278054423067,
+        "CG Dist": 10.012492197250394,
+        "PZ Dist": 6.103277807866851,
+        "WG Dist": 2.5,
+        "Prostate Dist": 2.5,
+        "Atlas Weights": [
+            {
+                "case_id": "P-11388",
+                "weight": 1.0,
+                "similarity_weight": 1.0,
+                "prompt_weight": 0.5471373117229701
+            }
+        ]
+    },
+    "Patient985762726_study_0": {
+        "CG Dice": 0.5654094997747249,
+        "PZ Dice": 0.27127069713313945,
+        "WG Dice": 0.8553129820975284,
+        "Prostate Dice": 0.8553129820975284,
+        "CG Dist": 3.9370039370059056,
+        "PZ Dist": 4.5,
+        "WG Dist": 1.118033988749895,
+        "Prostate Dist": 1.118033988749895,
+        "Atlas Weights": [
+            {
+                "case_id": "P-10837",
+                "weight": 1.0,
+                "similarity_weight": 1.0,
+                "prompt_weight": 0.5480916026212337
+            }
+        ]
+    },
+    "Patient954554801_study_0": {
+        "CG Dice": 0.23383347761186055,
+        "PZ Dice": 0.1816653238662265,
+        "WG Dice": 0.6526080788326463,
+        "Prostate Dice": 0.6526080788326463,
+        "CG Dist": 15.435349040433131,
+        "PZ Dist": 8.558621384311845,
+        "WG Dist": 11.510864433221338,
+        "Prostate Dist": 11.510864433221338,
+        "Atlas Weights": [
+            {
+                "case_id": "P-10155",
+                "weight": 1.0,
+                "similarity_weight": 1.0,
+                "prompt_weight": 0.5180452518606723
+            }
+        ]
+    },
+    "Patient841484403_study_0": {
+        "CG Dice": 0.31501005248018094,
+        "PZ Dice": 0.08215952206440715,
+        "WG Dice": 0.7627731430034961,
+        "Prostate Dice": 0.7627731430034961,
+        "CG Dist": 14.0,
+        "PZ Dist": 7.483314773547883,
+        "WG Dist": 2.9154759474226504,
+        "Prostate Dist": 2.9154759474226504,
+        "Atlas Weights": [
+            {
+                "case_id": "P-10601",
+                "weight": 1.0,
+                "similarity_weight": 1.0,
+                "prompt_weight": 0.56828721546123
+            }
+        ]
+    },
+    "Patient910743815_study_0": {
+        "CG Dice": 0.7642121363783084,
+        "PZ Dice": 0.20059460922379924,
+        "WG Dice": 0.8878672959929073,
+        "Prostate Dice": 0.8878672959929073,
+        "CG Dist": 2.8722813232690143,
+        "PZ Dist": 7.516648189186454,
+        "WG Dist": 1.0,
+        "Prostate Dist": 1.0,
+        "Atlas Weights": [
+            {
+                "case_id": "P-10205",
+                "weight": 1.0,
+                "similarity_weight": 1.0,
+                "prompt_weight": 0.5919749128992158
+            }
+        ]
+    },
+    "Patient941592504_study_0": {
+        "CG Dice": 0.6123540792924083,
+        "PZ Dice": 0.11314831096593155,
+        "WG Dice": 0.8817688287124021,
+        "Prostate Dice": 0.8817688287124021,
+        "CG Dist": 4.387482193696061,
+        "PZ Dist": 7.5,
+        "WG Dist": 1.0,
+        "Prostate Dist": 1.0,
+        "Atlas Weights": [
+            {
+                "case_id": "P-10121",
+                "weight": 1.0,
+                "similarity_weight": 1.0,
+                "prompt_weight": 0.6136016343814448
+            }
+        ]
+    },
+    "Patient879207934_study_0": {
+        "CG Dice": 0.6463054922964884,
+        "PZ Dice": 0.20494085675959678,
+        "WG Dice": 0.7825548208884837,
+        "Prostate Dice": 0.7825548208884837,
+        "CG Dist": 3.5355339059327378,
+        "PZ Dist": 5.385164807134504,
+        "WG Dist": 2.1213203435596424,
+        "Prostate Dist": 2.1213203435596424,
+        "Atlas Weights": [
+            {
+                "case_id": "P-11388",
+                "weight": 1.0,
+                "similarity_weight": 1.0,
+                "prompt_weight": 0.5730398312265959
+            }
+        ]
+    },
+    "Patient951135893_study_0": {
+        "CG Dice": 0.774308308868495,
+        "PZ Dice": 0.035173471389918845,
+        "WG Dice": 0.8641036868389167,
+        "Prostate Dice": 0.8641036868389167,
+        "CG Dist": 2.692582403567252,
+        "PZ Dist": 12.338962679253067,
+        "WG Dist": 1.4142135623730951,
+        "Prostate Dist": 1.4142135623730951,
+        "Atlas Weights": [
+            {
+                "case_id": "P-10837",
+                "weight": 1.0,
+                "similarity_weight": 1.0,
+                "prompt_weight": 0.6260809106535822
+            }
+        ]
+    },
+    "Patient994434010_study_0": {
+        "CG Dice": 0.17548935925152287,
+        "PZ Dice": 0.3773253348064799,
+        "WG Dice": 0.5472206174709213,
+        "Prostate Dice": 0.5472206174709213,
+        "CG Dist": 19.72308292331602,
+        "PZ Dist": 3.905124837953327,
+        "WG Dist": 10.547511554864494,
+        "Prostate Dist": 10.547511554864494,
+        "Atlas Weights": [
+            {
+                "case_id": "P-10155",
+                "weight": 1.0,
+                "similarity_weight": 1.0,
+                "prompt_weight": 0.48474825491918183
+            }
+        ]
+    },
+    "Patient910907550_study_0": {
+        "CG Dice": 0.4849338399141076,
+        "PZ Dice": 0.3841567845430191,
+        "WG Dice": 0.7883497681728098,
+        "Prostate Dice": 0.7883497681728098,
+        "CG Dist": 9.86154146165801,
+        "PZ Dist": 4.743416490252569,
+        "WG Dist": 3.0,
+        "Prostate Dist": 3.0,
+        "Atlas Weights": [
+            {
+                "case_id": "P-10601",
+                "weight": 1.0,
+                "similarity_weight": 1.0,
+                "prompt_weight": 0.5516756631994701
+            }
+        ]
+    },
+    "Patient928575900_study_0": {
+        "CG Dice": 0.6177853213815057,
+        "PZ Dice": 0.13105880018049618,
+        "WG Dice": 0.7863981728121411,
+        "Prostate Dice": 0.7863981728121411,
+        "CG Dist": 9.387489316837414,
+        "PZ Dist": 6.96419413859206,
+        "WG Dist": 4.387482193696061,
+        "Prostate Dist": 4.387482193696061,
+        "Atlas Weights": [
+            {
+                "case_id": "P-10205",
+                "weight": 1.0,
+                "similarity_weight": 1.0,
+                "prompt_weight": 0.6072791055977869
+            }
+        ]
+    },
+    "Patient909419281_study_0": {
+        "CG Dice": 0.6220008365408951,
+        "PZ Dice": 0.17084591069876534,
+        "WG Dice": 0.7779573470251929,
+        "Prostate Dice": 0.7779573470251929,
+        "CG Dist": 4.0,
+        "PZ Dist": 7.035623639735144,
+        "WG Dist": 2.5,
+        "Prostate Dist": 2.5,
+        "Atlas Weights": [
+            {
+                "case_id": "P-10121",
+                "weight": 1.0,
+                "similarity_weight": 1.0,
+                "prompt_weight": 0.5560168922912989
+            }
+        ]
+    },
+    "Patient940614618_study_0": {
+        "CG Dice": 0.49438605589026613,
+        "PZ Dice": 0.03905550587292662,
+        "WG Dice": 0.8352569286211093,
+        "Prostate Dice": 0.8352569286211093,
+        "CG Dist": 7.22841614740048,
+        "PZ Dist": 7.968688725254614,
+        "WG Dist": 1.8708286933869707,
+        "Prostate Dist": 1.8708286933869707,
+        "Atlas Weights": [
+            {
+                "case_id": "P-11388",
+                "weight": 1.0,
+                "similarity_weight": 1.0,
+                "prompt_weight": 0.5822817614617498
+            }
+        ]
+    },
+    "Patient951795211_study_0": {
+        "CG Dice": 0.5396377431923098,
+        "PZ Dice": 0.09126836186031852,
+        "WG Dice": 0.7478107344677293,
+        "Prostate Dice": 0.7478107344677293,
+        "CG Dist": 5.408326913195984,
+        "PZ Dist": 10.295630140987,
+        "WG Dist": 3.082207001484488,
+        "Prostate Dist": 3.082207001484488,
+        "Atlas Weights": [
+            {
+                "case_id": "P-10837",
+                "weight": 1.0,
+                "similarity_weight": 1.0,
+                "prompt_weight": 0.5512886106847428
+            }
+        ]
+    },
+    "Patient940027058_study_0": {
+        "CG Dice": 0.3175375031890806,
+        "PZ Dice": 0.23278611477380112,
+        "WG Dice": 0.6789192687302064,
+        "Prostate Dice": 0.6789192687302064,
+        "CG Dist": 14.866068747318506,
+        "PZ Dist": 7.365459931328117,
+        "WG Dist": 9.759610647971568,
+        "Prostate Dist": 9.759610647971568,
+        "Atlas Weights": [
+            {
+                "case_id": "P-10155",
+                "weight": 1.0,
+                "similarity_weight": 1.0,
+                "prompt_weight": 0.4668398173910585
+            }
+        ]
+    },
+    "Patient976673643_study_0": {
+        "CG Dice": 0.4053751863631486,
+        "PZ Dice": 0.26536665191881614,
+        "WG Dice": 0.7400584833021158,
+        "Prostate Dice": 0.7400584833021158,
+        "CG Dist": 13.0,
+        "PZ Dist": 4.924428900898052,
+        "WG Dist": 7.0,
+        "Prostate Dist": 7.0,
+        "Atlas Weights": [
+            {
+                "case_id": "P-10601",
+                "weight": 1.0,
+                "similarity_weight": 1.0,
+                "prompt_weight": 0.4979173500669968
+            }
+        ]
+    },
+    "Patient912706323_study_0": {
+        "CG Dice": 0.7282058443630416,
+        "PZ Dice": 0.19412470026396508,
+        "WG Dice": 0.8886318101426902,
+        "Prostate Dice": 0.8886318101426902,
+        "CG Dist": 2.692582403567252,
+        "PZ Dist": 9.7082439194738,
+        "WG Dist": 1.0,
+        "Prostate Dist": 1.0,
+        "Atlas Weights": [
+            {
+                "case_id": "P-10205",
+                "weight": 1.0,
+                "similarity_weight": 1.0,
+                "prompt_weight": 0.5590040851653724
+            }
+        ]
+    },
+    "Patient861846728_study_0": {
+        "CG Dice": 0.27072876125967715,
+        "PZ Dice": 0.18029265336045155,
+        "WG Dice": 0.8310163490597858,
+        "Prostate Dice": 0.8310163490597858,
+        "CG Dist": 9.486832980505138,
+        "PZ Dist": 7.22841614740048,
+        "WG Dist": 2.0615528128088303,
+        "Prostate Dist": 2.0615528128088303,
+        "Atlas Weights": [
+            {
+                "case_id": "P-10121",
+                "weight": 1.0,
+                "similarity_weight": 1.0,
+                "prompt_weight": 0.5493638736102973
+            }
+        ]
+    },
+    "Patient910489986_study_0": {
+        "CG Dice": 0.6366818472724476,
+        "PZ Dice": 0.13048912594240109,
+        "WG Dice": 0.8468758102171783,
+        "Prostate Dice": 0.8468758102171783,
+        "CG Dist": 3.2015621187164243,
+        "PZ Dist": 5.5901699437494745,
+        "WG Dist": 1.4142135623730951,
+        "Prostate Dist": 1.4142135623730951,
+        "Atlas Weights": [
+            {
+                "case_id": "P-11388",
+                "weight": 1.0,
+                "similarity_weight": 1.0,
+                "prompt_weight": 0.5806693915812842
+            }
+        ]
+    },
+    "Patient959814554_study_0": {
+        "CG Dice": 0.3162134944747307,
+        "PZ Dice": 0.1793041677392643,
+        "WG Dice": 0.8208868820212935,
+        "Prostate Dice": 0.8208868820212935,
+        "CG Dist": 11.0,
+        "PZ Dist": 6.87386354243376,
+        "WG Dist": 3.2015621187164243,
+        "Prostate Dist": 3.2015621187164243,
+        "Atlas Weights": [
+            {
+                "case_id": "P-10837",
+                "weight": 1.0,
+                "similarity_weight": 1.0,
+                "prompt_weight": 0.5946315396403474
+            }
+        ]
+    },
+    "Patient866076620_study_0": {
+        "CG Dice": 0.3588159405442269,
+        "PZ Dice": 0.16083203046766312,
+        "WG Dice": 0.7736808690268557,
+        "Prostate Dice": 0.7736808690268557,
+        "CG Dist": 11.113055385446435,
+        "PZ Dist": 9.604686356149273,
+        "WG Dist": 3.3166247903554,
+        "Prostate Dist": 3.3166247903554,
+        "Atlas Weights": [
+            {
+                "case_id": "P-10155",
+                "weight": 1.0,
+                "similarity_weight": 1.0,
+                "prompt_weight": 0.500150954206723
+            }
+        ]
+    },
+    "Patient890199685_study_0": {
+        "CG Dice": 0.12326702834132928,
+        "PZ Dice": 0.3208860336170486,
+        "WG Dice": 0.41598641319768453,
+        "Prostate Dice": 0.41598641319768453,
+        "CG Dist": 17.327723451163457,
+        "PZ Dist": 4.47213595499958,
+        "WG Dist": 13.838352503098047,
+        "Prostate Dist": 13.838352503098047,
+        "Atlas Weights": [
+            {
+                "case_id": "P-10601",
+                "weight": 1.0,
+                "similarity_weight": 1.0,
+                "prompt_weight": 0.5362945880950943
+            }
+        ]
+    },
+    "Patient848616772_study_0": {
+        "CG Dice": 0.37671676261216097,
+        "PZ Dice": 0.22343262669566893,
+        "WG Dice": 0.8307643758090908,
+        "Prostate Dice": 0.8307643758090908,
+        "CG Dist": 8.660254037844387,
+        "PZ Dist": 5.123475382979799,
+        "WG Dist": 1.8027756377319946,
+        "Prostate Dist": 1.8027756377319946,
+        "Atlas Weights": [
+            {
+                "case_id": "P-10205",
+                "weight": 1.0,
+                "similarity_weight": 1.0,
+                "prompt_weight": 0.5219776987503887
+            }
+        ]
+    },
+    "Patient833660745_study_0": {
+        "CG Dice": 0.4857059895075441,
+        "PZ Dice": 0.03158146590385346,
+        "WG Dice": 0.8028638292847792,
+        "Prostate Dice": 0.8028638292847792,
+        "CG Dist": 6.264982043070834,
+        "PZ Dist": 12.103718436910205,
+        "WG Dist": 2.0615528128088303,
+        "Prostate Dist": 2.0615528128088303,
+        "Atlas Weights": [
+            {
+                "case_id": "P-10121",
+                "weight": 1.0,
+                "similarity_weight": 1.0,
+                "prompt_weight": 0.5178593751836642
+            }
+        ]
+    },
+    "Patient886774322_study_0": {
+        "CG Dice": 0.7374779248058024,
+        "PZ Dice": 0.10336855381272583,
+        "WG Dice": 0.8278501916848844,
+        "Prostate Dice": 0.8278501916848844,
+        "CG Dist": 4.0,
+        "PZ Dist": 6.87386354243376,
+        "WG Dist": 1.8027756377319946,
+        "Prostate Dist": 1.8027756377319946,
+        "Atlas Weights": [
+            {
+                "case_id": "P-11388",
+                "weight": 1.0,
+                "similarity_weight": 1.0,
+                "prompt_weight": 0.6814880220516097
+            }
+        ]
+    },
+    "Patient842946741_study_0": {
+        "CG Dice": 0.39064400655508136,
+        "PZ Dice": 0.3131010814751945,
+        "WG Dice": 0.8412468420299961,
+        "Prostate Dice": 0.8412468420299961,
+        "CG Dist": 8.0156097709407,
+        "PZ Dist": 5.612486080160912,
+        "WG Dist": 2.0,
+        "Prostate Dist": 2.0,
+        "Atlas Weights": [
+            {
+                "case_id": "P-10837",
+                "weight": 1.0,
+                "similarity_weight": 1.0,
+                "prompt_weight": 0.5325332366019232
+            }
+        ]
+    },
+    "Patient846807280_study_0": {
+        "CG Dice": 0.07782690087654405,
+        "PZ Dice": 0.37449997184701955,
+        "WG Dice": 0.3414215973854536,
+        "Prostate Dice": 0.3414215973854536,
+        "CG Dist": 26.405491853021786,
+        "PZ Dist": 5.830951894845301,
+        "WG Dist": 18.71563506767646,
+        "Prostate Dist": 18.71563506767646,
+        "Atlas Weights": [
+            {
+                "case_id": "P-10155",
+                "weight": 1.0,
+                "similarity_weight": 1.0,
+                "prompt_weight": 0.494392102660837
+            }
+        ]
+    },
+    "Patient836053162_study_0": {
+        "CG Dice": 0.4279897737092134,
+        "PZ Dice": 0.18258308796416664,
+        "WG Dice": 0.7339126608775726,
+        "Prostate Dice": 0.7339126608775726,
+        "CG Dist": 8.789197915623474,
+        "PZ Dist": 5.5901699437494745,
+        "WG Dist": 3.905124837953327,
+        "Prostate Dist": 3.905124837953327,
+        "Atlas Weights": [
+            {
+                "case_id": "P-10601",
+                "weight": 1.0,
+                "similarity_weight": 1.0,
+                "prompt_weight": 0.4953600497870591
+            }
+        ]
+    },
+    "Patient808136284_study_0": {
+        "CG Dice": 0.6634951954960133,
+        "PZ Dice": 0.11318030897872189,
+        "WG Dice": 0.8082174436046994,
+        "Prostate Dice": 0.8082174436046994,
+        "CG Dist": 4.47213595499958,
+        "PZ Dist": 7.211102550927978,
+        "WG Dist": 2.0,
+        "Prostate Dist": 2.0,
+        "Atlas Weights": [
+            {
+                "case_id": "P-10205",
+                "weight": 1.0,
+                "similarity_weight": 1.0,
+                "prompt_weight": 0.571535981321617
+            }
+        ]
+    },
+    "Patient945134395_study_0": {
+        "CG Dice": 0.7629028583466562,
+        "PZ Dice": 0.09529705919525426,
+        "WG Dice": 0.8742289436776634,
+        "Prostate Dice": 0.8742289436776634,
+        "CG Dist": 3.5,
+        "PZ Dist": 8.958236433584458,
+        "WG Dist": 1.118033988749895,
+        "Prostate Dist": 1.118033988749895,
+        "Atlas Weights": [
+            {
+                "case_id": "P-10121",
+                "weight": 1.0,
+                "similarity_weight": 1.0,
+                "prompt_weight": 0.6429984269813578
+            }
+        ]
+    },
+    "Patient905783150_study_0": {
+        "CG Dice": 0.47643866531953044,
+        "PZ Dice": 0.23116749344742166,
+        "WG Dice": 0.8270074076096366,
+        "Prostate Dice": 0.8270074076096366,
+        "CG Dist": 5.338539126015656,
+        "PZ Dist": 5.385164807134504,
+        "WG Dist": 2.23606797749979,
+        "Prostate Dist": 2.23606797749979,
+        "Atlas Weights": [
+            {
+                "case_id": "P-11388",
+                "weight": 1.0,
+                "similarity_weight": 1.0,
+                "prompt_weight": 0.5331532524259843
+            }
+        ]
+    },
+    "Patient995907312_study_0": {
+        "CG Dice": 0.4651722424350613,
+        "PZ Dice": 0.16947655751567614,
+        "WG Dice": 0.8501971715019845,
+        "Prostate Dice": 0.8501971715019845,
+        "CG Dist": 9.23985683038158,
+        "PZ Dist": 6.264982043070834,
+        "WG Dist": 1.4142135623730951,
+        "Prostate Dist": 1.4142135623730951,
+        "Atlas Weights": [
+            {
+                "case_id": "P-10837",
+                "weight": 1.0,
+                "similarity_weight": 1.0,
+                "prompt_weight": 0.5385962698107052
+            }
+        ]
+    },
+    "Patient965251812_study_0": {
+        "CG Dice": 0.558698479027955,
+        "PZ Dice": 0.0822776418514003,
+        "WG Dice": 0.7558439738187847,
+        "Prostate Dice": 0.7558439738187847,
+        "CG Dist": 8.0,
+        "PZ Dist": 9.86154146165801,
+        "WG Dist": 5.0990195135927845,
+        "Prostate Dist": 5.0990195135927845,
+        "Atlas Weights": [
+            {
+                "case_id": "P-10155",
+                "weight": 1.0,
+                "similarity_weight": 1.0,
+                "prompt_weight": 0.5893439659637086
+            }
+        ]
+    },
+    "Patient996244487_study_0": {
+        "CG Dice": 0.30096124834473553,
+        "PZ Dice": 0.24884422879973936,
+        "WG Dice": 0.7715101677087063,
+        "Prostate Dice": 0.7715101677087063,
+        "CG Dist": 9.112490111589773,
+        "PZ Dist": 4.6097722286464435,
+        "WG Dist": 2.692582403567252,
+        "Prostate Dist": 2.692582403567252,
+        "Atlas Weights": [
+            {
+                "case_id": "P-10601",
+                "weight": 1.0,
+                "similarity_weight": 1.0,
+                "prompt_weight": 0.47848470795415343
+            }
+        ]
+    },
+    "Patient896555169_study_0": {
+        "CG Dice": 0.41738163976988873,
+        "PZ Dice": 0.012417093218679636,
+        "WG Dice": 0.8457836289083523,
+        "Prostate Dice": 0.8457836289083523,
+        "CG Dist": 7.0178344238090995,
+        "PZ Dist": 10.700467279516348,
+        "WG Dist": 1.5811388300841898,
+        "Prostate Dist": 1.5811388300841898,
+        "Atlas Weights": [
+            {
+                "case_id": "P-10205",
+                "weight": 1.0,
+                "similarity_weight": 1.0,
+                "prompt_weight": 0.5760068184167816
+            }
+        ]
+    },
+    "Patient871031213_study_0": {
+        "CG Dice": 0.740819465811394,
+        "PZ Dice": 0.15790421783478978,
+        "WG Dice": 0.9032465577187646,
+        "Prostate Dice": 0.9032465577187646,
+        "CG Dist": 3.6742346141747673,
+        "PZ Dist": 4.47213595499958,
+        "WG Dist": 1.0,
+        "Prostate Dist": 1.0,
+        "Atlas Weights": [
+            {
+                "case_id": "P-10121",
+                "weight": 1.0,
+                "similarity_weight": 1.0,
+                "prompt_weight": 0.6433219850115844
+            }
+        ]
+    },
+    "Patient913099765_study_0": {
+        "CG Dice": 0.6371214867106475,
+        "PZ Dice": 0.14178077050384788,
+        "WG Dice": 0.8667322423930497,
+        "Prostate Dice": 0.8667322423930497,
+        "CG Dist": 3.3541019662496847,
+        "PZ Dist": 7.22841614740048,
+        "WG Dist": 1.224744871391589,
+        "Prostate Dist": 1.224744871391589,
+        "Atlas Weights": [
+            {
+                "case_id": "P-11388",
+                "weight": 1.0,
+                "similarity_weight": 1.0,
+                "prompt_weight": 0.6068393136548326
+            }
+        ]
+    },
+    "Patient877767576_study_0": {
+        "CG Dice": 0.20440804839242482,
+        "PZ Dice": 0.15141307048858504,
+        "WG Dice": 0.7393293195698206,
+        "Prostate Dice": 0.7393293195698206,
+        "CG Dist": 13.96424004376894,
+        "PZ Dist": 7.632168761236874,
+        "WG Dist": 3.0413812651491097,
+        "Prostate Dist": 3.0413812651491097,
+        "Atlas Weights": [
+            {
+                "case_id": "P-10837",
+                "weight": 1.0,
+                "similarity_weight": 1.0,
+                "prompt_weight": 0.5112921910412627
+            }
+        ]
+    },
+    "Patient982554660_study_0": {
+        "CG Dice": 0.004597127703848809,
+        "PZ Dice": 0.449636959564514,
+        "WG Dice": 0.5271376022860551,
+        "Prostate Dice": 0.5271376022860551,
+        "CG Dist": 19.085334683992315,
+        "PZ Dist": 4.242640687119285,
+        "WG Dist": 11.629703349613008,
+        "Prostate Dist": 11.629703349613008,
+        "Atlas Weights": [
+            {
+                "case_id": "P-10155",
+                "weight": 1.0,
+                "similarity_weight": 1.0,
+                "prompt_weight": 0.472514987798047
+            }
+        ]
+    },
+    "Patient859950816_study_0": {
+        "CG Dice": 0.10078615465469186,
+        "PZ Dice": 0.23814407471661972,
+        "WG Dice": 0.5020192020694539,
+        "Prostate Dice": 0.5020192020694539,
+        "CG Dist": 24.005207768315607,
+        "PZ Dist": 6.928203230275509,
+        "WG Dist": 11.575836902790225,
+        "Prostate Dist": 11.575836902790225,
+        "Atlas Weights": [
+            {
+                "case_id": "P-10601",
+                "weight": 1.0,
+                "similarity_weight": 1.0,
+                "prompt_weight": 0.4869086163820203
+            }
+        ]
+    },
+    "Patient947170572_study_0": {
+        "CG Dice": 0.44559083064512167,
+        "PZ Dice": 0.10414304408616908,
+        "WG Dice": 0.715396077487611,
+        "Prostate Dice": 0.715396077487611,
+        "CG Dist": 6.34428877022476,
+        "PZ Dist": 5.852349955359813,
+        "WG Dist": 3.3541019662496847,
+        "Prostate Dist": 3.3541019662496847,
+        "Atlas Weights": [
+            {
+                "case_id": "P-10205",
+                "weight": 1.0,
+                "similarity_weight": 1.0,
+                "prompt_weight": 0.540350088821016
+            }
+        ]
+    },
+    "Patient848809546_study_0": {
+        "CG Dice": 0.4729962892180624,
+        "PZ Dice": 0.12439335009939777,
+        "WG Dice": 0.5820445152658265,
+        "Prostate Dice": 0.5820445152658265,
+        "CG Dist": 6.946221994724902,
+        "PZ Dist": 10.723805294763608,
+        "WG Dist": 9.7082439194738,
+        "Prostate Dist": 9.7082439194738,
+        "Atlas Weights": [
+            {
+                "case_id": "P-10121",
+                "weight": 1.0,
+                "similarity_weight": 1.0,
+                "prompt_weight": 0.5455594357435352
+            }
+        ]
+    },
+    "Patient801454842_study_0": {
+        "CG Dice": 0.5095847244718164,
+        "PZ Dice": 0.07733473244812868,
+        "WG Dice": 0.771485443054318,
+        "Prostate Dice": 0.771485443054318,
+        "CG Dist": 6.745368781616021,
+        "PZ Dist": 8.306623862918075,
+        "WG Dist": 3.7416573867739413,
+        "Prostate Dist": 3.7416573867739413,
+        "Atlas Weights": [
+            {
+                "case_id": "P-11388",
+                "weight": 1.0,
+                "similarity_weight": 1.0,
+                "prompt_weight": 0.5706995607807002
+            }
+        ]
+    },
+    "Patient989809536_study_0": {
+        "CG Dice": 0.3847460605825719,
+        "PZ Dice": 0.06027618813572169,
+        "WG Dice": 0.8486055299004546,
+        "Prostate Dice": 0.8486055299004546,
+        "CG Dist": 6.800735254367722,
+        "PZ Dist": 7.280109889280518,
+        "WG Dist": 1.5,
+        "Prostate Dist": 1.5,
+        "Atlas Weights": [
+            {
+                "case_id": "P-10837",
+                "weight": 1.0,
+                "similarity_weight": 1.0,
+                "prompt_weight": 0.6055313896993892
+            }
+        ]
+    },
+    "Patient923716667_study_0": {
+        "CG Dice": 0.47815589462627744,
+        "PZ Dice": 0.22723673793947965,
+        "WG Dice": 0.6977869137484517,
+        "Prostate Dice": 0.6977869137484517,
+        "CG Dist": 17.240939649566666,
+        "PZ Dist": 6.363961030678928,
+        "WG Dist": 10.488088481701515,
+        "Prostate Dist": 10.488088481701515,
+        "Atlas Weights": [
+            {
+                "case_id": "P-10155",
+                "weight": 1.0,
+                "similarity_weight": 1.0,
+                "prompt_weight": 0.5656239692052787
+            }
+        ]
+    },
+    "Patient799300347_study_0": {
+        "CG Dice": 0.3295130310141147,
+        "PZ Dice": 0.05680437428833514,
+        "WG Dice": 0.5837283450776034,
+        "Prostate Dice": 0.5837283450776034,
+        "CG Dist": 13.30413469565007,
+        "PZ Dist": 7.826237921249264,
+        "WG Dist": 8.381527307120106,
+        "Prostate Dist": 8.381527307120106,
+        "Atlas Weights": [
+            {
+                "case_id": "P-10601",
+                "weight": 1.0,
+                "similarity_weight": 1.0,
+                "prompt_weight": 0.5304010956663817
+            }
+        ]
+    },
+    "Patient805528367_study_0": {
+        "CG Dice": 0.4857624028631899,
+        "PZ Dice": 0.08074393289065707,
+        "WG Dice": 0.8358817940913458,
+        "Prostate Dice": 0.8358817940913458,
+        "CG Dist": 6.0,
+        "PZ Dist": 6.4031242374328485,
+        "WG Dist": 1.8027756377319946,
+        "Prostate Dist": 1.8027756377319946,
+        "Atlas Weights": [
+            {
+                "case_id": "P-10205",
+                "weight": 1.0,
+                "similarity_weight": 1.0,
+                "prompt_weight": 0.5604223160952466
+            }
+        ]
+    },
+    "Patient806991235_study_0": {
+        "CG Dice": 0.40814973106594393,
+        "PZ Dice": 0.15737704921667917,
+        "WG Dice": 0.8314852350893946,
+        "Prostate Dice": 0.8314852350893946,
+        "CG Dist": 5.244044240850758,
+        "PZ Dist": 7.14142842854285,
+        "WG Dist": 1.5,
+        "Prostate Dist": 1.5,
+        "Atlas Weights": [
+            {
+                "case_id": "P-10121",
+                "weight": 1.0,
+                "similarity_weight": 1.0,
+                "prompt_weight": 0.5149210366160677
+            }
+        ]
+    },
+    "Patient909065182_study_0": {
+        "CG Dice": 0.806890206503383,
+        "PZ Dice": 0.23250727638028051,
+        "WG Dice": 0.8272566351672166,
+        "Prostate Dice": 0.8272566351672166,
+        "CG Dist": 2.0615528128088303,
+        "PZ Dist": 5.196152422706632,
+        "WG Dist": 1.8027756377319946,
+        "Prostate Dist": 1.8027756377319946,
+        "Atlas Weights": [
+            {
+                "case_id": "P-11388",
+                "weight": 1.0,
+                "similarity_weight": 1.0,
+                "prompt_weight": 0.6788953719446418
+            }
+        ]
+    },
+    "Patient816101315_study_0": {
+        "CG Dice": 0.642963460896397,
+        "PZ Dice": 0.20981600823737237,
+        "WG Dice": 0.8827614638177621,
+        "Prostate Dice": 0.8827614638177621,
+        "CG Dist": 6.103277807866851,
+        "PZ Dist": 4.387482193696061,
+        "WG Dist": 1.0,
+        "Prostate Dist": 1.0,
+        "Atlas Weights": [
+            {
+                "case_id": "P-10837",
+                "weight": 1.0,
+                "similarity_weight": 1.0,
+                "prompt_weight": 0.6633977344170114
+            }
+        ]
+    },
+    "Patient962056378_study_0": {
+        "CG Dice": 0.25992504259952404,
+        "PZ Dice": 0.23305254714735155,
+        "WG Dice": 0.5963565545535249,
+        "Prostate Dice": 0.5963565545535249,
+        "CG Dist": 16.80029761641144,
+        "PZ Dist": 4.123105625617661,
+        "WG Dist": 9.5524865872714,
+        "Prostate Dist": 9.5524865872714,
+        "Atlas Weights": [
+            {
+                "case_id": "P-10155",
+                "weight": 1.0,
+                "similarity_weight": 1.0,
+                "prompt_weight": 0.4439213283787251
+            }
+        ]
+    },
+    "Patient985916122_study_0": {
+        "CG Dice": 0.6781200126338589,
+        "PZ Dice": 0.21312895125410458,
+        "WG Dice": 0.8296889832835638,
+        "Prostate Dice": 0.8296889832835638,
+        "CG Dist": 4.031128874149275,
+        "PZ Dist": 5.5901699437494745,
+        "WG Dist": 2.0615528128088303,
+        "Prostate Dist": 2.0615528128088303,
+        "Atlas Weights": [
+            {
+                "case_id": "P-10601",
+                "weight": 1.0,
+                "similarity_weight": 1.0,
+                "prompt_weight": 0.5988443271149549
+            }
+        ]
+    },
+    "Patient897701819_study_0": {
+        "CG Dice": 0.6166660394684246,
+        "PZ Dice": 0.15040188359279041,
+        "WG Dice": 0.841914301442456,
+        "Prostate Dice": 0.841914301442456,
+        "CG Dist": 5.0990195135927845,
+        "PZ Dist": 8.077747210701755,
+        "WG Dist": 1.8027756377319946,
+        "Prostate Dist": 1.8027756377319946,
+        "Atlas Weights": [
+            {
+                "case_id": "P-10205",
+                "weight": 1.0,
+                "similarity_weight": 1.0,
+                "prompt_weight": 0.5622232061577392
+            }
+        ]
+    },
+    "Patient861626844_study_0": {
+        "CG Dice": 0.8081617473052696,
+        "PZ Dice": 0.13409991455898015,
+        "WG Dice": 0.8447307881045575,
+        "Prostate Dice": 0.8447307881045575,
+        "CG Dist": 2.29128784747792,
+        "PZ Dist": 6.708203932499369,
+        "WG Dist": 1.5811388300841898,
+        "Prostate Dist": 1.5811388300841898,
+        "Atlas Weights": [
+            {
+                "case_id": "P-10121",
+                "weight": 1.0,
+                "similarity_weight": 1.0,
+                "prompt_weight": 0.6397988156560208
+            }
+        ]
+    },
+    "Patient832052752_study_0": {
+        "CG Dice": 0.37129941200600597,
+        "PZ Dice": 0.2708808290407295,
+        "WG Dice": 0.8485720648978333,
+        "Prostate Dice": 0.8485720648978333,
+        "CG Dist": 6.18465843842649,
+        "PZ Dist": 4.123105625617661,
+        "WG Dist": 1.4142135623730951,
+        "Prostate Dist": 1.4142135623730951,
+        "Atlas Weights": [
+            {
+                "case_id": "P-11388",
+                "weight": 1.0,
+                "similarity_weight": 1.0,
+                "prompt_weight": 0.5420623773682907
+            }
+        ]
+    },
+    "Patient907231890_study_0": {
+        "CG Dice": 0.37816794129013237,
+        "PZ Dice": 0.10724208189457177,
+        "WG Dice": 0.7878538934721573,
+        "Prostate Dice": 0.7878538934721573,
+        "CG Dist": 10.770329614269007,
+        "PZ Dist": 7.810249675906654,
+        "WG Dist": 3.640054944640259,
+        "Prostate Dist": 3.640054944640259,
+        "Atlas Weights": [
+            {
+                "case_id": "P-10837",
+                "weight": 1.0,
+                "similarity_weight": 1.0,
+                "prompt_weight": 0.619154903520919
+            }
+        ]
+    },
+    "Patient948084900_study_0": {
+        "CG Dice": 0.34942765805198667,
+        "PZ Dice": 0.18372326685862914,
+        "WG Dice": 0.7663353109928054,
+        "Prostate Dice": 0.7663353109928054,
+        "CG Dist": 11.191514642799696,
+        "PZ Dist": 5.315072906367325,
+        "WG Dist": 3.5,
+        "Prostate Dist": 3.5,
+        "Atlas Weights": [
+            {
+                "case_id": "P-10155",
+                "weight": 1.0,
+                "similarity_weight": 1.0,
+                "prompt_weight": 0.45768718216918775
+            }
+        ]
+    },
+    "Patient946250678_study_0": {
+        "CG Dice": 0.23465870340034548,
+        "PZ Dice": 0.2562424550715979,
+        "WG Dice": 0.6445577239417621,
+        "Prostate Dice": 0.6445577239417621,
+        "CG Dist": 15.811388300841896,
+        "PZ Dist": 6.164414002968976,
+        "WG Dist": 8.860022573334675,
+        "Prostate Dist": 8.860022573334675,
+        "Atlas Weights": [
+            {
+                "case_id": "P-10601",
+                "weight": 1.0,
+                "similarity_weight": 1.0,
+                "prompt_weight": 0.5192165974449592
+            }
+        ]
+    },
+    "Patient984057610_study_0": {
+        "CG Dice": 0.8826076779031125,
+        "PZ Dice": 0.13347268493188164,
+        "WG Dice": 0.8761568107621497,
+        "Prostate Dice": 0.8761568107621497,
+        "CG Dist": 1.118033988749895,
+        "PZ Dist": 7.632168761236874,
+        "WG Dist": 1.4142135623730951,
+        "Prostate Dist": 1.4142135623730951,
+        "Atlas Weights": [
+            {
+                "case_id": "P-10205",
+                "weight": 1.0,
+                "similarity_weight": 1.0,
+                "prompt_weight": 0.7033479112897536
+            }
+        ]
+    },
+    "Patient864283391_study_0": {
+        "CG Dice": 0.4736674925521356,
+        "PZ Dice": 0.041367179236303425,
+        "WG Dice": 0.7456054611784096,
+        "Prostate Dice": 0.7456054611784096,
+        "CG Dist": 4.6097722286464435,
+        "PZ Dist": 7.297259759663212,
+        "WG Dist": 2.345207879911715,
+        "Prostate Dist": 2.345207879911715,
+        "Atlas Weights": [
+            {
+                "case_id": "P-10121",
+                "weight": 1.0,
+                "similarity_weight": 1.0,
+                "prompt_weight": 0.5068010127443274
+            }
+        ]
+    },
+    "Patient890871995_study_0": {
+        "CG Dice": 0.5211777119087427,
+        "PZ Dice": 0.08925685448724781,
+        "WG Dice": 0.8182205934852741,
+        "Prostate Dice": 0.8182205934852741,
+        "CG Dist": 7.0,
+        "PZ Dist": 6.5,
+        "WG Dist": 2.23606797749979,
+        "Prostate Dist": 2.23606797749979,
+        "Atlas Weights": [
+            {
+                "case_id": "P-11388",
+                "weight": 1.0,
+                "similarity_weight": 1.0,
+                "prompt_weight": 0.6668658922480103
+            }
+        ]
+    },
+    "Patient812964223_study_0": {
+        "CG Dice": 0.6665487303749483,
+        "PZ Dice": 0.14686571293293021,
+        "WG Dice": 0.8823127392028987,
+        "Prostate Dice": 0.8823127392028987,
+        "CG Dist": 3.905124837953327,
+        "PZ Dist": 7.035623639735144,
+        "WG Dist": 1.0,
+        "Prostate Dist": 1.0,
+        "Atlas Weights": [
+            {
+                "case_id": "P-10837",
+                "weight": 1.0,
+                "similarity_weight": 1.0,
+                "prompt_weight": 0.6113013002251022
+            }
+        ]
+    },
+    "Patient991142573_study_0": {
+        "CG Dice": 0.33793674450508465,
+        "PZ Dice": 0.1512084144168549,
+        "WG Dice": 0.6640284835628256,
+        "Prostate Dice": 0.6640284835628256,
+        "CG Dist": 15.370426148939398,
+        "PZ Dist": 5.408326913195984,
+        "WG Dist": 6.5,
+        "Prostate Dist": 6.5,
+        "Atlas Weights": [
+            {
+                "case_id": "P-10155",
+                "weight": 1.0,
+                "similarity_weight": 1.0,
+                "prompt_weight": 0.48392692400705634
+            }
+        ]
+    },
+    "Patient869970961_study_0": {
+        "CG Dice": 0.271022603413365,
+        "PZ Dice": 0.3196650658995301,
+        "WG Dice": 0.6954434852222352,
+        "Prostate Dice": 0.6954434852222352,
+        "CG Dist": 15.041608956491324,
+        "PZ Dist": 4.272001872658765,
+        "WG Dist": 6.5,
+        "Prostate Dist": 6.5,
+        "Atlas Weights": [
+            {
+                "case_id": "P-10601",
+                "weight": 1.0,
+                "similarity_weight": 1.0,
+                "prompt_weight": 0.45341009784185726
+            }
+        ]
+    },
+    "Patient871446219_study_0": {
+        "CG Dice": 0.7606827260640305,
+        "PZ Dice": 0.010205836849658683,
+        "WG Dice": 0.8429766907311055,
+        "Prostate Dice": 0.8429766907311055,
+        "CG Dist": 3.0413812651491097,
+        "PZ Dist": 13.19090595827292,
+        "WG Dist": 1.7320508075688772,
+        "Prostate Dist": 1.7320508075688772,
+        "Atlas Weights": [
+            {
+                "case_id": "P-10205",
+                "weight": 1.0,
+                "similarity_weight": 1.0,
+                "prompt_weight": 0.5977415092627532
+            }
+        ]
+    },
+    "Patient860955368_study_0": {
+        "CG Dice": 0.612069603857607,
+        "PZ Dice": 0.00851987976075343,
+        "WG Dice": 0.7940844492356206,
+        "Prostate Dice": 0.7940844492356206,
+        "CG Dist": 4.272001872658765,
+        "PZ Dist": 13.124404748406688,
+        "WG Dist": 2.0615528128088303,
+        "Prostate Dist": 2.0615528128088303,
+        "Atlas Weights": [
+            {
+                "case_id": "P-10121",
+                "weight": 1.0,
+                "similarity_weight": 1.0,
+                "prompt_weight": 0.5367181380739598
+            }
+        ]
+    },
+    "Patient897544385_study_0": {
+        "CG Dice": 0.6771309790169361,
+        "PZ Dice": 0.15164320776335788,
+        "WG Dice": 0.8331152251177313,
+        "Prostate Dice": 0.8331152251177313,
+        "CG Dist": 3.774917217635375,
+        "PZ Dist": 7.648529270389178,
+        "WG Dist": 1.8027756377319946,
+        "Prostate Dist": 1.8027756377319946,
+        "Atlas Weights": [
+            {
+                "case_id": "P-11388",
+                "weight": 1.0,
+                "similarity_weight": 1.0,
+                "prompt_weight": 0.7052079048297624
+            }
+        ]
+    },
+    "Patient908835948_study_0": {
+        "CG Dice": 0.6033265371906144,
+        "PZ Dice": 0.08122520650708118,
+        "WG Dice": 0.7606045327055218,
+        "Prostate Dice": 0.7606045327055218,
+        "CG Dist": 4.69041575982343,
+        "PZ Dist": 7.516648189186454,
+        "WG Dist": 2.449489742783178,
+        "Prostate Dist": 2.449489742783178,
+        "Atlas Weights": [
+            {
+                "case_id": "P-10837",
+                "weight": 1.0,
+                "similarity_weight": 1.0,
+                "prompt_weight": 0.5520707745119771
+            }
+        ]
+    },
+    "Patient820466562_study_0": {
+        "CG Dice": 0.2282075960727296,
+        "PZ Dice": 0.5283670880642062,
+        "WG Dice": 0.5191732078412886,
+        "Prostate Dice": 0.5191732078412886,
+        "CG Dist": 21.195518394226642,
+        "PZ Dist": 4.06201920231798,
+        "WG Dist": 14.5,
+        "Prostate Dist": 14.5,
+        "Atlas Weights": [
+            {
+                "case_id": "P-10155",
+                "weight": 1.0,
+                "similarity_weight": 1.0,
+                "prompt_weight": 0.48106421968821417
+            }
+        ]
+    },
+    "Patient807931277_study_0": {
+        "CG Dice": 0.32150406505444096,
+        "PZ Dice": 0.2455190610671113,
+        "WG Dice": 0.7857756214869931,
+        "Prostate Dice": 0.7857756214869931,
+        "CG Dist": 12.981717236459728,
+        "PZ Dist": 6.4031242374328485,
+        "WG Dist": 2.7386127875258306,
+        "Prostate Dist": 2.7386127875258306,
+        "Atlas Weights": [
+            {
+                "case_id": "P-10601",
+                "weight": 1.0,
+                "similarity_weight": 1.0,
+                "prompt_weight": 0.5142481917452909
+            }
+        ]
+    },
+    "Patient850881477_study_0": {
+        "CG Dice": 0.5099190230416164,
+        "PZ Dice": 0.10435090203890164,
+        "WG Dice": 0.8582349692840284,
+        "Prostate Dice": 0.8582349692840284,
+        "CG Dist": 6.819090848492928,
+        "PZ Dist": 7.3484692283495345,
+        "WG Dist": 1.5,
+        "Prostate Dist": 1.5,
+        "Atlas Weights": [
+            {
+                "case_id": "P-10205",
+                "weight": 1.0,
+                "similarity_weight": 1.0,
+                "prompt_weight": 0.5897628755461751
+            }
+        ]
+    },
+    "Patient907602254_study_0": {
+        "CG Dice": 0.7217280543496261,
+        "PZ Dice": 0.061899360050900035,
+        "WG Dice": 0.8132064627384095,
+        "Prostate Dice": 0.8132064627384095,
+        "CG Dist": 3.2015621187164243,
+        "PZ Dist": 7.762087348130012,
+        "WG Dist": 2.29128784747792,
+        "Prostate Dist": 2.29128784747792,
+        "Atlas Weights": [
+            {
+                "case_id": "P-10121",
+                "weight": 1.0,
+                "similarity_weight": 1.0,
+                "prompt_weight": 0.6327340596756016
+            }
+        ]
+    },
+    "Patient927034577_study_0": {
+        "CG Dice": 0.6241019384630293,
+        "PZ Dice": 0.14169376732492023,
+        "WG Dice": 0.8182818532836073,
+        "Prostate Dice": 0.8182818532836073,
+        "CG Dist": 4.716990566028302,
+        "PZ Dist": 7.0,
+        "WG Dist": 2.0,
+        "Prostate Dist": 2.0,
+        "Atlas Weights": [
+            {
+                "case_id": "P-11388",
+                "weight": 1.0,
+                "similarity_weight": 1.0,
+                "prompt_weight": 0.5923556952123498
+            }
+        ]
+    },
+    "Patient855235476_study_0": {
+        "CG Dice": 0.036506443993776956,
+        "PZ Dice": 0.42312539383997255,
+        "WG Dice": 0.8041376609075768,
+        "Prostate Dice": 0.8041376609075768,
+        "CG Dist": 9.899494936611665,
+        "PZ Dist": 5.123475382979799,
+        "WG Dist": 2.0615528128088303,
+        "Prostate Dist": 2.0615528128088303,
+        "Atlas Weights": [
+            {
+                "case_id": "P-10837",
+                "weight": 1.0,
+                "similarity_weight": 1.0,
+                "prompt_weight": 0.47577261692609063
+            }
+        ]
+    },
+    "Patient995663925_study_0": {
+        "CG Dice": 0.4424605375083873,
+        "PZ Dice": 0.24334210359059355,
+        "WG Dice": 0.7107058269300323,
+        "Prostate Dice": 0.7107058269300323,
+        "CG Dist": 14.2828568570857,
+        "PZ Dist": 5.123475382979799,
+        "WG Dist": 9.12414379544733,
+        "Prostate Dist": 9.12414379544733,
+        "Atlas Weights": [
+            {
+                "case_id": "P-10155",
+                "weight": 1.0,
+                "similarity_weight": 1.0,
+                "prompt_weight": 0.48623902277025466
+            }
+        ]
+    },
+    "Patient923194593_study_0": {
+        "CG Dice": 0.11315191046022562,
+        "PZ Dice": 0.3695319230551945,
+        "WG Dice": 0.5344416600509206,
+        "Prostate Dice": 0.5344416600509206,
+        "CG Dist": 19.90602923739438,
+        "PZ Dist": 4.716990566028302,
+        "WG Dist": 17.0,
+        "Prostate Dist": 17.0,
+        "Atlas Weights": [
+            {
+                "case_id": "P-10601",
+                "weight": 1.0,
+                "similarity_weight": 1.0,
+                "prompt_weight": 0.47640536865791383
+            }
+        ]
+    },
+    "Patient913575499_study_0": {
+        "CG Dice": 0.3977958753778508,
+        "PZ Dice": 0.019380745394770492,
+        "WG Dice": 0.7508255260352593,
+        "Prostate Dice": 0.7508255260352593,
+        "CG Dist": 10.0,
+        "PZ Dist": 11.789826122551595,
+        "WG Dist": 4.0,
+        "Prostate Dist": 4.0,
+        "Atlas Weights": [
+            {
+                "case_id": "P-10205",
+                "weight": 1.0,
+                "similarity_weight": 1.0,
+                "prompt_weight": 0.5068129690412104
+            }
+        ]
+    },
+    "Patient976331109_study_0": {
+        "CG Dice": 0.34453802515821014,
+        "PZ Dice": 0.046221681646762304,
+        "WG Dice": 0.7020494389461708,
+        "Prostate Dice": 0.7020494389461708,
+        "CG Dist": 9.810708435174291,
+        "PZ Dist": 7.88986691902975,
+        "WG Dist": 3.2015621187164243,
+        "Prostate Dist": 3.2015621187164243,
+        "Atlas Weights": [
+            {
+                "case_id": "P-10121",
+                "weight": 1.0,
+                "similarity_weight": 1.0,
+                "prompt_weight": 0.4494107469538349
+            }
+        ]
+    },
+    "Patient965633848_study_0": {
+        "CG Dice": 0.5515310707204063,
+        "PZ Dice": 0.09384164225963848,
+        "WG Dice": 0.8255613918408886,
+        "Prostate Dice": 0.8255613918408886,
+        "CG Dist": 5.5901699437494745,
+        "PZ Dist": 9.433981132056603,
+        "WG Dist": 2.0,
+        "Prostate Dist": 2.0,
+        "Atlas Weights": [
+            {
+                "case_id": "P-11388",
+                "weight": 1.0,
+                "similarity_weight": 1.0,
+                "prompt_weight": 0.5823214399106511
+            }
+        ]
+    },
+    "Patient885725027_study_0": {
+        "CG Dice": 0.6341403744866,
+        "PZ Dice": 0.14831569801221292,
+        "WG Dice": 0.827179649513359,
+        "Prostate Dice": 0.827179649513359,
+        "CG Dist": 4.272001872658765,
+        "PZ Dist": 8.0156097709407,
+        "WG Dist": 1.8708286933869707,
+        "Prostate Dist": 1.8708286933869707,
+        "Atlas Weights": [
+            {
+                "case_id": "P-10837",
+                "weight": 1.0,
+                "similarity_weight": 1.0,
+                "prompt_weight": 0.6699745696871431
+            }
+        ]
+    },
+    "Patient872282004_study_0": {
+        "CG Dice": 0.18815465767983247,
+        "PZ Dice": 0.185945543658564,
+        "WG Dice": 0.4600850561365679,
+        "Prostate Dice": 0.4600850561365679,
+        "CG Dist": 21.0,
+        "PZ Dist": 7.874007874011811,
+        "WG Dist": 12.459935794377111,
+        "Prostate Dist": 12.459935794377111,
+        "Atlas Weights": [
+            {
+                "case_id": "P-10155",
+                "weight": 1.0,
+                "similarity_weight": 1.0,
+                "prompt_weight": 0.4972225112724722
+            }
+        ]
+    },
+    "Patient845768704_study_0": {
+        "CG Dice": 0.5172481508212706,
+        "PZ Dice": 0.09649011498879552,
+        "WG Dice": 0.8188758766036301,
+        "Prostate Dice": 0.8188758766036301,
+        "CG Dist": 7.874007874011811,
+        "PZ Dist": 10.062305898749054,
+        "WG Dist": 2.8722813232690143,
+        "Prostate Dist": 2.8722813232690143,
+        "Atlas Weights": [
+            {
+                "case_id": "P-10601",
+                "weight": 1.0,
+                "similarity_weight": 1.0,
+                "prompt_weight": 0.5184083454490597
+            }
+        ]
+    },
+    "Patient853303953_study_0": {
+        "CG Dice": 0.30676521638733223,
+        "PZ Dice": 0.04872260229482331,
+        "WG Dice": 0.6824807016266627,
+        "Prostate Dice": 0.6824807016266627,
+        "CG Dist": 9.0,
+        "PZ Dist": 5.678908345800274,
+        "WG Dist": 3.082207001484488,
+        "Prostate Dist": 3.082207001484488,
+        "Atlas Weights": [
+            {
+                "case_id": "P-10205",
+                "weight": 1.0,
+                "similarity_weight": 1.0,
+                "prompt_weight": 0.5529675447466067
+            }
+        ]
+    },
+    "Patient982554659_study_0": {
+        "CG Dice": 0.23271347656212693,
+        "PZ Dice": 0.20038795650388272,
+        "WG Dice": 0.7965314593378467,
+        "Prostate Dice": 0.7965314593378467,
+        "CG Dist": 15.066519173319364,
+        "PZ Dist": 5.873670062235365,
+        "WG Dist": 2.0615528128088303,
+        "Prostate Dist": 2.0615528128088303,
+        "Atlas Weights": [
+            {
+                "case_id": "P-10121",
+                "weight": 1.0,
+                "similarity_weight": 1.0,
+                "prompt_weight": 0.5389578939250589
+            }
+        ]
+    },
+    "Patient884816159_study_0": {
+        "CG Dice": 0.5983957874235123,
+        "PZ Dice": 0.0738829973862653,
+        "WG Dice": 0.6860844454899542,
+        "Prostate Dice": 0.6860844454899542,
+        "CG Dist": 3.2015621187164243,
+        "PZ Dist": 7.3484692283495345,
+        "WG Dist": 3.640054944640259,
+        "Prostate Dist": 3.640054944640259,
+        "Atlas Weights": [
+            {
+                "case_id": "P-11388",
+                "weight": 1.0,
+                "similarity_weight": 1.0,
+                "prompt_weight": 0.5103879017858148
+            }
+        ]
+    },
+    "Patient930889108_study_0": {
+        "CG Dice": 0.47061849043019494,
+        "PZ Dice": 0.06529236561117369,
+        "WG Dice": 0.8035269839309171,
+        "Prostate Dice": 0.8035269839309171,
+        "CG Dist": 8.077747210701755,
+        "PZ Dist": 9.1104335791443,
+        "WG Dist": 2.5,
+        "Prostate Dist": 2.5,
+        "Atlas Weights": [
+            {
+                "case_id": "P-10837",
+                "weight": 1.0,
+                "similarity_weight": 1.0,
+                "prompt_weight": 0.5791720006253978
+            }
+        ]
+    },
+    "Patient815940060_study_0": {
+        "CG Dice": 0.34514765439873635,
+        "PZ Dice": 0.2218561592191264,
+        "WG Dice": 0.660216260015889,
+        "Prostate Dice": 0.660216260015889,
+        "CG Dist": 9.513148795220223,
+        "PZ Dist": 4.415880433163924,
+        "WG Dist": 4.636809247747852,
+        "Prostate Dist": 4.636809247747852,
+        "Atlas Weights": [
+            {
+                "case_id": "P-10155",
+                "weight": 1.0,
+                "similarity_weight": 1.0,
+                "prompt_weight": 0.43864509812977504
+            }
+        ]
+    },
+    "Patient893391546_study_0": {
+        "CG Dice": 0.3704063819042892,
+        "PZ Dice": 0.08447456681308563,
+        "WG Dice": 0.7998159102305195,
+        "Prostate Dice": 0.7998159102305195,
+        "CG Dist": 11.0,
+        "PZ Dist": 7.176350047203662,
+        "WG Dist": 2.5,
+        "Prostate Dist": 2.5,
+        "Atlas Weights": [
+            {
+                "case_id": "P-10601",
+                "weight": 1.0,
+                "similarity_weight": 1.0,
+                "prompt_weight": 0.5424131452064196
+            }
+        ]
+    },
+    "Patient828086439_study_0": {
+        "CG Dice": 0.6695431890300537,
+        "PZ Dice": 0.0974411591239175,
+        "WG Dice": 0.8669848612614818,
+        "Prostate Dice": 0.8669848612614818,
+        "CG Dist": 5.431390245600108,
+        "PZ Dist": 6.576473218982953,
+        "WG Dist": 1.4142135623730951,
+        "Prostate Dist": 1.4142135623730951,
+        "Atlas Weights": [
+            {
+                "case_id": "P-10205",
+                "weight": 1.0,
+                "similarity_weight": 1.0,
+                "prompt_weight": 0.6039497575927777
+            }
+        ]
+    },
+    "Patient829954743_study_0": {
+        "CG Dice": 0.4442026951346083,
+        "PZ Dice": 0.11202681942952801,
+        "WG Dice": 0.7145858763789529,
+        "Prostate Dice": 0.7145858763789529,
+        "CG Dist": 4.716990566028302,
+        "PZ Dist": 7.088723439378913,
+        "WG Dist": 4.031128874149275,
+        "Prostate Dist": 4.031128874149275,
+        "Atlas Weights": [
+            {
+                "case_id": "P-10121",
+                "weight": 1.0,
+                "similarity_weight": 1.0,
+                "prompt_weight": 0.5004207697621225
+            }
+        ]
+    },
+    "Patient998123438_study_0": {
+        "CG Dice": 0.6770967358315357,
+        "PZ Dice": 0.12476894641935499,
+        "WG Dice": 0.8779597298832896,
+        "Prostate Dice": 0.8779597298832896,
+        "CG Dist": 4.636809247747852,
+        "PZ Dist": 5.75867976955635,
+        "WG Dist": 1.118033988749895,
+        "Prostate Dist": 1.118033988749895,
+        "Atlas Weights": [
+            {
+                "case_id": "P-11388",
+                "weight": 1.0,
+                "similarity_weight": 1.0,
+                "prompt_weight": 0.6699771115914088
+            }
+        ]
+    },
+    "Patient972534934_study_0": {
+        "CG Dice": 0.7824641201927736,
+        "PZ Dice": 0.12448915437691269,
+        "WG Dice": 0.9024206827706094,
+        "Prostate Dice": 0.9024206827706094,
+        "CG Dist": 2.5,
+        "PZ Dist": 5.315072906367325,
+        "WG Dist": 1.0,
+        "Prostate Dist": 1.0,
+        "Atlas Weights": [
+            {
+                "case_id": "P-10837",
+                "weight": 1.0,
+                "similarity_weight": 1.0,
+                "prompt_weight": 0.6733036391746514
+            }
+        ]
+    },
+    "Patient827240789_study_0": {
+        "CG Dice": 0.037586788014323066,
+        "PZ Dice": 0.20330730364104568,
+        "WG Dice": 0.5634440979348069,
+        "Prostate Dice": 0.5634440979348069,
+        "CG Dist": 18.0,
+        "PZ Dist": 5.385164807134504,
+        "WG Dist": 9.340770846134703,
+        "Prostate Dist": 9.340770846134703,
+        "Atlas Weights": [
+            {
+                "case_id": "P-10155",
+                "weight": 1.0,
+                "similarity_weight": 1.0,
+                "prompt_weight": 0.44948973925372737
+            }
+        ]
+    },
+    "Patient925772295_study_0": {
+        "CG Dice": 0.09839700243668056,
+        "PZ Dice": 0.2794088540067393,
+        "WG Dice": 0.8369352413214958,
+        "Prostate Dice": 0.8369352413214958,
+        "CG Dist": 13.0,
+        "PZ Dist": 4.898979485566356,
+        "WG Dist": 1.8027756377319946,
+        "Prostate Dist": 1.8027756377319946,
+        "Atlas Weights": [
+            {
+                "case_id": "P-10601",
+                "weight": 1.0,
+                "similarity_weight": 1.0,
+                "prompt_weight": 0.538957682893956
+            }
+        ]
+    },
+    "Average": {
+        "CG Dice": 0.4544297158718109,
+        "PZ Dice": 0.17318753898143768,
+        "Prostate Dice": 0.7626491189002991,
+        "CG Dist": 9.083392143249512,
+        "PZ Dist": 6.920838832855225,
+        "Prostate Dist": 4.151331901550293,
+        "Std": {
+            "CG": 0.20839114487171173,
+            "PZ": 0.12150577455759048,
+            "Prostate": 0.1172194853425026
+        },
+        "Dist Std": {
+            "CG": 5.868265628814697,
+            "PZ": 2.1743972301483154,
+            "Prostate": 4.003941059112549
+        }
+    }
+}

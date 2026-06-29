@@ -1,0 +1,80 @@
+GPU Prolog Script v1.14
+This is a GPU node.
+Enough GPUs available.
+Allocating card 1
+hogthrob-206-1.local
+Wed Jun 24 09:07:17 2026       
++-----------------------------------------------------------------------------------------+
+| NVIDIA-SMI 550.127.05             Driver Version: 550.127.05     CUDA Version: 12.4     |
+|-----------------------------------------+------------------------+----------------------+
+| GPU  Name                 Persistence-M | Bus-Id          Disp.A | Volatile Uncorr. ECC |
+| Fan  Temp   Perf          Pwr:Usage/Cap |           Memory-Usage | GPU-Util  Compute M. |
+|                                         |                        |               MIG M. |
+|=========================================+========================+======================|
+|   0  NVIDIA GeForce RTX 3090        On  |   00000000:01:00.0 Off |                  N/A |
+| 40%   49C    P2            134W /  350W |    9552MiB /  24576MiB |      0%   E. Process |
+|                                         |                        |                  N/A |
++-----------------------------------------+------------------------+----------------------+
+|   1  NVIDIA GeForce RTX 3090        On  |   00000000:C1:00.0 Off |                  N/A |
+| 51%   43C    P8             37W /  350W |       1MiB /  24576MiB |      0%   E. Process |
+|                                         |                        |                  N/A |
++-----------------------------------------+------------------------+----------------------+
+                                                                                         
++-----------------------------------------------------------------------------------------+
+| Processes:                                                                              |
+|  GPU   GI   CI        PID   Type   Process name                              GPU Memory |
+|        ID   ID                                                               Usage      |
+|=========================================================================================|
+|    0   N/A  N/A     55193      C   python                                       9546MiB |
++-----------------------------------------------------------------------------------------+
+Selected GPU 0
+creating model SAM-Med3D
+try to load pretrained weights from https://huggingface.co/blueyo0/SAM-Med3D/blob/main/sam_med3d_turbo.pth
+cache found, use pretrained weights in /home/wenyan/.local/share/checkpoint/huggingface_hub/blueyo0/SAM-Med3D/sam_med3d_turbo.pth
+Loaded 6 selected atlas masks from ../register/atlas_bank/reference_bank.csv
+Loaded frozen light registration from /cluster/project7/longitude/atlasSam/register/checkpoints/light_register/latest_light_register.pth
+data length: 134
+0: Patient965251812_study_0, CG Dice=0.2117, PZ Dice=0.6466, prostate Dice=0.8083
+[ WARN:0@33.838] global loadsave.cpp:1063 imwrite_ Unsupported depth image for selected encoder is fallbacked to CV_8U.
+1: Patient884816159_study_0, CG Dice=0.1411, PZ Dice=0.4925, prostate Dice=0.5953
+2: Patient962056378_study_0, CG Dice=0.3722, PZ Dice=0.1660, prostate Dice=0.7713
+3: Patient959814554_study_0, CG Dice=0.6503, PZ Dice=0.1861, prostate Dice=0.8371
+4: Patient850564213_study_0, CG Dice=0.3236, PZ Dice=0.2370, prostate Dice=0.4270
+5: Patient820466562_study_0, CG Dice=0.5506, PZ Dice=0.0175, prostate Dice=0.7799
+6: Patient812964223_study_0, CG Dice=0.3704, PZ Dice=0.6567, prostate Dice=0.7148
+7: Patient815940060_study_0, CG Dice=0.4804, PZ Dice=0.3769, prostate Dice=0.6847
+8: Patient892640977_study_0, CG Dice=0.3250, PZ Dice=0.0875, prostate Dice=0.8609
+9: Patient871446219_study_0, CG Dice=0.2134, PZ Dice=0.1248, prostate Dice=0.8321
+10: Patient947170572_study_0, CG Dice=0.4974, PZ Dice=0.1369, prostate Dice=0.7905
+11: Patient878281488_study_0, CG Dice=0.4452, PZ Dice=0.2345, prostate Dice=0.8727
+12: Patient910053655_study_0, CG Dice=0.0725, PZ Dice=0.3975, prostate Dice=0.5523
+13: Patient871031213_study_0, CG Dice=0.5370, PZ Dice=0.8128, prostate Dice=0.8704
+14: Patient912706323_study_0, CG Dice=0.3658, PZ Dice=0.4310, prostate Dice=0.8796
+15: Patient886774322_study_0, CG Dice=0.3523, PZ Dice=0.1590, prostate Dice=0.8087
+16: Patient807931277_study_0, CG Dice=0.6471, PZ Dice=0.0287, prostate Dice=0.8326
+17: Patient948084900_study_0, CG Dice=0.5046, PZ Dice=0.3036, prostate Dice=0.8145
+18: Patient973816846_study_0, CG Dice=0.1371, PZ Dice=0.3032, prostate Dice=0.4113
+19: Patient908835948_study_0, CG Dice=0.4326, PZ Dice=0.1660, prostate Dice=0.7726
+20: Patient909419281_study_0, CG Dice=0.5435, PZ Dice=0.1948, prostate Dice=0.8254
+21: Patient965633848_study_0, CG Dice=0.4695, PZ Dice=0.0699, prostate Dice=0.8533
+22: Patient976673643_study_0, CG Dice=0.5997, PZ Dice=0.1003, prostate Dice=0.8835
+23: Patient984057610_study_0, CG Dice=0.0396, PZ Dice=0.2292, prostate Dice=0.7641
+24: Patient812415908_study_0, CG Dice=0.0370, PZ Dice=0.4051, prostate Dice=0.6432
+25: Patient859950816_study_0, CG Dice=0.2741, PZ Dice=0.4292, prostate Dice=0.5003
+26: Patient857551265_study_0, CG Dice=0.5685, PZ Dice=0.5232, prostate Dice=0.8176
+27: Patient910907550_study_0, CG Dice=0.6182, PZ Dice=0.0084, prostate Dice=0.8619
+28: Patient981742409_study_0, CG Dice=0.5450, PZ Dice=0.2235, prostate Dice=0.8348
+29: Patient946782415_study_0, CG Dice=0.2725, PZ Dice=0.3078, prostate Dice=0.8201
+30: Patient881613793_study_0, CG Dice=0.0225, PZ Dice=0.3356, prostate Dice=0.6487
+31: Patient893391546_study_0, CG Dice=0.6437, PZ Dice=0.8244, prostate Dice=0.8265
+32: Patient832853324_study_0, CG Dice=0.5023, PZ Dice=0.0302, prostate Dice=0.8550
+33: Patient855235476_study_0, CG Dice=0.6790, PZ Dice=0.0990, prostate Dice=0.8421
+34: Patient976331109_study_0, CG Dice=0.4222, PZ Dice=0.4456, prostate Dice=0.5446
+35: Patient982554659_study_0, CG Dice=0.7067, PZ Dice=0.1036, prostate Dice=0.7948
+36: Patient940614618_study_0, CG Dice=0.0968, PZ Dice=0.5221, prostate Dice=0.6211
+37: Patient869970961_study_0, CG Dice=0.1083, PZ Dice=0.5581, prostate Dice=0.6403
+38: Patient899795838_study_0, CG Dice=0.6567, PZ Dice=0.2452, prostate Dice=0.8566
+39: Patient931730120_study_0, CG Dice=0.5353, PZ Dice=0.0657, prostate Dice=0.8075
+40: Patient816630551_study_0, CG Dice=0.6490, PZ Dice=0.0186, prostate Dice=0.8222
+41: Patient897544385_study_0, CG Dice=0.4137, PZ Dice=0.1242, prostate Dice=0.8038
+GPU Epilog Script v0.30

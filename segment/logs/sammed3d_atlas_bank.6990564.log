@@ -1,0 +1,766 @@
+GPU Prolog Script v1.14
+This is a GPU node.
+Enough GPUs available.
+Allocating card 5
+animal-206-2.local
+Wed Jun 24 11:20:32 2026       
++-----------------------------------------------------------------------------------------+
+| NVIDIA-SMI 550.54.15              Driver Version: 550.54.15      CUDA Version: 12.4     |
+|-----------------------------------------+------------------------+----------------------+
+| GPU  Name                 Persistence-M | Bus-Id          Disp.A | Volatile Uncorr. ECC |
+| Fan  Temp   Perf          Pwr:Usage/Cap |           Memory-Usage | GPU-Util  Compute M. |
+|                                         |                        |               MIG M. |
+|=========================================+========================+======================|
+|   0  NVIDIA A40                     On  |   00000000:12:00.0 Off |                    0 |
+|  0%   62C    P0            281W /  300W |   20648MiB /  46068MiB |     98%   E. Process |
+|                                         |                        |                  N/A |
++-----------------------------------------+------------------------+----------------------+
+|   1  NVIDIA A40                     On  |   00000000:13:00.0 Off |                    0 |
+|  0%   40C    P0            135W /  300W |   11892MiB /  46068MiB |      0%   E. Process |
+|                                         |                        |                  N/A |
++-----------------------------------------+------------------------+----------------------+
+|   2  NVIDIA A40                     On  |   00000000:48:00.0 Off |                    0 |
+|  0%   57C    P0            225W /  300W |   18434MiB /  46068MiB |     80%   E. Process |
+|                                         |                        |                  N/A |
++-----------------------------------------+------------------------+----------------------+
+|   3  NVIDIA A40                     On  |   00000000:49:00.0 Off |                    0 |
+|  0%   46C    P0            156W /  300W |   11892MiB /  46068MiB |     99%   E. Process |
+|                                         |                        |                  N/A |
++-----------------------------------------+------------------------+----------------------+
+|   4  NVIDIA A40                     On  |   00000000:89:00.0 Off |                    0 |
+|  0%   39C    P0             93W /  300W |   11892MiB /  46068MiB |      0%   E. Process |
+|                                         |                        |                  N/A |
++-----------------------------------------+------------------------+----------------------+
+|   5  NVIDIA A40                     On  |   00000000:8A:00.0 Off |                    0 |
+|  0%   30C    P8             22W /  300W |       0MiB /  46068MiB |      0%   E. Process |
+|                                         |                        |                  N/A |
++-----------------------------------------+------------------------+----------------------+
+|   6  NVIDIA A40                     On  |   00000000:C1:00.0 Off |                    0 |
+|  0%   24C    P8             26W /  300W |       0MiB /  46068MiB |      0%   E. Process |
+|                                         |                        |                  N/A |
++-----------------------------------------+------------------------+----------------------+
+|   7  NVIDIA A40                     On  |   00000000:C2:00.0 Off |                    0 |
+|  0%   55C    P0            219W /  300W |   18434MiB /  46068MiB |     78%   E. Process |
+|                                         |                        |                  N/A |
++-----------------------------------------+------------------------+----------------------+
+                                                                                         
++-----------------------------------------------------------------------------------------+
+| Processes:                                                                              |
+|  GPU   GI   CI        PID   Type   Process name                              GPU Memory |
+|        ID   ID                                                               Usage      |
+|=========================================================================================|
+|    0   N/A  N/A     20028      C   python                                      20640MiB |
+|    1   N/A  N/A     52531      C   python3                                     11884MiB |
+|    2   N/A  N/A    267714      C   ...e/yutozhao/workload_env/bin/python3      18426MiB |
+|    3   N/A  N/A     56276      C   python3                                     11884MiB |
+|    4   N/A  N/A    300750      C   python3                                     11884MiB |
+|    7   N/A  N/A    267724      C   ...e/yutozhao/workload_env/bin/python3      18426MiB |
++-----------------------------------------------------------------------------------------+
+Selected GPU 0
+creating model SAM-Med3D
+try to load pretrained weights from https://huggingface.co/blueyo0/SAM-Med3D/blob/main/sam_med3d_turbo.pth
+cache found, use pretrained weights in /home/wenyan/.local/share/checkpoint/huggingface_hub/blueyo0/SAM-Med3D/sam_med3d_turbo.pth
+Loaded 6 selected atlas masks from ../register/atlas_bank/reference_bank.csv
+Loaded frozen light registration from /cluster/project7/longitude/atlasSam/register/checkpoints/light_register/latest_light_register.pth
+data length: 534
+Epoch 0, batch 0, Patient479080439_study_0, atlas=P-10155, atlas-conditioned SAM-Med3D loss=0.6019
+Epoch 0, batch 100, Patient232343986_study_0, atlas=P-11388, atlas-conditioned SAM-Med3D loss=0.2812
+Epoch 0, batch 200, Patient776567116_study_0, atlas=P-10205, atlas-conditioned SAM-Med3D loss=0.1711
+Epoch 0, batch 300, Patient624702902_study_0, atlas=P-10155, atlas-conditioned SAM-Med3D loss=0.5809
+Epoch 0, batch 400, Patient371636580_study_0, atlas=P-11388, atlas-conditioned SAM-Med3D loss=0.2289
+Epoch 0, batch 500, Patient357186937_study_0, atlas=P-10205, atlas-conditioned SAM-Med3D loss=0.2867
+Epoch 0, mean atlas-conditioned SAM-Med3D loss=0.2762
+Epoch 1, batch 0, Patient736534585_study_0, atlas=P-10155, atlas-conditioned SAM-Med3D loss=0.3225
+Epoch 1, batch 100, Patient141201314_study_0, atlas=P-11388, atlas-conditioned SAM-Med3D loss=0.1779
+Epoch 1, batch 200, Patient015091299_study_0, atlas=P-10205, atlas-conditioned SAM-Med3D loss=0.2108
+Epoch 1, batch 300, Patient103626798_study_0, atlas=P-10155, atlas-conditioned SAM-Med3D loss=0.1698
+Epoch 1, batch 400, Patient417022091_study_0, atlas=P-11388, atlas-conditioned SAM-Med3D loss=0.1896
+Epoch 1, batch 500, Patient371731971_study_0, atlas=P-10205, atlas-conditioned SAM-Med3D loss=0.2170
+Epoch 1, mean atlas-conditioned SAM-Med3D loss=0.2334
+Epoch 2, batch 0, Patient731892464_study_0, atlas=P-10155, atlas-conditioned SAM-Med3D loss=0.2049
+Epoch 2, batch 100, Patient561303883_study_0, atlas=P-11388, atlas-conditioned SAM-Med3D loss=0.2300
+Epoch 2, batch 200, Patient730463441_study_0, atlas=P-10205, atlas-conditioned SAM-Med3D loss=0.1523
+Epoch 2, batch 300, Patient268080731_study_0, atlas=P-10155, atlas-conditioned SAM-Med3D loss=0.1820
+Epoch 2, batch 400, Patient420789922_study_0, atlas=P-11388, atlas-conditioned SAM-Med3D loss=0.2103
+Epoch 2, batch 500, Patient696820440_study_0, atlas=P-10205, atlas-conditioned SAM-Med3D loss=0.1871
+Epoch 2, mean atlas-conditioned SAM-Med3D loss=0.2228
+Epoch 3, batch 0, Patient155238254_study_0, atlas=P-10155, atlas-conditioned SAM-Med3D loss=0.1681
+Epoch 3, batch 100, Patient641350878_study_0, atlas=P-11388, atlas-conditioned SAM-Med3D loss=0.1875
+Epoch 3, batch 200, Patient046907837_study_0, atlas=P-10205, atlas-conditioned SAM-Med3D loss=0.1894
+Epoch 3, batch 300, Patient120412735_study_0, atlas=P-10155, atlas-conditioned SAM-Med3D loss=0.2012
+Epoch 3, batch 400, Patient324385451_study_0, atlas=P-11388, atlas-conditioned SAM-Med3D loss=0.2628
+Epoch 3, batch 500, Patient083747786_study_0, atlas=P-10205, atlas-conditioned SAM-Med3D loss=0.2093
+Epoch 3, mean atlas-conditioned SAM-Med3D loss=0.2179
+Epoch 4, batch 0, Patient014885955_study_0, atlas=P-10155, atlas-conditioned SAM-Med3D loss=0.1718
+Epoch 4, batch 100, Patient303418804_study_0, atlas=P-11388, atlas-conditioned SAM-Med3D loss=0.1221
+Epoch 4, batch 200, Patient534752975_study_0, atlas=P-10205, atlas-conditioned SAM-Med3D loss=0.1434
+Epoch 4, batch 300, Patient046907837_study_0, atlas=P-10155, atlas-conditioned SAM-Med3D loss=0.1745
+Epoch 4, batch 400, Patient330739714_study_0, atlas=P-11388, atlas-conditioned SAM-Med3D loss=0.1548
+Epoch 4, batch 500, Patient204923012_study_0, atlas=P-10205, atlas-conditioned SAM-Med3D loss=0.2101
+Epoch 4, mean atlas-conditioned SAM-Med3D loss=0.2061
+Epoch 5, batch 0, Patient739761047_study_0, atlas=P-10155, atlas-conditioned SAM-Med3D loss=0.1669
+Epoch 5, batch 100, Patient111059389_study_0, atlas=P-11388, atlas-conditioned SAM-Med3D loss=0.2809
+Epoch 5, batch 200, Patient720096171_study_0, atlas=P-10205, atlas-conditioned SAM-Med3D loss=0.2655
+Epoch 5, batch 300, Patient030037068_study_0, atlas=P-10155, atlas-conditioned SAM-Med3D loss=0.2764
+Epoch 5, batch 400, Patient776597439_study_0, atlas=P-11388, atlas-conditioned SAM-Med3D loss=0.1839
+Epoch 5, batch 500, Patient371636580_study_0, atlas=P-10205, atlas-conditioned SAM-Med3D loss=0.2029
+Epoch 5, mean atlas-conditioned SAM-Med3D loss=0.2007
+Epoch 6, batch 0, Patient089126151_study_0, atlas=P-10155, atlas-conditioned SAM-Med3D loss=0.2819
+Epoch 6, batch 100, Patient735752280_study_0, atlas=P-11388, atlas-conditioned SAM-Med3D loss=0.1546
+Epoch 6, batch 200, Patient733664450_study_0, atlas=P-10205, atlas-conditioned SAM-Med3D loss=0.1451
+Epoch 6, batch 300, Patient229744142_study_0, atlas=P-10155, atlas-conditioned SAM-Med3D loss=0.1771
+Epoch 6, batch 400, Patient543534584_study_0, atlas=P-11388, atlas-conditioned SAM-Med3D loss=0.1672
+Epoch 6, batch 500, Patient389164477_study_0, atlas=P-10205, atlas-conditioned SAM-Med3D loss=0.1571
+Epoch 6, mean atlas-conditioned SAM-Med3D loss=0.1974
+Epoch 7, batch 0, Patient439514915_study_0, atlas=P-10155, atlas-conditioned SAM-Med3D loss=0.1771
+Epoch 7, batch 100, Patient407510695_study_0, atlas=P-11388, atlas-conditioned SAM-Med3D loss=0.2137
+Epoch 7, batch 200, Patient215770087_study_0, atlas=P-10205, atlas-conditioned SAM-Med3D loss=0.1805
+Epoch 7, batch 300, Patient357294412_study_0, atlas=P-10155, atlas-conditioned SAM-Med3D loss=0.1972
+Epoch 7, batch 400, Patient326473435_study_0, atlas=P-11388, atlas-conditioned SAM-Med3D loss=0.1728
+Epoch 7, batch 500, Patient084275481_study_0, atlas=P-10205, atlas-conditioned SAM-Med3D loss=0.2381
+Epoch 7, mean atlas-conditioned SAM-Med3D loss=0.1949
+Epoch 8, batch 0, Patient102357291_study_0, atlas=P-10155, atlas-conditioned SAM-Med3D loss=0.1506
+Epoch 8, batch 100, Patient087811482_study_0, atlas=P-11388, atlas-conditioned SAM-Med3D loss=0.2301
+Epoch 8, batch 200, Patient095506196_study_0, atlas=P-10205, atlas-conditioned SAM-Med3D loss=0.1939
+Epoch 8, batch 300, Patient744325601_study_0, atlas=P-10155, atlas-conditioned SAM-Med3D loss=0.1946
+Epoch 8, batch 400, Patient656603960_study_0, atlas=P-11388, atlas-conditioned SAM-Med3D loss=0.2468
+Epoch 8, batch 500, Patient554518626_study_0, atlas=P-10205, atlas-conditioned SAM-Med3D loss=0.1676
+Epoch 8, mean atlas-conditioned SAM-Med3D loss=0.1927
+Epoch 9, batch 0, Patient416851907_study_0, atlas=P-10155, atlas-conditioned SAM-Med3D loss=0.1969
+Epoch 9, batch 100, Patient453566563_study_0, atlas=P-11388, atlas-conditioned SAM-Med3D loss=0.1796
+Epoch 9, batch 200, Patient200044678_study_0, atlas=P-10205, atlas-conditioned SAM-Med3D loss=0.1983
+Epoch 9, batch 300, Patient768596057_study_0, atlas=P-10155, atlas-conditioned SAM-Med3D loss=0.2420
+Epoch 9, batch 400, Patient108424028_study_0, atlas=P-11388, atlas-conditioned SAM-Med3D loss=0.1258
+Epoch 9, batch 500, Patient721467147_study_0, atlas=P-10205, atlas-conditioned SAM-Med3D loss=0.2338
+Epoch 9, mean atlas-conditioned SAM-Med3D loss=0.1918
+Epoch 10, batch 0, Patient460959031_study_0, atlas=P-10155, atlas-conditioned SAM-Med3D loss=0.1375
+Epoch 10, batch 100, Patient486344697_study_0, atlas=P-11388, atlas-conditioned SAM-Med3D loss=0.1434
+Epoch 10, batch 200, Patient294443738_study_0, atlas=P-10205, atlas-conditioned SAM-Med3D loss=0.4183
+Epoch 10, batch 300, Patient204923012_study_0, atlas=P-10155, atlas-conditioned SAM-Med3D loss=0.1665
+Epoch 10, batch 400, Patient018934401_study_0, atlas=P-11388, atlas-conditioned SAM-Med3D loss=0.2016
+Epoch 10, batch 500, Patient020061593_study_0, atlas=P-10205, atlas-conditioned SAM-Med3D loss=0.1987
+Epoch 10, mean atlas-conditioned SAM-Med3D loss=0.1898
+Epoch 11, batch 0, Patient091681973_study_0, atlas=P-10155, atlas-conditioned SAM-Med3D loss=0.1642
+Epoch 11, batch 100, Patient752326508_study_0, atlas=P-11388, atlas-conditioned SAM-Med3D loss=0.1609
+Epoch 11, batch 200, Patient155238254_study_0, atlas=P-10205, atlas-conditioned SAM-Med3D loss=0.1536
+Epoch 11, batch 300, Patient786584387_study_0, atlas=P-10155, atlas-conditioned SAM-Med3D loss=0.1976
+Epoch 11, batch 400, Patient453319108_study_0, atlas=P-11388, atlas-conditioned SAM-Med3D loss=0.1555
+Epoch 11, batch 500, Patient479592532_study_0, atlas=P-10205, atlas-conditioned SAM-Med3D loss=0.1632
+Epoch 11, mean atlas-conditioned SAM-Med3D loss=0.1896
+Epoch 12, batch 0, Patient381930338_study_0, atlas=P-10155, atlas-conditioned SAM-Med3D loss=0.1672
+Epoch 12, batch 100, Patient776597439_study_0, atlas=P-11388, atlas-conditioned SAM-Med3D loss=0.1729
+Epoch 12, batch 200, Patient486813872_study_0, atlas=P-10205, atlas-conditioned SAM-Med3D loss=0.1528
+Epoch 12, batch 300, Patient017976356_study_0, atlas=P-10155, atlas-conditioned SAM-Med3D loss=0.2174
+Epoch 12, batch 400, Patient171406743_study_0, atlas=P-11388, atlas-conditioned SAM-Med3D loss=0.1957
+Epoch 12, batch 500, Patient276665455_study_0, atlas=P-10205, atlas-conditioned SAM-Med3D loss=0.1924
+Epoch 12, mean atlas-conditioned SAM-Med3D loss=0.1904
+Epoch 13, batch 0, Patient357294412_study_0, atlas=P-10155, atlas-conditioned SAM-Med3D loss=0.1911
+Epoch 13, batch 100, Patient147745557_study_0, atlas=P-11388, atlas-conditioned SAM-Med3D loss=0.1188
+Epoch 13, batch 200, Patient337225304_study_0, atlas=P-10205, atlas-conditioned SAM-Med3D loss=0.1536
+Epoch 13, batch 300, Patient468566503_study_0, atlas=P-10155, atlas-conditioned SAM-Med3D loss=0.1826
+Epoch 13, batch 400, Patient072210286_study_0, atlas=P-11388, atlas-conditioned SAM-Med3D loss=0.1860
+Epoch 13, batch 500, Patient401673144_study_0, atlas=P-10205, atlas-conditioned SAM-Med3D loss=0.2417
+Epoch 13, mean atlas-conditioned SAM-Med3D loss=0.1873
+Epoch 14, batch 0, Patient562682367_study_0, atlas=P-10155, atlas-conditioned SAM-Med3D loss=0.2079
+Epoch 14, batch 100, Patient561303883_study_0, atlas=P-11388, atlas-conditioned SAM-Med3D loss=0.2253
+Epoch 14, batch 200, Patient478204397_study_0, atlas=P-10205, atlas-conditioned SAM-Med3D loss=0.2058
+Epoch 14, batch 300, Patient683036630_study_0, atlas=P-10155, atlas-conditioned SAM-Med3D loss=0.1964
+Epoch 14, batch 400, Patient063592119_study_0, atlas=P-11388, atlas-conditioned SAM-Med3D loss=0.1346
+Epoch 14, batch 500, Patient678806284_study_0, atlas=P-10205, atlas-conditioned SAM-Med3D loss=0.2036
+Epoch 14, mean atlas-conditioned SAM-Med3D loss=0.1848
+Epoch 15, batch 0, Patient564225831_study_0, atlas=P-10155, atlas-conditioned SAM-Med3D loss=0.3236
+Epoch 15, batch 100, Patient183375692_study_0, atlas=P-11388, atlas-conditioned SAM-Med3D loss=0.1848
+Epoch 15, batch 200, Patient215770087_study_0, atlas=P-10205, atlas-conditioned SAM-Med3D loss=0.1746
+Epoch 15, batch 300, Patient419834677_study_0, atlas=P-10155, atlas-conditioned SAM-Med3D loss=0.2622
+Epoch 15, batch 400, Patient132959248_study_0, atlas=P-11388, atlas-conditioned SAM-Med3D loss=0.1623
+Epoch 15, batch 500, Patient008826585_study_0, atlas=P-10205, atlas-conditioned SAM-Med3D loss=0.1418
+Epoch 15, mean atlas-conditioned SAM-Med3D loss=0.1877
+Epoch 16, batch 0, Patient068394021_study_0, atlas=P-10155, atlas-conditioned SAM-Med3D loss=0.1862
+Epoch 16, batch 100, Patient207631909_study_0, atlas=P-11388, atlas-conditioned SAM-Med3D loss=0.1574
+Epoch 16, batch 200, Patient479592531_study_0, atlas=P-10205, atlas-conditioned SAM-Med3D loss=0.1513
+Epoch 16, batch 300, Patient316133777_study_0, atlas=P-10155, atlas-conditioned SAM-Med3D loss=0.1389
+Epoch 16, batch 400, Patient131083225_study_0, atlas=P-11388, atlas-conditioned SAM-Med3D loss=0.1285
+Epoch 16, batch 500, Patient089628858_study_0, atlas=P-10205, atlas-conditioned SAM-Med3D loss=0.1136
+Epoch 16, mean atlas-conditioned SAM-Med3D loss=0.1826
+Epoch 17, batch 0, Patient698804944_study_0, atlas=P-10155, atlas-conditioned SAM-Med3D loss=0.1352
+Epoch 17, batch 100, Patient016226935_study_0, atlas=P-11388, atlas-conditioned SAM-Med3D loss=0.1678
+Epoch 17, batch 200, Patient419265153_study_0, atlas=P-10205, atlas-conditioned SAM-Med3D loss=0.1855
+Epoch 17, batch 300, Patient188736831_study_0, atlas=P-10155, atlas-conditioned SAM-Med3D loss=0.1313
+Epoch 17, batch 400, Patient083037522_study_0, atlas=P-11388, atlas-conditioned SAM-Med3D loss=0.2289
+Epoch 17, batch 500, Patient112426985_study_0, atlas=P-10205, atlas-conditioned SAM-Med3D loss=0.1569
+Epoch 17, mean atlas-conditioned SAM-Med3D loss=0.1863
+Epoch 18, batch 0, Patient025553758_study_0, atlas=P-10155, atlas-conditioned SAM-Med3D loss=0.1570
+Epoch 18, batch 100, Patient010614677_study_0, atlas=P-11388, atlas-conditioned SAM-Med3D loss=0.2495
+Epoch 18, batch 200, Patient102357291_study_0, atlas=P-10205, atlas-conditioned SAM-Med3D loss=0.1392
+Epoch 18, batch 300, Patient594133608_study_0, atlas=P-10155, atlas-conditioned SAM-Med3D loss=0.2033
+Epoch 18, batch 400, Patient212947796_study_0, atlas=P-11388, atlas-conditioned SAM-Med3D loss=0.2114
+Epoch 18, batch 500, Patient525849715_study_0, atlas=P-10205, atlas-conditioned SAM-Med3D loss=0.1625
+Epoch 18, mean atlas-conditioned SAM-Med3D loss=0.1822
+Epoch 19, batch 0, Patient441081007_study_0, atlas=P-10155, atlas-conditioned SAM-Med3D loss=0.1637
+Epoch 19, batch 100, Patient555560471_study_0, atlas=P-11388, atlas-conditioned SAM-Med3D loss=0.1707
+Epoch 19, batch 200, Patient112426985_study_0, atlas=P-10205, atlas-conditioned SAM-Med3D loss=0.1564
+Epoch 19, batch 300, Patient726806929_study_0, atlas=P-10155, atlas-conditioned SAM-Med3D loss=0.3194
+Epoch 19, batch 400, Patient658818632_study_0, atlas=P-11388, atlas-conditioned SAM-Med3D loss=0.2452
+Epoch 19, batch 500, Patient592667059_study_0, atlas=P-10205, atlas-conditioned SAM-Med3D loss=0.1310
+Epoch 19, mean atlas-conditioned SAM-Med3D loss=0.1845
+Epoch 20, batch 0, Patient294697199_study_0, atlas=P-10155, atlas-conditioned SAM-Med3D loss=0.1194
+Epoch 20, batch 100, Patient301077280_study_0, atlas=P-11388, atlas-conditioned SAM-Med3D loss=0.1433
+Epoch 20, batch 200, Patient236693575_study_0, atlas=P-10205, atlas-conditioned SAM-Med3D loss=0.1415
+Epoch 20, batch 300, Patient112426985_study_0, atlas=P-10155, atlas-conditioned SAM-Med3D loss=0.1996
+Epoch 20, batch 400, Patient584899654_study_0, atlas=P-11388, atlas-conditioned SAM-Med3D loss=0.1629
+Epoch 20, batch 500, Patient218418269_study_0, atlas=P-10205, atlas-conditioned SAM-Med3D loss=0.3052
+Epoch 20, mean atlas-conditioned SAM-Med3D loss=0.1872
+Epoch 21, batch 0, Patient422360447_study_0, atlas=P-10155, atlas-conditioned SAM-Med3D loss=0.1760
+Epoch 21, batch 100, Patient720096171_study_0, atlas=P-11388, atlas-conditioned SAM-Med3D loss=0.1658
+Epoch 21, batch 200, Patient275075640_study_0, atlas=P-10205, atlas-conditioned SAM-Med3D loss=0.2972
+Epoch 21, batch 300, Patient625413806_study_0, atlas=P-10155, atlas-conditioned SAM-Med3D loss=0.1277
+Epoch 21, batch 400, Patient196180025_study_0, atlas=P-11388, atlas-conditioned SAM-Med3D loss=0.1582
+Epoch 21, batch 500, Patient739761046_study_0, atlas=P-10205, atlas-conditioned SAM-Med3D loss=0.1577
+Epoch 21, mean atlas-conditioned SAM-Med3D loss=0.1845
+Epoch 22, batch 0, Patient001061633_study_0, atlas=P-10155, atlas-conditioned SAM-Med3D loss=0.2193
+Epoch 22, batch 100, Patient421361107_study_0, atlas=P-11388, atlas-conditioned SAM-Med3D loss=0.2624
+Epoch 22, batch 200, Patient462948252_study_0, atlas=P-10205, atlas-conditioned SAM-Med3D loss=0.1399
+Epoch 22, batch 300, Patient083037522_study_0, atlas=P-10155, atlas-conditioned SAM-Med3D loss=0.1980
+Epoch 22, batch 400, Patient360404066_study_0, atlas=P-11388, atlas-conditioned SAM-Med3D loss=0.1491
+Epoch 22, batch 500, Patient794616707_study_0, atlas=P-10205, atlas-conditioned SAM-Med3D loss=0.1618
+Epoch 22, mean atlas-conditioned SAM-Med3D loss=0.1820
+Epoch 23, batch 0, Patient511276390_study_0, atlas=P-10155, atlas-conditioned SAM-Med3D loss=0.1581
+Epoch 23, batch 100, Patient039330438_study_0, atlas=P-11388, atlas-conditioned SAM-Med3D loss=0.2045
+Epoch 23, batch 200, Patient724006063_study_0, atlas=P-10205, atlas-conditioned SAM-Med3D loss=0.2132
+Epoch 23, batch 300, Patient083747786_study_0, atlas=P-10155, atlas-conditioned SAM-Med3D loss=0.1393
+Epoch 23, batch 400, Patient562682367_study_0, atlas=P-11388, atlas-conditioned SAM-Med3D loss=0.1895
+Epoch 23, batch 500, Patient615024097_study_0, atlas=P-10205, atlas-conditioned SAM-Med3D loss=0.1739
+Epoch 23, mean atlas-conditioned SAM-Med3D loss=0.1821
+Epoch 24, batch 0, Patient261790813_study_0, atlas=P-10155, atlas-conditioned SAM-Med3D loss=0.1413
+Epoch 24, batch 100, Patient261614534_study_0, atlas=P-11388, atlas-conditioned SAM-Med3D loss=0.3369
+Epoch 24, batch 200, Patient617300540_study_0, atlas=P-10205, atlas-conditioned SAM-Med3D loss=0.3396
+Epoch 24, batch 300, Patient189821334_study_0, atlas=P-10155, atlas-conditioned SAM-Med3D loss=0.1288
+Epoch 24, batch 400, Patient496681506_study_0, atlas=P-11388, atlas-conditioned SAM-Med3D loss=0.2144
+Epoch 24, batch 500, Patient229744142_study_0, atlas=P-10205, atlas-conditioned SAM-Med3D loss=0.2184
+Epoch 24, mean atlas-conditioned SAM-Med3D loss=0.1838
+Epoch 25, batch 0, Patient579637475_study_0, atlas=P-10155, atlas-conditioned SAM-Med3D loss=0.2033
+Epoch 25, batch 100, Patient521886245_study_0, atlas=P-11388, atlas-conditioned SAM-Med3D loss=0.2069
+Epoch 25, batch 200, Patient302622134_study_0, atlas=P-10205, atlas-conditioned SAM-Med3D loss=0.1646
+Epoch 25, batch 300, Patient032617999_study_0, atlas=P-10155, atlas-conditioned SAM-Med3D loss=0.1471
+Epoch 25, batch 400, Patient470857248_study_0, atlas=P-11388, atlas-conditioned SAM-Med3D loss=0.1876
+Epoch 25, batch 500, Patient083747786_study_0, atlas=P-10205, atlas-conditioned SAM-Med3D loss=0.1710
+Epoch 25, mean atlas-conditioned SAM-Med3D loss=0.1819
+Epoch 26, batch 0, Patient103488346_study_0, atlas=P-10155, atlas-conditioned SAM-Med3D loss=0.2336
+Epoch 26, batch 100, Patient073160911_study_0, atlas=P-11388, atlas-conditioned SAM-Med3D loss=0.2144
+Epoch 26, batch 200, Patient135601926_study_0, atlas=P-10205, atlas-conditioned SAM-Med3D loss=0.1532
+Epoch 26, batch 300, Patient428757580_study_0, atlas=P-10155, atlas-conditioned SAM-Med3D loss=0.1680
+Epoch 26, batch 400, Patient024798392_study_0, atlas=P-11388, atlas-conditioned SAM-Med3D loss=0.1232
+Epoch 26, batch 500, Patient536586503_study_0, atlas=P-10205, atlas-conditioned SAM-Med3D loss=0.1616
+Epoch 26, mean atlas-conditioned SAM-Med3D loss=0.1837
+Epoch 27, batch 0, Patient208970322_study_0, atlas=P-10155, atlas-conditioned SAM-Med3D loss=0.1680
+Epoch 27, batch 100, Patient675502002_study_0, atlas=P-11388, atlas-conditioned SAM-Med3D loss=0.1496
+Epoch 27, batch 200, Patient353021893_study_0, atlas=P-10205, atlas-conditioned SAM-Med3D loss=0.2114
+Epoch 27, batch 300, Patient564225831_study_0, atlas=P-10155, atlas-conditioned SAM-Med3D loss=0.3392
+Epoch 27, batch 400, Patient268080731_study_0, atlas=P-11388, atlas-conditioned SAM-Med3D loss=0.1397
+Epoch 27, batch 500, Patient097631898_study_0, atlas=P-10205, atlas-conditioned SAM-Med3D loss=0.1393
+Epoch 27, mean atlas-conditioned SAM-Med3D loss=0.1808
+Epoch 28, batch 0, Patient653917359_study_0, atlas=P-10155, atlas-conditioned SAM-Med3D loss=0.1817
+Epoch 28, batch 100, Patient462948252_study_0, atlas=P-11388, atlas-conditioned SAM-Med3D loss=0.1191
+Epoch 28, batch 200, Patient049072222_study_0, atlas=P-10205, atlas-conditioned SAM-Med3D loss=0.2763
+Epoch 28, batch 300, Patient147745557_study_0, atlas=P-10155, atlas-conditioned SAM-Med3D loss=0.1437
+Epoch 28, batch 400, Patient363807266_study_0, atlas=P-11388, atlas-conditioned SAM-Med3D loss=0.2052
+Epoch 28, batch 500, Patient444492553_study_0, atlas=P-10205, atlas-conditioned SAM-Med3D loss=0.2275
+Epoch 28, mean atlas-conditioned SAM-Med3D loss=0.1795
+Epoch 29, batch 0, Patient139367998_study_0, atlas=P-10155, atlas-conditioned SAM-Med3D loss=0.1912
+Epoch 29, batch 100, Patient786584387_study_0, atlas=P-11388, atlas-conditioned SAM-Med3D loss=0.1806
+Epoch 29, batch 200, Patient119517827_study_0, atlas=P-10205, atlas-conditioned SAM-Med3D loss=0.1553
+Epoch 29, batch 300, Patient640115082_study_0, atlas=P-10155, atlas-conditioned SAM-Med3D loss=0.1835
+Epoch 29, batch 400, Patient097631898_study_0, atlas=P-11388, atlas-conditioned SAM-Med3D loss=0.1544
+Epoch 29, batch 500, Patient566833733_study_0, atlas=P-10205, atlas-conditioned SAM-Med3D loss=0.1706
+Epoch 29, mean atlas-conditioned SAM-Med3D loss=0.1844
+Epoch 30, batch 0, Patient171406743_study_0, atlas=P-10155, atlas-conditioned SAM-Med3D loss=0.1453
+Epoch 30, batch 100, Patient046512600_study_0, atlas=P-11388, atlas-conditioned SAM-Med3D loss=0.1266
+Epoch 30, batch 200, Patient687547228_study_0, atlas=P-10205, atlas-conditioned SAM-Med3D loss=0.1950
+Epoch 30, batch 300, Patient330739714_study_0, atlas=P-10155, atlas-conditioned SAM-Med3D loss=0.1797
+Epoch 30, batch 400, Patient234234919_study_0, atlas=P-11388, atlas-conditioned SAM-Med3D loss=0.2826
+Epoch 30, batch 500, Patient110688797_study_0, atlas=P-10205, atlas-conditioned SAM-Med3D loss=0.1327
+Epoch 30, mean atlas-conditioned SAM-Med3D loss=0.1827
+Epoch 31, batch 0, Patient003782816_study_0, atlas=P-10155, atlas-conditioned SAM-Med3D loss=0.1494
+Epoch 31, batch 100, Patient089126151_study_0, atlas=P-11388, atlas-conditioned SAM-Med3D loss=0.2294
+Epoch 31, batch 200, Patient752326508_study_0, atlas=P-10205, atlas-conditioned SAM-Med3D loss=0.1614
+Epoch 31, batch 300, Patient260236723_study_0, atlas=P-10155, atlas-conditioned SAM-Med3D loss=0.1670
+Epoch 31, batch 400, Patient462948252_study_0, atlas=P-11388, atlas-conditioned SAM-Med3D loss=0.1298
+Epoch 31, batch 500, Patient155950528_study_0, atlas=P-10205, atlas-conditioned SAM-Med3D loss=0.1511
+Epoch 31, mean atlas-conditioned SAM-Med3D loss=0.1797
+Epoch 32, batch 0, Patient137137888_study_0, atlas=P-10155, atlas-conditioned SAM-Med3D loss=0.1646
+Epoch 32, batch 100, Patient645116766_study_0, atlas=P-11388, atlas-conditioned SAM-Med3D loss=0.2213
+Epoch 32, batch 200, Patient572739111_study_0, atlas=P-10205, atlas-conditioned SAM-Med3D loss=0.1520
+Epoch 32, batch 300, Patient034606666_study_0, atlas=P-10155, atlas-conditioned SAM-Med3D loss=0.2588
+Epoch 32, batch 400, Patient013177859_study_0, atlas=P-11388, atlas-conditioned SAM-Med3D loss=0.1324
+Epoch 32, batch 500, Patient715853166_study_0, atlas=P-10205, atlas-conditioned SAM-Med3D loss=0.2158
+Epoch 32, mean atlas-conditioned SAM-Med3D loss=0.1839
+Epoch 33, batch 0, Patient357294412_study_0, atlas=P-10155, atlas-conditioned SAM-Med3D loss=0.1744
+Epoch 33, batch 100, Patient577236934_study_0, atlas=P-11388, atlas-conditioned SAM-Med3D loss=0.1754
+Epoch 33, batch 200, Patient183375692_study_0, atlas=P-10205, atlas-conditioned SAM-Med3D loss=0.1679
+Epoch 33, batch 300, Patient739761046_study_0, atlas=P-10155, atlas-conditioned SAM-Med3D loss=0.2013
+Epoch 33, batch 400, Patient168510003_study_0, atlas=P-11388, atlas-conditioned SAM-Med3D loss=0.1797
+Epoch 33, batch 500, Patient645116766_study_0, atlas=P-10205, atlas-conditioned SAM-Med3D loss=0.1776
+Epoch 33, mean atlas-conditioned SAM-Med3D loss=0.1806
+Epoch 34, batch 0, Patient208257857_study_0, atlas=P-10155, atlas-conditioned SAM-Med3D loss=0.1519
+Epoch 34, batch 100, Patient399222076_study_0, atlas=P-11388, atlas-conditioned SAM-Med3D loss=0.1760
+Epoch 34, batch 200, Patient200044678_study_0, atlas=P-10205, atlas-conditioned SAM-Med3D loss=0.1649
+Epoch 34, batch 300, Patient393107382_study_0, atlas=P-10155, atlas-conditioned SAM-Med3D loss=0.1531
+Epoch 34, batch 400, Patient752326508_study_0, atlas=P-11388, atlas-conditioned SAM-Med3D loss=0.1671
+Epoch 34, batch 500, Patient426776318_study_0, atlas=P-10205, atlas-conditioned SAM-Med3D loss=0.1714
+Epoch 34, mean atlas-conditioned SAM-Med3D loss=0.1810
+Epoch 35, batch 0, Patient445277269_study_0, atlas=P-10155, atlas-conditioned SAM-Med3D loss=0.1242
+Epoch 35, batch 100, Patient287972698_study_0, atlas=P-11388, atlas-conditioned SAM-Med3D loss=0.1529
+Epoch 35, batch 200, Patient205634611_study_0, atlas=P-10205, atlas-conditioned SAM-Med3D loss=0.1928
+Epoch 35, batch 300, Patient748546309_study_0, atlas=P-10155, atlas-conditioned SAM-Med3D loss=0.1778
+Epoch 35, batch 400, Patient650135892_study_0, atlas=P-11388, atlas-conditioned SAM-Med3D loss=0.1532
+Epoch 35, batch 500, Patient191952054_study_0, atlas=P-10205, atlas-conditioned SAM-Med3D loss=0.1118
+Epoch 35, mean atlas-conditioned SAM-Med3D loss=0.1812
+Epoch 36, batch 0, Patient079557561_study_0, atlas=P-10155, atlas-conditioned SAM-Med3D loss=0.1711
+Epoch 36, batch 100, Patient084081489_study_0, atlas=P-11388, atlas-conditioned SAM-Med3D loss=0.2131
+Epoch 36, batch 200, Patient155238254_study_0, atlas=P-10205, atlas-conditioned SAM-Med3D loss=0.1153
+Epoch 36, batch 300, Patient095506196_study_0, atlas=P-10155, atlas-conditioned SAM-Med3D loss=0.1781
+Epoch 36, batch 400, Patient299360026_study_0, atlas=P-11388, atlas-conditioned SAM-Med3D loss=0.1611
+Epoch 36, batch 500, Patient485433784_study_0, atlas=P-10205, atlas-conditioned SAM-Med3D loss=0.1808
+Epoch 36, mean atlas-conditioned SAM-Med3D loss=0.1814
+Epoch 37, batch 0, Patient169138540_study_0, atlas=P-10155, atlas-conditioned SAM-Med3D loss=0.1531
+Epoch 37, batch 100, Patient541380506_study_0, atlas=P-11388, atlas-conditioned SAM-Med3D loss=0.1697
+Epoch 37, batch 200, Patient568036406_study_0, atlas=P-10205, atlas-conditioned SAM-Med3D loss=0.2796
+Epoch 37, batch 300, Patient509612077_study_0, atlas=P-10155, atlas-conditioned SAM-Med3D loss=0.1883
+Epoch 37, batch 400, Patient593256360_study_0, atlas=P-11388, atlas-conditioned SAM-Med3D loss=0.1557
+Epoch 37, batch 500, Patient546521856_study_0, atlas=P-10205, atlas-conditioned SAM-Med3D loss=0.1600
+Epoch 37, mean atlas-conditioned SAM-Med3D loss=0.1800
+Epoch 38, batch 0, Patient602161513_study_0, atlas=P-10155, atlas-conditioned SAM-Med3D loss=0.1507
+Epoch 38, batch 100, Patient381930338_study_0, atlas=P-11388, atlas-conditioned SAM-Med3D loss=0.1292
+Epoch 38, batch 200, Patient452120073_study_0, atlas=P-10205, atlas-conditioned SAM-Med3D loss=0.1155
+Epoch 38, batch 300, Patient486344697_study_0, atlas=P-10155, atlas-conditioned SAM-Med3D loss=0.1603
+Epoch 38, batch 400, Patient155238254_study_0, atlas=P-11388, atlas-conditioned SAM-Med3D loss=0.1279
+Epoch 38, batch 500, Patient577236934_study_0, atlas=P-10205, atlas-conditioned SAM-Med3D loss=0.1700
+Epoch 38, mean atlas-conditioned SAM-Med3D loss=0.1794
+Epoch 39, batch 0, Patient017976356_study_0, atlas=P-10155, atlas-conditioned SAM-Med3D loss=0.1535
+Epoch 39, batch 100, Patient168510003_study_0, atlas=P-11388, atlas-conditioned SAM-Med3D loss=0.1635
+Epoch 39, batch 200, Patient371636580_study_0, atlas=P-10205, atlas-conditioned SAM-Med3D loss=0.1785
+Epoch 39, batch 300, Patient023164663_study_0, atlas=P-10155, atlas-conditioned SAM-Med3D loss=0.1403
+Epoch 39, batch 400, Patient627307000_study_0, atlas=P-11388, atlas-conditioned SAM-Med3D loss=0.1355
+Epoch 39, batch 500, Patient562682367_study_0, atlas=P-10205, atlas-conditioned SAM-Med3D loss=0.1889
+Epoch 39, mean atlas-conditioned SAM-Med3D loss=0.1808
+Epoch 40, batch 0, Patient641465726_study_0, atlas=P-10155, atlas-conditioned SAM-Med3D loss=0.1946
+Epoch 40, batch 100, Patient445277269_study_0, atlas=P-11388, atlas-conditioned SAM-Med3D loss=0.1223
+Epoch 40, batch 200, Patient357186937_study_0, atlas=P-10205, atlas-conditioned SAM-Med3D loss=0.2281
+Epoch 40, batch 300, Patient790870501_study_0, atlas=P-10155, atlas-conditioned SAM-Med3D loss=0.2315
+Epoch 40, batch 400, Patient500693223_study_0, atlas=P-11388, atlas-conditioned SAM-Med3D loss=0.2165
+Epoch 40, batch 500, Patient518956689_study_0, atlas=P-10205, atlas-conditioned SAM-Med3D loss=0.2035
+Epoch 40, mean atlas-conditioned SAM-Med3D loss=0.1769
+Epoch 41, batch 0, Patient645436163_study_0, atlas=P-10155, atlas-conditioned SAM-Med3D loss=0.1915
+Epoch 41, batch 100, Patient061429196_study_0, atlas=P-11388, atlas-conditioned SAM-Med3D loss=0.1628
+Epoch 41, batch 200, Patient696820440_study_0, atlas=P-10205, atlas-conditioned SAM-Med3D loss=0.2146
+Epoch 41, batch 300, Patient040185845_study_0, atlas=P-10155, atlas-conditioned SAM-Med3D loss=0.1180
+Epoch 41, batch 400, Patient246919835_study_0, atlas=P-11388, atlas-conditioned SAM-Med3D loss=0.1401
+Epoch 41, batch 500, Patient366324851_study_0, atlas=P-10205, atlas-conditioned SAM-Med3D loss=0.1093
+Epoch 41, mean atlas-conditioned SAM-Med3D loss=0.1775
+Epoch 42, batch 0, Patient748546309_study_0, atlas=P-10155, atlas-conditioned SAM-Med3D loss=0.2057
+Epoch 42, batch 100, Patient678806284_study_0, atlas=P-11388, atlas-conditioned SAM-Med3D loss=0.2176
+Epoch 42, batch 200, Patient751793951_study_0, atlas=P-10205, atlas-conditioned SAM-Med3D loss=0.1100
+Epoch 42, batch 300, Patient064869625_study_0, atlas=P-10155, atlas-conditioned SAM-Med3D loss=0.1523
+Epoch 42, batch 400, Patient485433784_study_0, atlas=P-11388, atlas-conditioned SAM-Med3D loss=0.2181
+Epoch 42, batch 500, Patient479080439_study_0, atlas=P-10205, atlas-conditioned SAM-Med3D loss=0.1879
+Epoch 42, mean atlas-conditioned SAM-Med3D loss=0.1793
+Epoch 43, batch 0, Patient218418269_study_0, atlas=P-10155, atlas-conditioned SAM-Med3D loss=0.2692
+Epoch 43, batch 100, Patient675856434_study_0, atlas=P-11388, atlas-conditioned SAM-Med3D loss=0.1636
+Epoch 43, batch 200, Patient554518626_study_0, atlas=P-10205, atlas-conditioned SAM-Med3D loss=0.1407
+Epoch 43, batch 300, Patient486813872_study_0, atlas=P-10155, atlas-conditioned SAM-Med3D loss=0.1678
+Epoch 43, batch 400, Patient720096171_study_0, atlas=P-11388, atlas-conditioned SAM-Med3D loss=0.1564
+Epoch 43, batch 500, Patient444737929_study_0, atlas=P-10205, atlas-conditioned SAM-Med3D loss=0.1892
+Epoch 43, mean atlas-conditioned SAM-Med3D loss=0.1816
+Epoch 44, batch 0, Patient640115082_study_0, atlas=P-10155, atlas-conditioned SAM-Med3D loss=0.1729
+Epoch 44, batch 100, Patient426776318_study_0, atlas=P-11388, atlas-conditioned SAM-Med3D loss=0.1744
+Epoch 44, batch 200, Patient181947879_study_0, atlas=P-10205, atlas-conditioned SAM-Med3D loss=0.1490
+Epoch 44, batch 300, Patient715853166_study_0, atlas=P-10155, atlas-conditioned SAM-Med3D loss=0.2309
+Epoch 44, batch 400, Patient337225304_study_0, atlas=P-11388, atlas-conditioned SAM-Med3D loss=0.1771
+Epoch 44, batch 500, Patient324139862_study_0, atlas=P-10205, atlas-conditioned SAM-Med3D loss=0.1341
+Epoch 44, mean atlas-conditioned SAM-Med3D loss=0.1842
+Epoch 45, batch 0, Patient453491212_study_0, atlas=P-10155, atlas-conditioned SAM-Med3D loss=0.1260
+Epoch 45, batch 100, Patient227940283_study_0, atlas=P-11388, atlas-conditioned SAM-Med3D loss=0.2154
+Epoch 45, batch 200, Patient046907837_study_0, atlas=P-10205, atlas-conditioned SAM-Med3D loss=0.1388
+Epoch 45, batch 300, Patient117745587_study_0, atlas=P-10155, atlas-conditioned SAM-Med3D loss=0.1616
+Epoch 45, batch 400, Patient715853166_study_0, atlas=P-11388, atlas-conditioned SAM-Med3D loss=0.2349
+Epoch 45, batch 500, Patient225745793_study_0, atlas=P-10205, atlas-conditioned SAM-Med3D loss=0.1259
+Epoch 45, mean atlas-conditioned SAM-Med3D loss=0.1779
+Epoch 46, batch 0, Patient268080731_study_0, atlas=P-10155, atlas-conditioned SAM-Med3D loss=0.1403
+Epoch 46, batch 100, Patient650962353_study_0, atlas=P-11388, atlas-conditioned SAM-Med3D loss=0.1332
+Epoch 46, batch 200, Patient699761763_study_0, atlas=P-10205, atlas-conditioned SAM-Med3D loss=0.1941
+Epoch 46, batch 300, Patient663349707_study_0, atlas=P-10155, atlas-conditioned SAM-Med3D loss=0.1537
+Epoch 46, batch 400, Patient443203892_study_0, atlas=P-11388, atlas-conditioned SAM-Med3D loss=0.1700
+Epoch 46, batch 500, Patient688976372_study_0, atlas=P-10205, atlas-conditioned SAM-Med3D loss=0.1643
+Epoch 46, mean atlas-conditioned SAM-Med3D loss=0.1787
+Epoch 47, batch 0, Patient368062628_study_0, atlas=P-10155, atlas-conditioned SAM-Med3D loss=0.2764
+Epoch 47, batch 100, Patient650962353_study_0, atlas=P-11388, atlas-conditioned SAM-Med3D loss=0.1280
+Epoch 47, batch 200, Patient428162557_study_0, atlas=P-10205, atlas-conditioned SAM-Med3D loss=0.3070
+Epoch 47, batch 300, Patient468566503_study_0, atlas=P-10155, atlas-conditioned SAM-Med3D loss=0.2134
+Epoch 47, batch 400, Patient024798392_study_0, atlas=P-11388, atlas-conditioned SAM-Med3D loss=0.1447
+Epoch 47, batch 500, Patient615024097_study_0, atlas=P-10205, atlas-conditioned SAM-Med3D loss=0.1632
+Epoch 47, mean atlas-conditioned SAM-Med3D loss=0.1776
+Epoch 48, batch 0, Patient670521060_study_0, atlas=P-10155, atlas-conditioned SAM-Med3D loss=0.1598
+Epoch 48, batch 100, Patient560560653_study_0, atlas=P-11388, atlas-conditioned SAM-Med3D loss=0.1640
+Epoch 48, batch 200, Patient264363800_study_0, atlas=P-10205, atlas-conditioned SAM-Med3D loss=0.1826
+Epoch 48, batch 300, Patient141643917_study_0, atlas=P-10155, atlas-conditioned SAM-Med3D loss=0.1303
+Epoch 48, batch 400, Patient715853166_study_0, atlas=P-11388, atlas-conditioned SAM-Med3D loss=0.2096
+Epoch 48, batch 500, Patient084081489_study_0, atlas=P-10205, atlas-conditioned SAM-Med3D loss=0.1667
+Epoch 48, mean atlas-conditioned SAM-Med3D loss=0.1805
+Epoch 49, batch 0, Patient552429162_study_0, atlas=P-10155, atlas-conditioned SAM-Med3D loss=0.1733
+Epoch 49, batch 100, Patient725396437_study_0, atlas=P-11388, atlas-conditioned SAM-Med3D loss=0.1729
+Epoch 49, batch 200, Patient071067363_study_0, atlas=P-10205, atlas-conditioned SAM-Med3D loss=0.1207
+Epoch 49, batch 300, Patient186990163_study_0, atlas=P-10155, atlas-conditioned SAM-Med3D loss=0.1336
+Epoch 49, batch 400, Patient343116179_study_0, atlas=P-11388, atlas-conditioned SAM-Med3D loss=0.1151
+Epoch 49, batch 500, Patient011391141_study_0, atlas=P-10205, atlas-conditioned SAM-Med3D loss=0.2130
+Epoch 49, mean atlas-conditioned SAM-Med3D loss=0.1788
+Epoch 50, batch 0, Patient353021893_study_0, atlas=P-10155, atlas-conditioned SAM-Med3D loss=0.1805
+Epoch 50, batch 100, Patient509612077_study_0, atlas=P-11388, atlas-conditioned SAM-Med3D loss=0.2398
+Epoch 50, batch 200, Patient518956689_study_0, atlas=P-10205, atlas-conditioned SAM-Med3D loss=0.2485
+Epoch 50, batch 300, Patient460835591_study_0, atlas=P-10155, atlas-conditioned SAM-Med3D loss=0.1443
+Epoch 50, batch 400, Patient218418269_study_0, atlas=P-11388, atlas-conditioned SAM-Med3D loss=0.2307
+Epoch 50, batch 500, Patient339666957_study_0, atlas=P-10205, atlas-conditioned SAM-Med3D loss=0.1768
+Epoch 50, mean atlas-conditioned SAM-Med3D loss=0.1783
+Epoch 51, batch 0, Patient479080439_study_0, atlas=P-10155, atlas-conditioned SAM-Med3D loss=0.1972
+Epoch 51, batch 100, Patient111059389_study_0, atlas=P-11388, atlas-conditioned SAM-Med3D loss=0.2217
+Epoch 51, batch 200, Patient301077280_study_0, atlas=P-10205, atlas-conditioned SAM-Med3D loss=0.1623
+Epoch 51, batch 300, Patient443203892_study_0, atlas=P-10155, atlas-conditioned SAM-Med3D loss=0.1773
+Epoch 51, batch 400, Patient578511508_study_0, atlas=P-11388, atlas-conditioned SAM-Med3D loss=0.1917
+Epoch 51, batch 500, Patient507459423_study_0, atlas=P-10205, atlas-conditioned SAM-Med3D loss=0.2187
+Epoch 51, mean atlas-conditioned SAM-Med3D loss=0.1772
+Epoch 52, batch 0, Patient238104460_study_0, atlas=P-10155, atlas-conditioned SAM-Med3D loss=0.1329
+Epoch 52, batch 100, Patient094943878_study_0, atlas=P-11388, atlas-conditioned SAM-Med3D loss=0.1997
+Epoch 52, batch 200, Patient287972698_study_0, atlas=P-10205, atlas-conditioned SAM-Med3D loss=0.1314
+Epoch 52, batch 300, Patient365613764_study_0, atlas=P-10155, atlas-conditioned SAM-Med3D loss=0.1884
+Epoch 52, batch 400, Patient641465726_study_0, atlas=P-11388, atlas-conditioned SAM-Med3D loss=0.1954
+Epoch 52, batch 500, Patient050630693_study_0, atlas=P-10205, atlas-conditioned SAM-Med3D loss=0.1441
+Epoch 52, mean atlas-conditioned SAM-Med3D loss=0.1767
+Epoch 53, batch 0, Patient572739111_study_0, atlas=P-10155, atlas-conditioned SAM-Med3D loss=0.1494
+Epoch 53, batch 100, Patient358839549_study_0, atlas=P-11388, atlas-conditioned SAM-Med3D loss=0.1138
+Epoch 53, batch 200, Patient560560653_study_0, atlas=P-10205, atlas-conditioned SAM-Med3D loss=0.1536
+Epoch 53, batch 300, Patient594133608_study_0, atlas=P-10155, atlas-conditioned SAM-Med3D loss=0.2001
+Epoch 53, batch 400, Patient232343986_study_0, atlas=P-11388, atlas-conditioned SAM-Med3D loss=0.1198
+Epoch 53, batch 500, Patient659218759_study_0, atlas=P-10205, atlas-conditioned SAM-Med3D loss=0.2120
+Epoch 53, mean atlas-conditioned SAM-Med3D loss=0.1816
+Epoch 54, batch 0, Patient659218759_study_0, atlas=P-10155, atlas-conditioned SAM-Med3D loss=0.1907
+Epoch 54, batch 100, Patient421361107_study_0, atlas=P-11388, atlas-conditioned SAM-Med3D loss=0.1853
+Epoch 54, batch 200, Patient417022091_study_0, atlas=P-10205, atlas-conditioned SAM-Med3D loss=0.1383
+Epoch 54, batch 300, Patient368062628_study_0, atlas=P-10155, atlas-conditioned SAM-Med3D loss=0.2437
+Epoch 54, batch 400, Patient755197280_study_0, atlas=P-11388, atlas-conditioned SAM-Med3D loss=0.1065
+Epoch 54, batch 500, Patient283261804_study_0, atlas=P-10205, atlas-conditioned SAM-Med3D loss=0.2224
+Epoch 54, mean atlas-conditioned SAM-Med3D loss=0.1759
+Epoch 55, batch 0, Patient244529861_study_0, atlas=P-10155, atlas-conditioned SAM-Med3D loss=0.1376
+Epoch 55, batch 100, Patient068394021_study_0, atlas=P-11388, atlas-conditioned SAM-Med3D loss=0.1604
+Epoch 55, batch 200, Patient535582268_study_0, atlas=P-10205, atlas-conditioned SAM-Med3D loss=0.1315
+Epoch 55, batch 300, Patient525849715_study_0, atlas=P-10155, atlas-conditioned SAM-Med3D loss=0.1072
+Epoch 55, batch 400, Patient014885955_study_0, atlas=P-11388, atlas-conditioned SAM-Med3D loss=0.1557
+Epoch 55, batch 500, Patient608159364_study_0, atlas=P-10205, atlas-conditioned SAM-Med3D loss=0.2339
+Epoch 55, mean atlas-conditioned SAM-Med3D loss=0.1762
+Epoch 56, batch 0, Patient116656271_study_0, atlas=P-10155, atlas-conditioned SAM-Med3D loss=0.1599
+Epoch 56, batch 100, Patient449815847_study_0, atlas=P-11388, atlas-conditioned SAM-Med3D loss=0.1532
+Epoch 56, batch 200, Patient250234033_study_0, atlas=P-10205, atlas-conditioned SAM-Med3D loss=0.1279
+Epoch 56, batch 300, Patient735752280_study_0, atlas=P-10155, atlas-conditioned SAM-Med3D loss=0.1286
+Epoch 56, batch 400, Patient090487330_study_0, atlas=P-11388, atlas-conditioned SAM-Med3D loss=0.4111
+Epoch 56, batch 500, Patient089628858_study_0, atlas=P-10205, atlas-conditioned SAM-Med3D loss=0.1234
+Epoch 56, mean atlas-conditioned SAM-Med3D loss=0.1775
+Epoch 57, batch 0, Patient672723439_study_0, atlas=P-10155, atlas-conditioned SAM-Med3D loss=0.2085
+Epoch 57, batch 100, Patient533697987_study_0, atlas=P-11388, atlas-conditioned SAM-Med3D loss=0.1386
+Epoch 57, batch 200, Patient244529861_study_0, atlas=P-10205, atlas-conditioned SAM-Med3D loss=0.1269
+Epoch 57, batch 300, Patient263137446_study_0, atlas=P-10155, atlas-conditioned SAM-Med3D loss=0.1704
+Epoch 57, batch 400, Patient479080439_study_0, atlas=P-11388, atlas-conditioned SAM-Med3D loss=0.1925
+Epoch 57, batch 500, Patient357186937_study_0, atlas=P-10205, atlas-conditioned SAM-Med3D loss=0.2273
+Epoch 57, mean atlas-conditioned SAM-Med3D loss=0.1787
+Epoch 58, batch 0, Patient443203892_study_0, atlas=P-10155, atlas-conditioned SAM-Med3D loss=0.1735
+Epoch 58, batch 100, Patient205634611_study_0, atlas=P-11388, atlas-conditioned SAM-Med3D loss=0.1909
+Epoch 58, batch 200, Patient676715539_study_0, atlas=P-10205, atlas-conditioned SAM-Med3D loss=0.1301
+Epoch 58, batch 300, Patient157999862_study_0, atlas=P-10155, atlas-conditioned SAM-Med3D loss=0.2305
+Epoch 58, batch 400, Patient486344697_study_0, atlas=P-11388, atlas-conditioned SAM-Med3D loss=0.1428
+Epoch 58, batch 500, Patient658818632_study_0, atlas=P-10205, atlas-conditioned SAM-Med3D loss=0.1970
+Epoch 58, mean atlas-conditioned SAM-Med3D loss=0.1793
+Epoch 59, batch 0, Patient024798392_study_0, atlas=P-10155, atlas-conditioned SAM-Med3D loss=0.1623
+Epoch 59, batch 100, Patient721467147_study_0, atlas=P-11388, atlas-conditioned SAM-Med3D loss=0.1887
+Epoch 59, batch 200, Patient044172944_study_0, atlas=P-10205, atlas-conditioned SAM-Med3D loss=0.1450
+Epoch 59, batch 300, Patient163156033_study_0, atlas=P-10155, atlas-conditioned SAM-Med3D loss=0.1656
+Epoch 59, batch 400, Patient507459423_study_0, atlas=P-11388, atlas-conditioned SAM-Med3D loss=0.1618
+Epoch 59, batch 500, Patient217489992_study_0, atlas=P-10205, atlas-conditioned SAM-Med3D loss=0.1519
+Epoch 59, mean atlas-conditioned SAM-Med3D loss=0.1788
+Epoch 60, batch 0, Patient401673144_study_0, atlas=P-10155, atlas-conditioned SAM-Med3D loss=0.2204
+Epoch 60, batch 100, Patient236895234_study_0, atlas=P-11388, atlas-conditioned SAM-Med3D loss=0.1348
+Epoch 60, batch 200, Patient452778775_study_0, atlas=P-10205, atlas-conditioned SAM-Med3D loss=0.1877
+Epoch 60, batch 300, Patient479592531_study_0, atlas=P-10155, atlas-conditioned SAM-Med3D loss=0.1404
+Epoch 60, batch 400, Patient063592119_study_0, atlas=P-11388, atlas-conditioned SAM-Med3D loss=0.1222
+Epoch 60, batch 500, Patient500693223_study_0, atlas=P-10205, atlas-conditioned SAM-Med3D loss=0.1695
+Epoch 60, mean atlas-conditioned SAM-Med3D loss=0.1810
+Epoch 61, batch 0, Patient079557561_study_0, atlas=P-10155, atlas-conditioned SAM-Med3D loss=0.1542
+Epoch 61, batch 100, Patient168510003_study_0, atlas=P-11388, atlas-conditioned SAM-Med3D loss=0.2925
+Epoch 61, batch 200, Patient618233623_study_0, atlas=P-10205, atlas-conditioned SAM-Med3D loss=0.1357
+Epoch 61, batch 300, Patient355186795_study_0, atlas=P-10155, atlas-conditioned SAM-Med3D loss=0.1753
+Epoch 61, batch 400, Patient276592525_study_0, atlas=P-11388, atlas-conditioned SAM-Med3D loss=0.2757
+Epoch 61, batch 500, Patient137137888_study_0, atlas=P-10205, atlas-conditioned SAM-Med3D loss=0.1354
+Epoch 61, mean atlas-conditioned SAM-Med3D loss=0.1789
+Epoch 62, batch 0, Patient208198819_study_0, atlas=P-10155, atlas-conditioned SAM-Med3D loss=0.1578
+Epoch 62, batch 100, Patient579637475_study_0, atlas=P-11388, atlas-conditioned SAM-Med3D loss=0.1637
+Epoch 62, batch 200, Patient399222076_study_0, atlas=P-10205, atlas-conditioned SAM-Med3D loss=0.1476
+Epoch 62, batch 300, Patient381930338_study_0, atlas=P-10155, atlas-conditioned SAM-Med3D loss=0.1644
+Epoch 62, batch 400, Patient101500695_study_0, atlas=P-11388, atlas-conditioned SAM-Med3D loss=0.1805
+Epoch 62, batch 500, Patient200957877_study_0, atlas=P-10205, atlas-conditioned SAM-Med3D loss=0.2137
+Epoch 62, mean atlas-conditioned SAM-Med3D loss=0.1797
+Epoch 63, batch 0, Patient097762143_study_0, atlas=P-10155, atlas-conditioned SAM-Med3D loss=0.1787
+Epoch 63, batch 100, Patient789945182_study_0, atlas=P-11388, atlas-conditioned SAM-Med3D loss=0.1738
+Epoch 63, batch 200, Patient152188767_study_0, atlas=P-10205, atlas-conditioned SAM-Med3D loss=0.1799
+Epoch 63, batch 300, Patient047998342_study_0, atlas=P-10155, atlas-conditioned SAM-Med3D loss=0.1817
+Epoch 63, batch 400, Patient422360447_study_0, atlas=P-11388, atlas-conditioned SAM-Med3D loss=0.1882
+Epoch 63, batch 500, Patient739761046_study_0, atlas=P-10205, atlas-conditioned SAM-Med3D loss=0.1456
+Epoch 63, mean atlas-conditioned SAM-Med3D loss=0.1767
+Epoch 64, batch 0, Patient592807634_study_0, atlas=P-10155, atlas-conditioned SAM-Med3D loss=0.2562
+Epoch 64, batch 100, Patient002215610_study_0, atlas=P-11388, atlas-conditioned SAM-Med3D loss=0.2131
+Epoch 64, batch 200, Patient208257857_study_0, atlas=P-10205, atlas-conditioned SAM-Med3D loss=0.1633
+Epoch 64, batch 300, Patient050630693_study_0, atlas=P-10155, atlas-conditioned SAM-Med3D loss=0.1726
+Epoch 64, batch 400, Patient015091299_study_0, atlas=P-11388, atlas-conditioned SAM-Med3D loss=0.1971
+Epoch 64, batch 500, Patient208198819_study_0, atlas=P-10205, atlas-conditioned SAM-Med3D loss=0.1684
+Epoch 64, mean atlas-conditioned SAM-Med3D loss=0.1822
+Epoch 65, batch 0, Patient432502530_study_0, atlas=P-10155, atlas-conditioned SAM-Med3D loss=0.1589
+Epoch 65, batch 100, Patient250234033_study_0, atlas=P-11388, atlas-conditioned SAM-Med3D loss=0.1357
+Epoch 65, batch 200, Patient244529861_study_0, atlas=P-10205, atlas-conditioned SAM-Med3D loss=0.1239
+Epoch 65, batch 300, Patient155238254_study_0, atlas=P-10155, atlas-conditioned SAM-Med3D loss=0.1124
+Epoch 65, batch 400, Patient602161513_study_0, atlas=P-11388, atlas-conditioned SAM-Med3D loss=0.1652
+Epoch 65, batch 500, Patient462948252_study_0, atlas=P-10205, atlas-conditioned SAM-Med3D loss=0.1458
+Epoch 65, mean atlas-conditioned SAM-Med3D loss=0.1773
+Epoch 66, batch 0, Patient725726278_study_0, atlas=P-10155, atlas-conditioned SAM-Med3D loss=0.1536
+Epoch 66, batch 100, Patient744325601_study_0, atlas=P-11388, atlas-conditioned SAM-Med3D loss=0.1628
+Epoch 66, batch 200, Patient791857197_study_0, atlas=P-10205, atlas-conditioned SAM-Med3D loss=0.1789
+Epoch 66, batch 300, Patient561628540_study_0, atlas=P-10155, atlas-conditioned SAM-Med3D loss=0.1554
+Epoch 66, batch 400, Patient653917359_study_0, atlas=P-11388, atlas-conditioned SAM-Med3D loss=0.1686
+Epoch 66, batch 500, Patient161392308_study_0, atlas=P-10205, atlas-conditioned SAM-Med3D loss=0.1752
+Epoch 66, mean atlas-conditioned SAM-Med3D loss=0.1789
+Epoch 67, batch 0, Patient329283484_study_0, atlas=P-10155, atlas-conditioned SAM-Med3D loss=0.2318
+Epoch 67, batch 100, Patient699761763_study_0, atlas=P-11388, atlas-conditioned SAM-Med3D loss=0.1727
+Epoch 67, batch 200, Patient002215610_study_0, atlas=P-10205, atlas-conditioned SAM-Med3D loss=0.2225
+Epoch 67, batch 300, Patient227940283_study_0, atlas=P-10155, atlas-conditioned SAM-Med3D loss=0.2402
+Epoch 67, batch 400, Patient482687956_study_0, atlas=P-11388, atlas-conditioned SAM-Med3D loss=0.1550
+Epoch 67, batch 500, Patient405879262_study_0, atlas=P-10205, atlas-conditioned SAM-Med3D loss=0.2045
+Epoch 67, mean atlas-conditioned SAM-Med3D loss=0.1781
+Epoch 68, batch 0, Patient235759092_study_0, atlas=P-10155, atlas-conditioned SAM-Med3D loss=0.2449
+Epoch 68, batch 100, Patient577236934_study_0, atlas=P-11388, atlas-conditioned SAM-Med3D loss=0.1766
+Epoch 68, batch 200, Patient467284472_study_0, atlas=P-10205, atlas-conditioned SAM-Med3D loss=0.1390
+Epoch 68, batch 300, Patient625413806_study_0, atlas=P-10155, atlas-conditioned SAM-Med3D loss=0.1303
+Epoch 68, batch 400, Patient515855137_study_0, atlas=P-11388, atlas-conditioned SAM-Med3D loss=0.1489
+Epoch 68, batch 500, Patient316133777_study_0, atlas=P-10205, atlas-conditioned SAM-Med3D loss=0.1295
+Epoch 68, mean atlas-conditioned SAM-Med3D loss=0.1770
+Epoch 69, batch 0, Patient028386534_study_0, atlas=P-10155, atlas-conditioned SAM-Med3D loss=0.1996
+Epoch 69, batch 100, Patient618421909_study_0, atlas=P-11388, atlas-conditioned SAM-Med3D loss=0.1622
+Epoch 69, batch 200, Patient656603960_study_0, atlas=P-10205, atlas-conditioned SAM-Med3D loss=0.2487
+Epoch 69, batch 300, Patient585671673_study_0, atlas=P-10155, atlas-conditioned SAM-Med3D loss=0.1310
+Epoch 69, batch 400, Patient735752280_study_0, atlas=P-11388, atlas-conditioned SAM-Med3D loss=0.1320
+Epoch 69, batch 500, Patient258536638_study_0, atlas=P-10205, atlas-conditioned SAM-Med3D loss=0.1549
+Epoch 69, mean atlas-conditioned SAM-Med3D loss=0.1770
+Epoch 70, batch 0, Patient268080731_study_0, atlas=P-10155, atlas-conditioned SAM-Med3D loss=0.1393
+Epoch 70, batch 100, Patient089628858_study_0, atlas=P-11388, atlas-conditioned SAM-Med3D loss=0.1222
+Epoch 70, batch 200, Patient207631909_study_0, atlas=P-10205, atlas-conditioned SAM-Med3D loss=0.1536
+Epoch 70, batch 300, Patient349547494_study_0, atlas=P-10155, atlas-conditioned SAM-Med3D loss=0.2183
+Epoch 70, batch 400, Patient555560471_study_0, atlas=P-11388, atlas-conditioned SAM-Med3D loss=0.1623
+Epoch 70, batch 500, Patient420789922_study_0, atlas=P-10205, atlas-conditioned SAM-Med3D loss=0.1333
+Epoch 70, mean atlas-conditioned SAM-Med3D loss=0.1774
+Epoch 71, batch 0, Patient514084915_study_0, atlas=P-10155, atlas-conditioned SAM-Med3D loss=0.1657
+Epoch 71, batch 100, Patient409558671_study_0, atlas=P-11388, atlas-conditioned SAM-Med3D loss=0.1309
+Epoch 71, batch 200, Patient131083225_study_0, atlas=P-10205, atlas-conditioned SAM-Med3D loss=0.1436
+Epoch 71, batch 300, Patient564225831_study_0, atlas=P-10155, atlas-conditioned SAM-Med3D loss=0.3925
+Epoch 71, batch 400, Patient238104460_study_0, atlas=P-11388, atlas-conditioned SAM-Med3D loss=0.1013
+Epoch 71, batch 500, Patient468566503_study_0, atlas=P-10205, atlas-conditioned SAM-Med3D loss=0.1666
+Epoch 71, mean atlas-conditioned SAM-Med3D loss=0.1755
+Epoch 72, batch 0, Patient311390328_study_0, atlas=P-10155, atlas-conditioned SAM-Med3D loss=0.1620
+Epoch 72, batch 100, Patient486813872_study_0, atlas=P-11388, atlas-conditioned SAM-Med3D loss=0.1682
+Epoch 72, batch 200, Patient001061633_study_0, atlas=P-10205, atlas-conditioned SAM-Med3D loss=0.1658
+Epoch 72, batch 300, Patient514885806_study_0, atlas=P-10155, atlas-conditioned SAM-Med3D loss=0.1754
+Epoch 72, batch 400, Patient299360026_study_0, atlas=P-11388, atlas-conditioned SAM-Med3D loss=0.1660
+Epoch 72, batch 500, Patient080325326_study_0, atlas=P-10205, atlas-conditioned SAM-Med3D loss=0.1754
+Epoch 72, mean atlas-conditioned SAM-Med3D loss=0.1787
+Epoch 73, batch 0, Patient708160561_study_0, atlas=P-10155, atlas-conditioned SAM-Med3D loss=0.1749
+Epoch 73, batch 100, Patient116656271_study_0, atlas=P-11388, atlas-conditioned SAM-Med3D loss=0.1652
+Epoch 73, batch 200, Patient399222076_study_0, atlas=P-10205, atlas-conditioned SAM-Med3D loss=0.1570
+Epoch 73, batch 300, Patient744083254_study_0, atlas=P-10155, atlas-conditioned SAM-Med3D loss=0.1802
+Epoch 73, batch 400, Patient658818632_study_0, atlas=P-11388, atlas-conditioned SAM-Med3D loss=0.1899
+Epoch 73, batch 500, Patient656603960_study_0, atlas=P-10205, atlas-conditioned SAM-Med3D loss=0.2113
+Epoch 73, mean atlas-conditioned SAM-Med3D loss=0.1772
+Epoch 74, batch 0, Patient200044678_study_0, atlas=P-10155, atlas-conditioned SAM-Med3D loss=0.1552
+Epoch 74, batch 100, Patient711719700_study_0, atlas=P-11388, atlas-conditioned SAM-Med3D loss=0.1824
+Epoch 74, batch 200, Patient776567116_study_0, atlas=P-10205, atlas-conditioned SAM-Med3D loss=0.1538
+Epoch 74, batch 300, Patient486267770_study_0, atlas=P-10155, atlas-conditioned SAM-Med3D loss=0.1687
+Epoch 74, batch 400, Patient288744436_study_0, atlas=P-11388, atlas-conditioned SAM-Med3D loss=0.1143
+Epoch 74, batch 500, Patient204018851_study_0, atlas=P-10205, atlas-conditioned SAM-Med3D loss=0.1644
+Epoch 74, mean atlas-conditioned SAM-Med3D loss=0.1748
+Epoch 75, batch 0, Patient299360026_study_0, atlas=P-10155, atlas-conditioned SAM-Med3D loss=0.1263
+Epoch 75, batch 100, Patient005876472_study_0, atlas=P-11388, atlas-conditioned SAM-Med3D loss=0.1281
+Epoch 75, batch 200, Patient164559963_study_0, atlas=P-10205, atlas-conditioned SAM-Med3D loss=0.1846
+Epoch 75, batch 300, Patient063592119_study_0, atlas=P-10155, atlas-conditioned SAM-Med3D loss=0.1119
+Epoch 75, batch 400, Patient091681973_study_0, atlas=P-11388, atlas-conditioned SAM-Med3D loss=0.1786
+Epoch 75, batch 500, Patient230758751_study_0, atlas=P-10205, atlas-conditioned SAM-Med3D loss=0.1442
+Epoch 75, mean atlas-conditioned SAM-Med3D loss=0.1791
+Epoch 76, batch 0, Patient097762143_study_0, atlas=P-10155, atlas-conditioned SAM-Med3D loss=0.1809
+Epoch 76, batch 100, Patient135601926_study_0, atlas=P-11388, atlas-conditioned SAM-Med3D loss=0.1257
+Epoch 76, batch 200, Patient733664450_study_0, atlas=P-10205, atlas-conditioned SAM-Med3D loss=0.1384
+Epoch 76, batch 300, Patient208257857_study_0, atlas=P-10155, atlas-conditioned SAM-Med3D loss=0.1513
+Epoch 76, batch 400, Patient349547494_study_0, atlas=P-11388, atlas-conditioned SAM-Med3D loss=0.2163
+Epoch 76, batch 500, Patient470857248_study_0, atlas=P-10205, atlas-conditioned SAM-Med3D loss=0.1807
+Epoch 76, mean atlas-conditioned SAM-Med3D loss=0.1777
+Epoch 77, batch 0, Patient319715312_study_0, atlas=P-10155, atlas-conditioned SAM-Med3D loss=0.1711
+Epoch 77, batch 100, Patient444737929_study_0, atlas=P-11388, atlas-conditioned SAM-Med3D loss=0.2021
+Epoch 77, batch 200, Patient445277269_study_0, atlas=P-10205, atlas-conditioned SAM-Med3D loss=0.0987
+Epoch 77, batch 300, Patient287972698_study_0, atlas=P-10155, atlas-conditioned SAM-Med3D loss=0.1459
+Epoch 77, batch 400, Patient236895234_study_0, atlas=P-11388, atlas-conditioned SAM-Med3D loss=0.1325
+Epoch 77, batch 500, Patient230758751_study_0, atlas=P-10205, atlas-conditioned SAM-Med3D loss=0.1229
+Epoch 77, mean atlas-conditioned SAM-Med3D loss=0.1765
+Epoch 78, batch 0, Patient219154025_study_0, atlas=P-10155, atlas-conditioned SAM-Med3D loss=0.2622
+Epoch 78, batch 100, Patient189821334_study_0, atlas=P-11388, atlas-conditioned SAM-Med3D loss=0.1300
+Epoch 78, batch 200, Patient024798392_study_0, atlas=P-10205, atlas-conditioned SAM-Med3D loss=0.1233
+Epoch 78, batch 300, Patient244837078_study_0, atlas=P-10155, atlas-conditioned SAM-Med3D loss=0.1148
+Epoch 78, batch 400, Patient218418269_study_0, atlas=P-11388, atlas-conditioned SAM-Med3D loss=0.2366
+Epoch 78, batch 500, Patient739246770_study_0, atlas=P-10205, atlas-conditioned SAM-Med3D loss=0.1789
+Epoch 78, mean atlas-conditioned SAM-Med3D loss=0.1770
+Epoch 79, batch 0, Patient072210286_study_0, atlas=P-10155, atlas-conditioned SAM-Med3D loss=0.1340
+Epoch 79, batch 100, Patient300358388_study_0, atlas=P-11388, atlas-conditioned SAM-Med3D loss=0.1450
+Epoch 79, batch 200, Patient374806437_study_0, atlas=P-10205, atlas-conditioned SAM-Med3D loss=0.1360
+Epoch 79, batch 300, Patient339666957_study_0, atlas=P-10155, atlas-conditioned SAM-Med3D loss=0.2037
+Epoch 79, batch 400, Patient776597439_study_0, atlas=P-11388, atlas-conditioned SAM-Med3D loss=0.1579
+Epoch 79, batch 500, Patient105718923_study_0, atlas=P-10205, atlas-conditioned SAM-Med3D loss=0.1216
+Epoch 79, mean atlas-conditioned SAM-Med3D loss=0.1766
+Epoch 80, batch 0, Patient726806929_study_0, atlas=P-10155, atlas-conditioned SAM-Med3D loss=0.3463
+Epoch 80, batch 100, Patient024798392_study_0, atlas=P-11388, atlas-conditioned SAM-Med3D loss=0.1137
+Epoch 80, batch 200, Patient610109348_study_0, atlas=P-10205, atlas-conditioned SAM-Med3D loss=0.1288
+Epoch 80, batch 300, Patient214328025_study_0, atlas=P-10155, atlas-conditioned SAM-Med3D loss=0.2028
+Epoch 80, batch 400, Patient149089083_study_0, atlas=P-11388, atlas-conditioned SAM-Med3D loss=0.1591
+Epoch 80, batch 500, Patient213324910_study_0, atlas=P-10205, atlas-conditioned SAM-Med3D loss=0.1646
+Epoch 80, mean atlas-conditioned SAM-Med3D loss=0.1762
+Epoch 81, batch 0, Patient003539366_study_0, atlas=P-10155, atlas-conditioned SAM-Med3D loss=0.1554
+Epoch 81, batch 100, Patient402570493_study_0, atlas=P-11388, atlas-conditioned SAM-Med3D loss=0.1777
+Epoch 81, batch 200, Patient627307000_study_0, atlas=P-10205, atlas-conditioned SAM-Med3D loss=0.1545
+Epoch 81, batch 300, Patient452120073_study_0, atlas=P-10155, atlas-conditioned SAM-Med3D loss=0.1597
+Epoch 81, batch 400, Patient294697199_study_0, atlas=P-11388, atlas-conditioned SAM-Med3D loss=0.1223
+Epoch 81, batch 500, Patient271312165_study_0, atlas=P-10205, atlas-conditioned SAM-Med3D loss=0.1083
+Epoch 81, mean atlas-conditioned SAM-Med3D loss=0.1779
+Epoch 82, batch 0, Patient675502002_study_0, atlas=P-10155, atlas-conditioned SAM-Med3D loss=0.1560
+Epoch 82, batch 100, Patient683032933_study_0, atlas=P-11388, atlas-conditioned SAM-Med3D loss=0.1506
+Epoch 82, batch 200, Patient011432769_study_0, atlas=P-10205, atlas-conditioned SAM-Med3D loss=0.1579
+Epoch 82, batch 300, Patient270670854_study_0, atlas=P-10155, atlas-conditioned SAM-Med3D loss=0.2203
+Epoch 82, batch 400, Patient655592843_study_0, atlas=P-11388, atlas-conditioned SAM-Med3D loss=0.1404
+Epoch 82, batch 500, Patient760284603_study_0, atlas=P-10205, atlas-conditioned SAM-Med3D loss=0.2491
+Epoch 82, mean atlas-conditioned SAM-Med3D loss=0.1765
+Epoch 83, batch 0, Patient735752280_study_0, atlas=P-10155, atlas-conditioned SAM-Med3D loss=0.1258
+Epoch 83, batch 100, Patient124435768_study_0, atlas=P-11388, atlas-conditioned SAM-Med3D loss=0.1115
+Epoch 83, batch 200, Patient214328025_study_0, atlas=P-10205, atlas-conditioned SAM-Med3D loss=0.1786
+Epoch 83, batch 300, Patient479592532_study_0, atlas=P-10155, atlas-conditioned SAM-Med3D loss=0.1814
+Epoch 83, batch 400, Patient102357291_study_0, atlas=P-11388, atlas-conditioned SAM-Med3D loss=0.1496
+Epoch 83, batch 500, Patient787745373_study_0, atlas=P-10205, atlas-conditioned SAM-Med3D loss=0.2292
+Epoch 83, mean atlas-conditioned SAM-Med3D loss=0.1738
+Epoch 84, batch 0, Patient479753380_study_0, atlas=P-10155, atlas-conditioned SAM-Med3D loss=0.2110
+Epoch 84, batch 100, Patient452120073_study_0, atlas=P-11388, atlas-conditioned SAM-Med3D loss=0.1298
+Epoch 84, batch 200, Patient214328025_study_0, atlas=P-10205, atlas-conditioned SAM-Med3D loss=0.1910
+Epoch 84, batch 300, Patient016639165_study_0, atlas=P-10155, atlas-conditioned SAM-Med3D loss=0.2073
+Epoch 84, batch 400, Patient496295580_study_0, atlas=P-11388, atlas-conditioned SAM-Med3D loss=0.2677
+Epoch 84, batch 500, Patient394057261_study_0, atlas=P-10205, atlas-conditioned SAM-Med3D loss=0.1596
+Epoch 84, mean atlas-conditioned SAM-Med3D loss=0.1765
+Epoch 85, batch 0, Patient190826066_study_0, atlas=P-10155, atlas-conditioned SAM-Med3D loss=0.2087
+Epoch 85, batch 100, Patient121278582_study_0, atlas=P-11388, atlas-conditioned SAM-Med3D loss=0.2729
+Epoch 85, batch 200, Patient592807634_study_0, atlas=P-10205, atlas-conditioned SAM-Med3D loss=0.2522
+Epoch 85, batch 300, Patient152188767_study_0, atlas=P-10155, atlas-conditioned SAM-Med3D loss=0.1758
+Epoch 85, batch 400, Patient265107782_study_0, atlas=P-11388, atlas-conditioned SAM-Med3D loss=0.1212
+Epoch 85, batch 500, Patient110688797_study_0, atlas=P-10205, atlas-conditioned SAM-Med3D loss=0.1340
+Epoch 85, mean atlas-conditioned SAM-Med3D loss=0.1766
+Epoch 86, batch 0, Patient258990891_study_0, atlas=P-10155, atlas-conditioned SAM-Med3D loss=0.5963
+Epoch 86, batch 100, Patient188736831_study_0, atlas=P-11388, atlas-conditioned SAM-Med3D loss=0.1379
+Epoch 86, batch 200, Patient200044678_study_0, atlas=P-10205, atlas-conditioned SAM-Med3D loss=0.1399
+Epoch 86, batch 300, Patient511276390_study_0, atlas=P-10155, atlas-conditioned SAM-Med3D loss=0.1744
+Epoch 86, batch 400, Patient324139862_study_0, atlas=P-11388, atlas-conditioned SAM-Med3D loss=0.1215
+Epoch 86, batch 500, Patient071067363_study_0, atlas=P-10205, atlas-conditioned SAM-Med3D loss=0.1246
+Epoch 86, mean atlas-conditioned SAM-Med3D loss=0.1751
+Epoch 87, batch 0, Patient399222076_study_0, atlas=P-10155, atlas-conditioned SAM-Med3D loss=0.1514
+Epoch 87, batch 100, Patient355975231_study_0, atlas=P-11388, atlas-conditioned SAM-Med3D loss=0.1590
+Epoch 87, batch 200, Patient416851907_study_0, atlas=P-10205, atlas-conditioned SAM-Med3D loss=0.1509
+Epoch 87, batch 300, Patient658818632_study_0, atlas=P-10155, atlas-conditioned SAM-Med3D loss=0.1666
+Epoch 87, batch 400, Patient419265153_study_0, atlas=P-11388, atlas-conditioned SAM-Med3D loss=0.1708
+Epoch 87, batch 500, Patient515855137_study_0, atlas=P-10205, atlas-conditioned SAM-Med3D loss=0.1571
+Epoch 87, mean atlas-conditioned SAM-Med3D loss=0.1789
+Epoch 88, batch 0, Patient615024097_study_0, atlas=P-10155, atlas-conditioned SAM-Med3D loss=0.1742
+Epoch 88, batch 100, Patient794616707_study_0, atlas=P-11388, atlas-conditioned SAM-Med3D loss=0.1434
+Epoch 88, batch 200, Patient235759092_study_0, atlas=P-10205, atlas-conditioned SAM-Med3D loss=0.2760
+Epoch 88, batch 300, Patient576153666_study_0, atlas=P-10155, atlas-conditioned SAM-Med3D loss=0.1797
+Epoch 88, batch 400, Patient301077280_study_0, atlas=P-11388, atlas-conditioned SAM-Med3D loss=0.1376
+Epoch 88, batch 500, Patient295825308_study_0, atlas=P-10205, atlas-conditioned SAM-Med3D loss=0.2157
+Epoch 88, mean atlas-conditioned SAM-Med3D loss=0.1777
+Epoch 89, batch 0, Patient360561715_study_0, atlas=P-10155, atlas-conditioned SAM-Med3D loss=0.2034
+Epoch 89, batch 100, Patient078473791_study_0, atlas=P-11388, atlas-conditioned SAM-Med3D loss=0.1678
+Epoch 89, batch 200, Patient624878933_study_0, atlas=P-10205, atlas-conditioned SAM-Med3D loss=0.2105
+Epoch 89, batch 300, Patient776597439_study_0, atlas=P-10155, atlas-conditioned SAM-Med3D loss=0.1830
+Epoch 89, batch 400, Patient428922729_study_0, atlas=P-11388, atlas-conditioned SAM-Med3D loss=0.1339
+Epoch 89, batch 500, Patient349547494_study_0, atlas=P-10205, atlas-conditioned SAM-Med3D loss=0.2253
+Epoch 89, mean atlas-conditioned SAM-Med3D loss=0.1748
+Epoch 90, batch 0, Patient011432769_study_0, atlas=P-10155, atlas-conditioned SAM-Med3D loss=0.1574
+Epoch 90, batch 100, Patient218085102_study_0, atlas=P-11388, atlas-conditioned SAM-Med3D loss=0.2187
+Epoch 90, batch 200, Patient585671673_study_0, atlas=P-10205, atlas-conditioned SAM-Med3D loss=0.1178
+Epoch 90, batch 300, Patient183375692_study_0, atlas=P-10155, atlas-conditioned SAM-Med3D loss=0.2104
+Epoch 90, batch 400, Patient283261804_study_0, atlas=P-11388, atlas-conditioned SAM-Med3D loss=0.1772
+Epoch 90, batch 500, Patient588405127_study_0, atlas=P-10205, atlas-conditioned SAM-Med3D loss=0.1106
+Epoch 90, mean atlas-conditioned SAM-Med3D loss=0.1768
+Epoch 91, batch 0, Patient777934376_study_0, atlas=P-10155, atlas-conditioned SAM-Med3D loss=0.2003
+Epoch 91, batch 100, Patient217842223_study_0, atlas=P-11388, atlas-conditioned SAM-Med3D loss=0.1796
+Epoch 91, batch 200, Patient328877286_study_0, atlas=P-10205, atlas-conditioned SAM-Med3D loss=0.1996
+Epoch 91, batch 300, Patient659218759_study_0, atlas=P-10155, atlas-conditioned SAM-Med3D loss=0.1928
+Epoch 91, batch 400, Patient310716104_study_0, atlas=P-11388, atlas-conditioned SAM-Med3D loss=0.1787
+Epoch 91, batch 500, Patient032617999_study_0, atlas=P-10205, atlas-conditioned SAM-Med3D loss=0.1375
+Epoch 91, mean atlas-conditioned SAM-Med3D loss=0.1769
+Epoch 92, batch 0, Patient183375692_study_0, atlas=P-10155, atlas-conditioned SAM-Med3D loss=0.1722
+Epoch 92, batch 100, Patient419265153_study_0, atlas=P-11388, atlas-conditioned SAM-Med3D loss=0.1479
+Epoch 92, batch 200, Patient236693575_study_0, atlas=P-10205, atlas-conditioned SAM-Med3D loss=0.1410
+Epoch 92, batch 300, Patient728920522_study_0, atlas=P-10155, atlas-conditioned SAM-Med3D loss=0.2510
+Epoch 92, batch 400, Patient312892008_study_0, atlas=P-11388, atlas-conditioned SAM-Med3D loss=0.1839
+Epoch 92, batch 500, Patient040185845_study_0, atlas=P-10205, atlas-conditioned SAM-Med3D loss=0.1100
+Epoch 92, mean atlas-conditioned SAM-Med3D loss=0.1778
+Epoch 93, batch 0, Patient562682367_study_0, atlas=P-10155, atlas-conditioned SAM-Med3D loss=0.1920
+Epoch 93, batch 100, Patient543883744_study_0, atlas=P-11388, atlas-conditioned SAM-Med3D loss=0.1335
+Epoch 93, batch 200, Patient683036630_study_0, atlas=P-10205, atlas-conditioned SAM-Med3D loss=0.1558
+Epoch 93, batch 300, Patient560560653_study_0, atlas=P-10155, atlas-conditioned SAM-Med3D loss=0.1695
+Epoch 93, batch 400, Patient509612077_study_0, atlas=P-11388, atlas-conditioned SAM-Med3D loss=0.2354
+Epoch 93, batch 500, Patient316133777_study_0, atlas=P-10205, atlas-conditioned SAM-Med3D loss=0.1326
+Epoch 93, mean atlas-conditioned SAM-Med3D loss=0.1724
+Epoch 94, batch 0, Patient698804944_study_0, atlas=P-10155, atlas-conditioned SAM-Med3D loss=0.1118
+Epoch 94, batch 100, Patient015091299_study_0, atlas=P-11388, atlas-conditioned SAM-Med3D loss=0.1802
+Epoch 94, batch 200, Patient407510695_study_0, atlas=P-10205, atlas-conditioned SAM-Med3D loss=0.1630
+Epoch 94, batch 300, Patient191952054_study_0, atlas=P-10155, atlas-conditioned SAM-Med3D loss=0.1117
+Epoch 94, batch 400, Patient215770087_study_0, atlas=P-11388, atlas-conditioned SAM-Med3D loss=0.1942
+Epoch 94, batch 500, Patient310716104_study_0, atlas=P-10205, atlas-conditioned SAM-Med3D loss=0.1596
+Epoch 94, mean atlas-conditioned SAM-Med3D loss=0.1766
+Epoch 95, batch 0, Patient506689051_study_0, atlas=P-10155, atlas-conditioned SAM-Med3D loss=0.1526
+Epoch 95, batch 100, Patient200957877_study_0, atlas=P-11388, atlas-conditioned SAM-Med3D loss=0.2129
+Epoch 95, batch 200, Patient178496845_study_0, atlas=P-10205, atlas-conditioned SAM-Med3D loss=0.1838
+Epoch 95, batch 300, Patient627967678_study_0, atlas=P-10155, atlas-conditioned SAM-Med3D loss=0.1540
+Epoch 95, batch 400, Patient089628858_study_0, atlas=P-11388, atlas-conditioned SAM-Med3D loss=0.1184
+Epoch 95, batch 500, Patient421361107_study_0, atlas=P-10205, atlas-conditioned SAM-Med3D loss=0.2053
+Epoch 95, mean atlas-conditioned SAM-Med3D loss=0.1792
+Epoch 96, batch 0, Patient212947796_study_0, atlas=P-10155, atlas-conditioned SAM-Med3D loss=0.2076
+Epoch 96, batch 100, Patient329283484_study_0, atlas=P-11388, atlas-conditioned SAM-Med3D loss=0.1790
+Epoch 96, batch 200, Patient594829866_study_0, atlas=P-10205, atlas-conditioned SAM-Med3D loss=0.1771
+Epoch 96, batch 300, Patient688976372_study_0, atlas=P-10155, atlas-conditioned SAM-Med3D loss=0.1785
+Epoch 96, batch 400, Patient288744436_study_0, atlas=P-11388, atlas-conditioned SAM-Med3D loss=0.1060
+Epoch 96, batch 500, Patient615283100_study_0, atlas=P-10205, atlas-conditioned SAM-Med3D loss=0.1616
+Epoch 96, mean atlas-conditioned SAM-Med3D loss=0.1734
+Epoch 97, batch 0, Patient506689051_study_0, atlas=P-10155, atlas-conditioned SAM-Med3D loss=0.1525
+Epoch 97, batch 100, Patient337225304_study_0, atlas=P-11388, atlas-conditioned SAM-Med3D loss=0.1656
+Epoch 97, batch 200, Patient486267770_study_0, atlas=P-10205, atlas-conditioned SAM-Med3D loss=0.1378
+Epoch 97, batch 300, Patient627307000_study_0, atlas=P-10155, atlas-conditioned SAM-Med3D loss=0.1463
+Epoch 97, batch 400, Patient295825308_study_0, atlas=P-11388, atlas-conditioned SAM-Med3D loss=0.1835
+Epoch 97, batch 500, Patient146204583_study_0, atlas=P-10205, atlas-conditioned SAM-Med3D loss=0.1338
+Epoch 97, mean atlas-conditioned SAM-Med3D loss=0.1728
+Epoch 98, batch 0, Patient776567116_study_0, atlas=P-10155, atlas-conditioned SAM-Med3D loss=0.1328
+Epoch 98, batch 100, Patient360228820_study_0, atlas=P-11388, atlas-conditioned SAM-Med3D loss=0.1488
+Epoch 98, batch 200, Patient200957877_study_0, atlas=P-10205, atlas-conditioned SAM-Med3D loss=0.2162
+Epoch 98, batch 300, Patient748981747_study_0, atlas=P-10155, atlas-conditioned SAM-Med3D loss=0.2249
+Epoch 98, batch 400, Patient608159364_study_0, atlas=P-11388, atlas-conditioned SAM-Med3D loss=0.1753
+Epoch 98, batch 500, Patient299360026_study_0, atlas=P-10205, atlas-conditioned SAM-Med3D loss=0.1618
+Epoch 98, mean atlas-conditioned SAM-Med3D loss=0.1757
+Epoch 99, batch 0, Patient314274794_study_0, atlas=P-10155, atlas-conditioned SAM-Med3D loss=0.1894
+Epoch 99, batch 100, Patient076865110_study_0, atlas=P-11388, atlas-conditioned SAM-Med3D loss=0.1311
+Epoch 99, batch 200, Patient068394021_study_0, atlas=P-10205, atlas-conditioned SAM-Med3D loss=0.2058
+Epoch 99, batch 300, Patient288744436_study_0, atlas=P-10155, atlas-conditioned SAM-Med3D loss=0.1668
+Epoch 99, batch 400, Patient521886245_study_0, atlas=P-11388, atlas-conditioned SAM-Med3D loss=0.2190
+Epoch 99, batch 500, Patient019802177_study_0, atlas=P-10205, atlas-conditioned SAM-Med3D loss=0.1889
+Epoch 99, mean atlas-conditioned SAM-Med3D loss=0.1783
+GPU Epilog Script v0.30

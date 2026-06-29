@@ -368,7 +368,7 @@ def main():
     parser = argparse.ArgumentParser(description="Generate prostate CG/PZ atlas reference bank")
     parser.add_argument("--case_list", default=DEFAULT_CASE_LIST, help="Path-list txt or CSV case table")
     parser.add_argument("--data_root", default=DEFAULT_DATA_ROOT, help="Dataset root used to remap stale path-list paths")
-    parser.add_argument("--output_dir", default="register/atlas/atlas_bank", help="Output directory for bank metadata")
+    parser.add_argument("--output_dir", default="register/atlas_bank", help="Output directory for bank metadata")
     parser.add_argument("--n_clusters", type=int, default=6, help="Number of anatomical clusters")
     parser.add_argument("--n_per_cluster", type=int, default=3, help="Reference cases selected from each cluster")
     parser.add_argument("--pz_label", type=int, default=2, help="Label value for peripheral zone in prostate_zones")

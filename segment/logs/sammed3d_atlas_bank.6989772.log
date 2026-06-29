@@ -1,0 +1,49 @@
+GPU Prolog Script v1.14
+This is a GPU node.
+Enough GPUs available.
+Allocating card 2
+clifford.local
+Tue Jun 23 21:32:55 2026       
++-----------------------------------------------------------------------------------------+
+| NVIDIA-SMI 550.127.05             Driver Version: 550.127.05     CUDA Version: 12.4     |
+|-----------------------------------------+------------------------+----------------------+
+| GPU  Name                 Persistence-M | Bus-Id          Disp.A | Volatile Uncorr. ECC |
+| Fan  Temp   Perf          Pwr:Usage/Cap |           Memory-Usage | GPU-Util  Compute M. |
+|                                         |                        |               MIG M. |
+|=========================================+========================+======================|
+|   0  NVIDIA A100 80GB PCIe          On  |   00000000:17:00.0 Off |                    0 |
+| N/A   67C    P0            208W /  300W |   28515MiB /  81920MiB |     51%   E. Process |
+|                                         |                        |             Disabled |
++-----------------------------------------+------------------------+----------------------+
+|   1  NVIDIA A100 80GB PCIe          On  |   00000000:65:00.0 Off |                    0 |
+| N/A   34C    P0             63W /  300W |     599MiB /  81920MiB |      0%   E. Process |
+|                                         |                        |             Disabled |
++-----------------------------------------+------------------------+----------------------+
+|   2  NVIDIA A100 80GB PCIe          On  |   00000000:CA:00.0 Off |                    0 |
+| N/A   37C    P0             42W /  300W |       1MiB /  81920MiB |      0%   E. Process |
+|                                         |                        |             Disabled |
++-----------------------------------------+------------------------+----------------------+
+|   3  NVIDIA A100 80GB PCIe          On  |   00000000:E3:00.0 Off |                    0 |
+| N/A   69C    P0            184W /  300W |   80079MiB /  81920MiB |     50%   E. Process |
+|                                         |                        |             Disabled |
++-----------------------------------------+------------------------+----------------------+
+                                                                                         
++-----------------------------------------------------------------------------------------+
+| Processes:                                                                              |
+|  GPU   GI   CI        PID   Type   Process name                              GPU Memory |
+|        ID   ID                                                               Usage      |
+|=========================================================================================|
+|    0   N/A  N/A     33529      C   python                                      28506MiB |
+|    1   N/A  N/A     20977      C   ...ic/Cardiac_SUMMIT/env/TS/bin/python        590MiB |
+|    3   N/A  N/A     76901      C   python                                      80070MiB |
++-----------------------------------------------------------------------------------------+
+Selected GPU 0
+creating model SAM-Med3D
+try to load pretrained weights from https://huggingface.co/blueyo0/SAM-Med3D/blob/main/sam_med3d_turbo.pth
+cache found, use pretrained weights in /home/wenyan/.local/share/checkpoint/huggingface_hub/blueyo0/SAM-Med3D/sam_med3d_turbo.pth
+Loaded 6 selected atlas masks from ../register/atlas_bank/reference_bank.csv
+data length: 534
+Epoch 0, batch 0, Patient357186937_study_0, atlas=P-10155, atlas-conditioned SAM-Med3D loss=1.0616
+Epoch 0, batch 100, Patient030037068_study_0, atlas=P-11388, atlas-conditioned SAM-Med3D loss=1.0356
+Epoch 0, batch 200, Patient750615039_study_0, atlas=P-10205, atlas-conditioned SAM-Med3D loss=1.0711
+GPU Epilog Script v0.30

@@ -1,0 +1,46 @@
+GPU Prolog Script v1.14
+This is a GPU node.
+Enough GPUs available.
+Allocating card 1
+gonzo-605-14.local
+Tue Jun 23 17:58:54 2026       
++-----------------------------------------------------------------------------------------+
+| NVIDIA-SMI 550.127.05             Driver Version: 550.127.05     CUDA Version: 12.4     |
+|-----------------------------------------+------------------------+----------------------+
+| GPU  Name                 Persistence-M | Bus-Id          Disp.A | Volatile Uncorr. ECC |
+| Fan  Temp   Perf          Pwr:Usage/Cap |           Memory-Usage | GPU-Util  Compute M. |
+|                                         |                        |               MIG M. |
+|=========================================+========================+======================|
+|   0  NVIDIA GeForce RTX 4070 ...    On  |   00000000:02:00.0 Off |                  N/A |
+| 31%   27C    P8             13W /  285W |       4MiB /  16376MiB |      0%   E. Process |
+|                                         |                        |                  N/A |
++-----------------------------------------+------------------------+----------------------+
+|   1  NVIDIA GeForce RTX 4070 ...    On  |   00000000:03:00.0 Off |                  N/A |
+| 30%   28C    P8             11W /  285W |       1MiB /  16376MiB |      0%   E. Process |
+|                                         |                        |                  N/A |
++-----------------------------------------+------------------------+----------------------+
+|   2  NVIDIA GeForce RTX 4070 ...    On  |   00000000:81:00.0 Off |                  N/A |
+| 30%   27C    P8             12W /  285W |       1MiB /  16376MiB |      0%   E. Process |
+|                                         |                        |                  N/A |
++-----------------------------------------+------------------------+----------------------+
+|   3  NVIDIA GeForce RTX 4070 ...    On  |   00000000:82:00.0 Off |                  N/A |
+| 31%   27C    P8             15W /  285W |       1MiB /  16376MiB |      0%   E. Process |
+|                                         |                        |                  N/A |
++-----------------------------------------+------------------------+----------------------+
+                                                                                         
++-----------------------------------------------------------------------------------------+
+| Processes:                                                                              |
+|  GPU   GI   CI        PID   Type   Process name                              GPU Memory |
+|        ID   ID                                                               Usage      |
+|=========================================================================================|
+|  No running processes found                                                             |
++-----------------------------------------------------------------------------------------+
+Selected GPU 
+
+EnvironmentLocationNotFound: Not a conda environment: /cluster/project7/longitude/atlasSam/env
+
+  File "register_atlas.py", line 29
+    def setup_device(gpu_id: int) -> str:
+                           ^
+SyntaxError: invalid syntax
+GPU Epilog Script v0.30
